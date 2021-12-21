@@ -18,6 +18,12 @@ switch ($width) {
     case '48':
         $width = 'w-48';
         break;
+    case '96':
+        $width = 'w-96';
+        break;
+    case 'auto':
+        $width = 'w-auto';
+        break;
 }
 @endphp
 
@@ -33,7 +39,7 @@ switch ($width) {
             x-transition:leave="transition ease-in duration-75"
             x-transition:leave-start="transform opacity-100 scale-100"
             x-transition:leave-end="transform opacity-0 scale-95"
-            class="absolute z-50 mt-2 whitespace-nowrap {{ $width }} rounded-md shadow-lg {{ $alignmentClasses }}"
+            class="absolute z-50 mt-3 -ml-3 whitespace-nowrap {{ $width }} rounded-md shadow-xl {{ $alignmentClasses }}"
             style="display: none;"
             @click="open = false">
         <div class="rounded-md ring-1 ring-black ring-opacity-5 {{ $contentClasses }}">

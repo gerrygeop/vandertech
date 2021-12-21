@@ -27,8 +27,8 @@
     <div :class="{'flex': hamburger, 'hidden': ! hamburger}" class="hidden lg:flex flex-col mt-4 space-y-2 lg:mt-0 lg:flex-row lg:-mx-6 lg:space-y-0">
         <x-nav-link :href="route('/')" :active="request()->routeIs('/')">Home</x-nav-link>
 
-        <div class="flex sm:items-center px-3 py-2 lg:mx-2 hover:bg-gray-200 rounded-md">
-            <x-dropdown align="left" width="48">
+        <div class="flex sm:items-center px-3 py-2 lg:mx-2 hover:bg-blue-200 rounded-md">
+            <x-dropdown align="left" width="auto">
                 <x-slot name="trigger">
                     <button class="flex items-center text-sm text-gray-500 hover:text-gray-700 hover:border-gray-300 focus:outline-none focus:text-gray-700 focus:border-gray-300 transition duration-150 ease-in-out">
                         <div>Perusahaan Inti</div>
@@ -52,8 +52,8 @@
             </x-dropdown>
         </div>
 
-        <div class="flex sm:items-center px-3 py-2 lg:mx-2 hover:bg-gray-200 rounded-md">
-            <x-dropdown align="left" width="48">
+        <div class="flex sm:items-center px-3 py-2 lg:mx-2 hover:bg-blue-200 rounded-md">
+            <x-dropdown align="left" width="auto">
                 <x-slot name="trigger">
                     <button class="flex items-center text-sm text-gray-500 hover:text-gray-700 hover:border-gray-300 focus:outline-none focus:text-gray-700 focus:border-gray-300 transition duration-150 ease-in-out">
                         <div>Perusahaan Afiliasi</div>

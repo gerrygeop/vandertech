@@ -3,7 +3,7 @@
     <section class="bg-white dark:bg-gray-800">
         <x-navbar />
     
-        @include('_hero-section')
+        @include('_swiper-image')
 
         <x-divide-section />
 

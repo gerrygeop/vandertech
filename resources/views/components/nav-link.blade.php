@@ -3,7 +3,7 @@
 @php
 
 $activeClass = 'bg-blue-300 font-medium text-blue-900';
-$inActiveClass = 'bg-transparent text-gray-500 hover:text-gray-700 hover:bg-gray-200 focus:text-gray-700 focus:bg-gray-200';
+$inActiveClass = 'bg-transparent text-gray-500 hover:text-gray-700 hover:bg-blue-200 focus:text-gray-700 focus:bg-blue-200';
 
 $classes = ($active ?? false)
             ? $activeClass
