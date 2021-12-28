@@ -1,5 +1,5 @@
-<nav class="p-6 mx-auto lg:flex lg:justify-between lg:items-center shadow" x-data="{ hamburger : false }">
-    <div class="flex items-center justify-between">
+<nav class="fixed top-0 inset-x-0 z-50 bg-white h-20 py-4 lg:px-12 mx-auto lg:flex lg:justify-between lg:items-center shadow-md" x-data="{ hamburger : false }">
+    <div class="flex items-center justify-between px-4 lg:px-0">
         <div>
             <a href="#">
                 <img src="{{ url('image/Logo-Vandertech.png') }}" alt="Logo Vander Tech" class="h-12 w-auto">
@@ -24,19 +24,25 @@
     </div>
 
     <!-- Mobile Menu open: "block", Menu closed: "hidden" -->
-    <div :class="{'flex': hamburger, 'hidden': ! hamburger}" class="hidden lg:flex flex-col mt-4 space-y-2 lg:mt-0 lg:flex-row lg:-mx-6 lg:space-y-0">
-        <x-nav-link :href="route('/')" :active="request()->routeIs('/')">Home</x-nav-link>
+    <div 
+        :class="{'flex': hamburger, 'hidden': ! hamburger}" 
+        class="bg-white hidden lg:flex flex-col lg:flex-row px-4 lg:px-0 mt-4 lg:mt-0 lg:-mx-6 space-y-2 lg:space-y-0 shadow-md lg:shadow-none"
+    >
+        <x-nav-link 
+            :href="route('/')" 
+            :active="request()->routeIs('/')"
+        >
+            Home
+        </x-nav-link>
 
-        <div class="flex sm:items-center px-3 py-2 lg:mx-2 hover:bg-blue-200 rounded-md">
+        <div class="px-3 py-2 lg:mx-1 hover:bg-blue-200 rounded-md">
             <x-dropdown align="left" width="auto">
                 <x-slot name="trigger">
-                    <button class="flex items-center text-sm text-gray-500 hover:text-gray-700 hover:border-gray-300 focus:outline-none focus:text-gray-700 focus:border-gray-300 transition duration-150 ease-in-out">
+                    <button class="nav-link">
                         <div>Perusahaan Inti</div>
 
-                        <div class="ml-1">
-                            <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-                            </svg>
+                        <div class="ml-px">
+                            <x-arrow-bottom />
                         </div>
                     </button>
                 </x-slot>
@@ -52,16 +58,14 @@
             </x-dropdown>
         </div>
 
-        <div class="flex sm:items-center px-3 py-2 lg:mx-2 hover:bg-blue-200 rounded-md">
+        <div class="px-3 py-2 lg:mx-1 hover:bg-blue-200 rounded-md">
             <x-dropdown align="left" width="auto">
                 <x-slot name="trigger">
-                    <button class="flex items-center text-sm text-gray-500 hover:text-gray-700 hover:border-gray-300 focus:outline-none focus:text-gray-700 focus:border-gray-300 transition duration-150 ease-in-out">
+                    <button class="nav-link">
                         <div>Perusahaan Afiliasi</div>
 
-                        <div class="ml-1">
-                            <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-                            </svg>
+                        <div class="ml-px">
+                            <x-arrow-bottom />
                         </div>
                     </button>
                 </x-slot>
@@ -85,10 +89,7 @@
 
         <x-nav-link href="#">Mitra Usaha</x-nav-link>
         <x-nav-link href="#">News & Event</x-nav-link>
+        <x-nav-link href="#">Kontak</x-nav-link>
     </div>
 
-    <a class="hidden lg:block h-10 px-5 py-2 mt-4 text-sm text-center text-gray-700 capitalize transition-colors duration-200 transform border rounded-md dark:hover:bg-gray-700 dark:text-white lg:mt-0 hover:bg-gray-100 lg:w-auto"
-        href="#">
-        Contact Us
-    </a>
 </nav>

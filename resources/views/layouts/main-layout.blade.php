@@ -49,6 +49,13 @@
             height: 100%;
             object-fit: cover;
         }
+        .swiper-button-next,
+        .swiper-button-prev{
+            color: #64748b;
+            height: 20px !important;
+            width: 10px !important;
+            font-size: 30px;
+        }
     </style>
 
 </head>

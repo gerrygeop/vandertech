@@ -10,6 +10,6 @@ $classes = ($active ?? false)
             : $inActiveClass;
 @endphp
 
-<a {{ $attributes->merge(['class' => 'flex lg:items-center lg:mx-2 px-3 py-2 text-sm '.$classes.' rounded-md focus:outline-none transition duration-150 ease-in-out']) }}>
+<a {{ $attributes->merge(['class' => 'flex lg:items-center lg:mx-1 px-3 py-2 text-sm '.$classes.' rounded-md focus:outline-none transition duration-150 ease-in-out']) }}>
     {{ $slot }}
 </a>
