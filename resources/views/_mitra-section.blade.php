@@ -1,152 +1,160 @@
-<div class="bg-white px-6 mb-12 mx-auto text-center">
-    <div class="max-w-7xl mx-auto">
-        <h2 class="text-2xl font-semibold text-gray-700 md:text-3xl mb-8">Mitra Perusahaan</h2>
+<div class="py-20" id="mitra">
+    <div class="max-w-7xl mx-auto px-6">
 
-        <div>
-            <div class="bg-blue-900 my-8">
-                <h3 class="text-lg font-medium text-blue-100">Perizinan</h3>
+        <div class="flex justify-center w-full mb-6 lg:mb-10">
+            <div>
+                <h1 class="text-2xl md:text-3xl font-medium mb-2 text-gray-800">Mitra Perusahaan</h1>
+                <div class="h-1 w-full bg-blue-500 rounded"></div>
             </div>
-            <div class="grid grid-cols-2 gap-8 md:grid-cols-3 lg:grid-cols-6">
+        </div>
+
+        <div class="bg-white rounded-md shadow overflow-hidden mb-3 py-6">
+            <div class="mb-8 px-4 w-11/12 bg-gradient-to-r from-blue-500">
+                <h3 class="text-base tracking-wider font-medium text-blue-50">Perizinan</h3>
+            </div>
+
+            <div class="grid grid-cols-2 gap-6 md:grid-cols-3 lg:grid-cols-6 px-2">
                 <div class="col-span-1">
-                    <img src="{{ url('image/mitra/6. PT. Jaya Mineral.png') }}" alt="PT. Jaya Mineral" class="h-12">
+                    <x-card-mitra mitraLogo="6. PT. Jaya Mineral.png" mitraName="PT. Jaya Mineral" />
                 </div>
     
                 <div class="col-span-1">
-                    <img src="{{ url('image/mitra/7. PT. Tambang Mulia.png') }}" alt="PT. Tambang Mulia" class="h-12">
-                </div>
-    
-                <div class="col-span-1">
-                    <img src="{{ url('image/mitra/8. PT. Chaido Mega Mineral.png') }}" alt="PT. Chaido Mega Mineral" class="h-12">
-                </div>
-    
-                <div class="col-span-1">
-                    <img src="{{ url('image/mitra/9. PT. Kevindo Ratu Mineral.png') }}" alt="PT. Kevindo Ratu Mineral" class="h-12">
+                    <x-card-mitra mitraLogo="7. PT. Tambang Mulia.png" mitraName="PT. Tambang Mulia" />
                 </div>
                 
                 <div class="col-span-1">
-                    <img src="{{ url('image/mitra/10. PT. Borneo Indo Mineral.png') }}" alt="PT. Borneo Indo Mineral" class="h-12">
+                    <x-card-mitra mitraLogo="8. PT. Chaido Mega Mineral.png" mitraName="PT. Chaido Mega Mineral" />
                 </div>
-    
+                
                 <div class="col-span-1">
-                    <img src="{{ url('image/mitra/11. PT. Bumi Muller Kalteng.png') }}" alt="PT. Bumi Muller Kalteng" class="h-12">
+                    <x-card-mitra mitraLogo="9. PT. Kevindo Ratu Mineral.png" mitraName="PT. Kevindo Ratu Mineral" />
+                </div>
+                
+                <div class="col-span-1">
+                    <x-card-mitra mitraLogo="10. PT. Borneo Indo Mineral.png" mitraName="PT. Borneo Indo Mineral" />
+                </div>
+                
+                <div class="col-span-1">
+                    <x-card-mitra mitraLogo="11. PT. Bumi Muller Kalteng.png" mitraName="PT. Bumi Muller Kalteng" />
                 </div>
             </div>
         </div>
 
-        <div>
-            <div class="bg-blue-900 my-8">
-                <h3 class="text-lg font-medium text-blue-100">Pelatihan</h3>
+        <div class="bg-white rounded-md shadow overflow-hidden mb-3 py-6">
+            <div class="mb-8 px-4 w-11/12 bg-gradient-to-r from-blue-500">
+                <h3 class="text-base tracking-wider font-medium text-blue-50">Pelatihan</h3>
             </div>
-            <div class="grid grid-cols-2 gap-8 md:grid-cols-3 lg:grid-cols-6">
+            
+            <div class="grid grid-cols-2 gap-6 md:grid-cols-3 lg:grid-cols-6 px-2">
                 <div class="col-span-1">
-                    <img src="{{ url('image/mitra/12. PT. Kobexindo Limestone.png') }}" alt="PT. Kobexindo Limestone" class="h-12">
+                    <x-card-mitra mitraLogo="12. PT. Kobexindo Limestone.png" mitraName="PT. Kobexindo Limestone" />
                 </div>
-    
                 <div class="col-span-1">
-                    <img src="{{ url('image/mitra/13. CV. Kutai Kumala Energy.png') }}" alt="CV. Kutai Kumala Energy" class="h-12">
+                    <x-card-mitra mitraLogo="13. CV. Kutai Kumala Energy.png" mitraName="CV. Kutai Kumala Energy" />
                 </div>
             </div>
         </div>
 
-        <div>
-            <div class="bg-blue-900 my-8">
-                <h3 class="text-lg font-medium text-blue-100">Pembuatan Dokumen</h3>
+        <div class="bg-white rounded-md shadow overflow-hidden mb-3 py-6">
+            <div class="mb-8 px-4 w-11/12 bg-gradient-to-r from-blue-500">
+                <h3 class="text-base tracking-wider font-medium text-blue-50">Pembuatan Dokumen</h3>
             </div>
-            <div class="grid grid-cols-2 gap-8 md:grid-cols-3 lg:grid-cols-6">
-                <div class="col-span-1">
-                    <img src="{{ url('image/mitra/14. CV. Bara Jaya Makmur.png') }}" alt="CV. Bara Jaya Makmur" class="h-12">
-                </div>
-    
-                <div class="col-span-1">
-                    <img src="{{ url('image/mitra/15. CV. Bara Mahakam.png') }}" alt="CV. Bara Mahakam" class="h-12">
-                </div>
 
+            <div class="grid grid-cols-2 gap-6 md:grid-cols-3 lg:grid-cols-6 px-2">
                 <div class="col-span-1">
-                    <img src="{{ url('image/mitra/16. CV. Bunga Bone.png') }}" alt="CV. Bunga Bone" class="h-12">
-                </div>
-
-                <div class="col-span-1">
-                    <img src="{{ url('image/mitra/17. PT. Rabani Corporindo.png') }}" alt="PT. Rabani Corporindo" class="h-12">
-                </div>
-
-                <div class="col-span-1">
-                    <img src="{{ url('image/mitra/18. PT. Energi Cahaya Industritama.png') }}" alt="PT. Energi Cahaya Industritama" class="h-12">
-                </div>
-
-                <div class="col-span-1">
-                    <img src="{{ url('image/mitra/19. PT. Masindo Intienergy Perkasa.png') }}" alt="PT. Masindo Intienergy Perkasa" class="h-12">
-                </div>
-
-                <div class="col-span-1">
-                    <img src="{{ url('image/mitra/20. PT. Transisi Energi Satunama.png') }}" alt="PT. Transisi Energi Satunama" class="h-12">
-                </div>
-
-                <div class="col-span-1">
-                    <img src="{{ url('image/mitra/21. PT. Bukit Baiduri Energi.png') }}" alt="PT. Bukit Baiduri Energi" class="h-12">
-                </div>
-
-                <div class="col-span-1">
-                    <img src="{{ url('image/mitra/22. PT. Rinjani Kartanegara.png') }}" alt="PT. Rinjani Kartanegara" class="h-12">
-                </div>
-
-                <div class="col-span-1">
-                    <img src="{{ url('image/mitra/23. PT. Borneo Emas Hitam.png') }}" alt="PT. Borneo Emas Hitam" class="h-12">
-                </div>
-
-                <div class="col-span-1">
-                    <img src="{{ url('image/mitra/24. PT. Gunung Bara Utama.png') }}" alt="PT. Gunung Bara Utama" class="h-12">
-                </div>
-
-                <div class="col-span-1">
-                    <img src="{{ url('image/mitra/25. PT. Delta Samudra.png') }}" alt="PT. Delta Samudra" class="h-12">
-                </div>
-
-                <div class="col-span-1">
-                    <img src="{{ url('image/mitra/26. PT. La Tahzan.png') }}" alt="PT. La Tahzan" class="h-12">
-                </div>
-
-                <div class="col-span-1">
-                    <img src="{{ url('image/mitra/6. PT. Jaya Mineral.png') }}" alt="PT. Jaya Mineral" class="h-12">
-                </div>
-    
-                <div class="col-span-1">
-                    <img src="{{ url('image/mitra/7. PT. Tambang Mulia.png') }}" alt="PT. Tambang Mulia" class="h-12">
-                </div>
-    
-                <div class="col-span-1">
-                    <img src="{{ url('image/mitra/8. PT. Chaido Mega Mineral.png') }}" alt="PT. Chaido Mega Mineral" class="h-12">
-                </div>
-    
-                <div class="col-span-1">
-                    <img src="{{ url('image/mitra/9. PT. Kevindo Ratu Mineral.png') }}" alt="PT. Kevindo Ratu Mineral" class="h-12">
+                    <x-card-mitra mitraLogo="14. CV. Bara Jaya Makmur.png" mitraName="CV. Bara Jaya Makmur" />
                 </div>
                 
                 <div class="col-span-1">
-                    <img src="{{ url('image/mitra/10. PT. Borneo Indo Mineral.png') }}" alt="PT. Borneo Indo Mineral" class="h-12">
+                    <x-card-mitra mitraLogo="15. CV. Bara Mahakam.png" mitraName="CV. Bara Mahakam" />
                 </div>
-    
+                
                 <div class="col-span-1">
-                    <img src="{{ url('image/mitra/11. PT. Bumi Muller Kalteng.png') }}" alt="PT. Bumi Muller Kalteng" class="h-12">
+                    <x-card-mitra mitraLogo="16. CV. Bunga Bone.png" mitraName="CV. Bunga Bone" />
                 </div>
-
+                
                 <div class="col-span-1">
-                    <img src="{{ url('image/mitra/27. PT. Sanggam Inti Perkasa.png') }}" alt="PT. Sanggam Inti Perkasa" class="h-12">
+                    <x-card-mitra mitraLogo="17. PT. Rabani Corporindo.png" mitraName="PT. Rabani Corporindo" />
                 </div>
-
+                
                 <div class="col-span-1">
-                    <img src="{{ url('image/mitra/28. PT. Helium Tiga.png') }}" alt="PT. Helium Tiga" class="h-12">
+                    <x-card-mitra mitraLogo="18. PT. Energi Cahaya Industritama.png" mitraName="PT. Energi Cahaya Industritama" />
                 </div>
-
+                
                 <div class="col-span-1">
-                    <img src="{{ url('image/mitra/29. PT. Mandiri Tata Persada.png') }}" alt="PT. Mandiri Tata Persada" class="h-12">
+                    <x-card-mitra mitraLogo="19. PT. Masindo Intienergy Perkasa.png" mitraName="PT. Masindo Intienergy Perkasa" />
                 </div>
-
+                
                 <div class="col-span-1">
-                    <img src="{{ url('image/mitra/30. PT. Mitra Handayani Sejahterah.png') }}" alt="PT. Mitra Handayani Sejahtera" class="h-12">
+                    <x-card-mitra mitraLogo="20. PT. Transisi Energi Satunama.png" mitraName="PT. Transisi Energi Satunama" />
                 </div>
-
+                
                 <div class="col-span-1">
-                    <img src="{{ url('image/mitra/31. PT. Kintamani Bara Utama.png') }}" alt="PT. Kintamani Bara Utama" class="h-12">
+                    <x-card-mitra mitraLogo="21. PT. Bukit Baiduri Energi.png" mitraName="PT. Bukit Baiduri Energi" />
+                </div>
+                
+                <div class="col-span-1">
+                    <x-card-mitra mitraLogo="22. PT. Rinjani Kartanegara.png" mitraName="PT. Rinjani Kartanegara" />
+                </div>
+                
+                <div class="col-span-1">
+                    <x-card-mitra mitraLogo="23. PT. Borneo Emas Hitam.png" mitraName="PT. Borneo Emas Hitam" />
+                </div>
+                
+                <div class="col-span-1">
+                    <x-card-mitra mitraLogo="24. PT. Gunung Bara Utama.png" mitraName="PT. Gunung Bara Utama" />
+                </div>
+                
+                <div class="col-span-1">
+                    <x-card-mitra mitraLogo="25. PT. Delta Samudra.png" mitraName="PT. Delta Samudra" />
+                </div>
+                
+                <div class="col-span-1">
+                    <x-card-mitra mitraLogo="26. PT. La Tahzan.png" mitraName="PT. La Tahzan" />
+                </div>
+                
+                <div class="col-span-1">
+                    <x-card-mitra mitraLogo="6. PT. Jaya Mineral.png" mitraName="PT. Jaya Mineral" />
+                </div>
+                
+                <div class="col-span-1">
+                    <x-card-mitra mitraLogo="7. PT. Tambang Mulia.png" mitraName="PT. Tambang Mulia" />
+                </div>
+                
+                <div class="col-span-1">
+                    <x-card-mitra mitraLogo="8. PT. Chaido Mega Mineral.png" mitraName="PT. Chaido Mega Mineral" />
+                </div>
+                
+                <div class="col-span-1">
+                    <x-card-mitra mitraLogo="9. PT. Kevindo Ratu Mineral.png" mitraName="PT. Kevindo Ratu Mineral" />
+                </div>
+                
+                <div class="col-span-1">
+                    <x-card-mitra mitraLogo="10. PT. Borneo Indo Mineral.png" mitraName="PT. Borneo Indo Mineral" />
+                </div>
+                
+                <div class="col-span-1">
+                    <x-card-mitra mitraLogo="11. PT. Bumi Muller Kalteng.png" mitraName="PT. Bumi Muller Kalteng" />
+                </div>
+                
+                <div class="col-span-1">
+                    <x-card-mitra mitraLogo="27. PT. Sanggam Inti Perkasa.png" mitraName="PT. Sanggam Inti Perkasa" />
+                </div>
+                
+                <div class="col-span-1">
+                    <x-card-mitra mitraLogo="28. PT. Helium Tiga.png" mitraName="PT. Helium Tiga" />
+                </div>
+                
+                <div class="col-span-1">
+                    <x-card-mitra mitraLogo="29. PT. Mandiri Tata Persada.png" mitraName="PT. Mandiri Tata Persada" />
+                </div>
+                
+                <div class="col-span-1">
+                    <x-card-mitra mitraLogo="30. PT. Mitra Handayani Sejahterah.png" mitraName="PT. Mitra Handayani Sejahterah" />
+                </div>
+                
+                <div class="col-span-1">
+                    <x-card-mitra mitraLogo="31. PT. Kintamani Bara Utama.png" mitraName="PT. Kintamani Bara Utama" />
                 </div>
             </div>
         </div>

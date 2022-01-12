@@ -9,6 +9,11 @@ switch ($align) {
         $alignmentClasses = 'origin-top';
         break;
     case 'right':
+        $alignmentClasses = 'origin-top-right right-0';
+        break;
+    case 'center':
+        $alignmentClasses = 'origin-center lg:-left-24';
+        break;
     default:
         $alignmentClasses = 'origin-top-right right-0';
         break;

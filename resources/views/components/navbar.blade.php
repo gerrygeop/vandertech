@@ -28,17 +28,14 @@
         :class="{'flex': hamburger, 'hidden': ! hamburger}" 
         class="bg-white hidden lg:flex flex-col lg:flex-row px-4 lg:px-0 mt-4 lg:mt-0 lg:-mx-6 space-y-2 lg:space-y-0 shadow-md lg:shadow-none"
     >
-        <x-nav-link 
-            :href="route('/')" 
-            :active="request()->routeIs('/')"
-        >
+        <x-nav-link :href="route('/')" :active="request()->routeIs('/')">
             Home
         </x-nav-link>
 
-        <div class="px-3 py-2 lg:mx-1 hover:bg-blue-200 rounded-md">
-            <x-dropdown align="left" width="auto">
+        <div class="lg:mx-1 border-b-2 border-transparent hover:border-gray-200 focus:border-gray-200">
+            <x-dropdown align="top" width="auto">
                 <x-slot name="trigger">
-                    <button class="nav-link">
+                    <button class="nav-link px-3 py-2">
                         <div>Perusahaan Inti</div>
 
                         <div class="ml-px">
@@ -48,20 +45,20 @@
                 </x-slot>
 
                 <x-slot name="content">
-                    <x-dropdown-link href="#">
+                    <x-dropdown-link href="/#about">
                         Tentang Perusahaan
                     </x-dropdown-link>
-                    <x-dropdown-link href="#">
+                    <x-dropdown-link href="/#visi-misi">
                         Visi & Misi
                     </x-dropdown-link>
                 </x-slot>
             </x-dropdown>
         </div>
 
-        <div class="px-3 py-2 lg:mx-1 hover:bg-blue-200 rounded-md">
-            <x-dropdown align="left" width="auto">
+        <div class="lg:mx-1 border-b-2 border-transparent hover:border-gray-200 focus:border-gray-200">
+            <x-dropdown align="center" width="96">
                 <x-slot name="trigger">
-                    <button class="nav-link">
+                    <button class="nav-link px-3 py-2">
                         <div>Perusahaan Afiliasi</div>
 
                         <div class="ml-px">
@@ -71,25 +68,29 @@
                 </x-slot>
 
                 <x-slot name="content">
-                    <x-dropdown-link href="#">
-                        Vander IntiEnergi
+                    <x-dropdown-link href="{{ route('vander-inti-energi') }}">
+                        Vander Inti Energi
+                        <img src="{{ url('image/afiliasi/2. Vander Inti Energi.png') }}" alt="Vender Inti Energi" class="w-auto h-10">
                     </x-dropdown-link>
-                    <x-dropdown-link href="#">
+                    <x-dropdown-link href="{{ route('vander-training') }}">
                         Vandertech In House Training
+                        <img src="{{ url('image/afiliasi/0. training.png') }}" alt="Vander In House Training" class="w-auto h-10">
                     </x-dropdown-link>
-                    <x-dropdown-link href="#">
-                        Vander GEOLABORATORY
+                    <x-dropdown-link href="{{ route('vander-geolab') }}">
+                        Vander Geolaboratory
+                        <img src="{{ url('image/afiliasi/4. Vander Geolaboratory.png') }}" alt="Vender Geolaboratory" class="w-auto h-10">
                     </x-dropdown-link>
-                    <x-dropdown-link href="#">
+                    <x-dropdown-link href="{{ route('9t-coffee') }}">
                         9T Coffee
+                        <img src="{{ url('image/afiliasi/5. 9T Coffee.png') }}" alt="9T Coffee" class="w-auto h-10">
                     </x-dropdown-link>
                 </x-slot>
             </x-dropdown>
         </div>
 
-        <x-nav-link href="#">Mitra Usaha</x-nav-link>
-        <x-nav-link href="#">News & Event</x-nav-link>
-        <x-nav-link href="#">Kontak</x-nav-link>
+        <x-nav-link href="/#mitra" :active="request()->is('/#mitra')">Mitra Usaha</x-nav-link>
+        <x-nav-link :href="route('news-event')" :active="request()->routeIs('news-event')">News & Event</x-nav-link>
+        <x-nav-link href="/#contact" :active="request()->routeIs('/#contact')">Kontak</x-nav-link>
     </div>
 
 </nav>

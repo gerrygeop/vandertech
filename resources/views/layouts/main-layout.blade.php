@@ -56,6 +56,12 @@
             width: 10px !important;
             font-size: 30px;
         }
+
+        .background-img {
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+        }
     </style>
 
 </head>
