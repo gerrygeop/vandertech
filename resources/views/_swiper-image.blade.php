@@ -43,9 +43,9 @@
                     alt="">
             </div>
         </div>
-        <div class="swiper-button-next bg-gray-100/70 p-6 shadow-md rounded-full"></div>
-        <div class="swiper-button-prev bg-gray-100/70 p-6 shadow-md rounded-full"></div>
+
+        <div class="swiper-button-next bg-gray-50/40 p-6"></div>
+        <div class="swiper-button-prev bg-gray-50/40 p-6"></div>
         <div class="swiper-pagination"></div>
     </div>
-    
 </div>

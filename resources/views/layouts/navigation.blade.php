@@ -1,12 +1,12 @@
 <nav x-data="{ open: false }" class="bg-white border-b border-gray-100">
     <!-- Primary Navigation Menu -->
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex justify-between h-16">
             <div class="flex">
                 <!-- Logo -->
                 <div class="shrink-0 flex items-center">
                     <a href="{{ route('dashboard') }}">
-                        <img src="{{ url('image/Logo-Vandertech.png') }}" alt="Vandertech" class="w-auto h-10">
+                        <img src="{{ url('image/Logo-Vandertech.png') }}" alt="Vandertech" class="w-28 h-auto">
                     </a>
                 </div>
 
@@ -15,7 +15,7 @@
                     <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
                         {{ __('Dashboard') }}
                     </x-nav-link>
-                    <x-nav-link :href="route('news.index')" :active="request()->routeIs('news.index')">
+                    <x-nav-link :href="route('news.index')" :active="request()->routeIs('news.*')">
                         {{ __('News') }}
                     </x-nav-link>
                 </div>

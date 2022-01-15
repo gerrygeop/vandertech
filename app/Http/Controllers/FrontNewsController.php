@@ -13,8 +13,8 @@ class FrontNewsController extends Controller
         return view('news-event', compact('news'));
     }
 
-    public function show(News $new)
+    public function show(News $news)
     {
-        return view('news-event-detail', compact('new'));
+        return view('news-event-detail', compact('news'));
     }
 }

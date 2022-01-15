@@ -1,47 +1,94 @@
-<x-guest-layout>
-    <section class="mt-16 text-gray-600">
-        <div class="max-w-6xl py-16 mx-auto flex flex-wrap">
+<x-content>
+    <div class="bg-white lg:shadow">
 
-            <div class="grid grid-cols-6 gap-6 lg:gap-8 items-center mb-20">
-                <div class="col-span-full md:col-span-3">
-                    <img 
-                        src="{{ url('image/afiliasi/2. Vander Inti Energi.png') }}" 
-                        alt="Vander Inti Energi"
-                        class="max-w-lg"
-                    >
+        <div class="h-full w-full mb-8">
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide min-h-full aspect-video">
+                        <img 
+                            src="{{ url('image/img-1.jpg') }}" 
+                            alt="">
+                    </div>
+                    <div class="swiper-slide min-h-full aspect-video">
+                        <img 
+                        src="{{ url('image/img-2.jpg') }}"
+                            alt="">
+                    </div>
+                    <div class="swiper-slide min-h-full aspect-video">
+                        <img 
+                            src="{{ url('image/img-3.jpg') }}"
+                            alt="">
+                    </div>
+                    <div class="swiper-slide min-h-full aspect-video">
+                        <img 
+                            src="{{ url('image/img-4.jpg') }}"
+                            alt="">
+                    </div>
+                    <div class="swiper-slide min-h-full aspect-video">
+                        <img 
+                            src="{{ url('image/img-5.jpg') }}"
+                            alt="">
+                    </div>
                 </div>
 
-                <p class="col-span-full md:col-span-3 leading-relaxed text-lg indent-8">PT Vander Inti Energi merupakan konsultan jasa pertambangan dan lingkungan yang berdiri sejak tahun 2020 dengan skala layanan nasional.</p>
+                <div class="swiper-button-next bg-gray-50/40 p-4 lg:p-6"></div>
+                <div class="swiper-button-prev bg-gray-50/40 p-4 lg:p-6"></div>
+                <div class="swiper-pagination"></div>
             </div>
-
-            <div class="flex flex-wrap md:-m-2 -m-1">
-                <div class="flex flex-wrap w-1/2">
-                    <div class="md:p-2 p-1 w-1/2">
-                        <img alt="gallery" class="w-full object-cover h-full object-center block" src="{{ url('image/intienergi/1.jpeg') }}">
-                    </div>
-                    <div class="md:p-2 p-1 w-1/2">
-                        <img alt="gallery" class="w-full object-cover h-full object-center block" src="{{ url('image/intienergi/2.jpeg') }}">
-                    </div>
-                    <div class="md:p-2 p-1 w-full">
-                        <img alt="gallery" class="w-full h-full object-cover object-center block" src="{{ url('image/intienergi/3.jpeg') }}">
-                    </div>
-                </div>
-
-                <div class="flex flex-wrap w-1/2">
-                    <div class="md:p-2 p-1 w-full">
-                        <img alt="gallery" class="w-full h-full object-cover object-center block" src="{{ url('image/intienergi/4.jpeg') }}">
-                    </div>
-                    <div class="md:p-2 p-1 w-1/2">
-                        <img alt="gallery" class="w-full object-cover h-full object-center block" src="{{ url('image/intienergi/5.jpeg') }}">
-                    </div>
-                    <div class="md:p-2 p-1 w-1/2">
-                        <img alt="gallery" class="w-full object-cover h-full object-center block" src="{{ url('image/intienergi/6.jpeg') }}">
-                    </div>
-                </div>
-            </div>
-
         </div>
-    </section>
 
-    @include('_footer')
-</x-guest-layout>
+        <div class="grid grid-cols-6 gap-y-4 gap-x-8 items-center px-4 lg:px-14 pb-12">
+            <div class="col-span-full md:col-span-2 p-4 md:p-0">
+                <img 
+                    src="{{ url('image/logo-afiliasi/vander-inti.png') }}" 
+                    alt="Vander Inti Energi"
+                    class="w-full shrink"
+                >
+            </div>
+
+            <p class="col-span-full md:col-span-4 leading-relaxed text-base text-justify indent-8">
+                PT Vander Inti Energi merupakan konsultan jasa pertambangan dan lingkungan yang berdiri sejak tahun 2020 dengan skala layanan nasional. Sebagai anak perusahaan grup Vandertech Resources yang berpusat di Kalimantan Timur, Vander Inti Energi didirikan untuk memberikan layanan konsultan pertambangan dan lingkungan dengan prinsip integritas, profesionalitas dan akuntabilitas.
+            </p>
+
+            <div class="col-span-full">
+                <p class="leading-relaxed text-base text-justify indent-8">
+                    Didirikan di hadapan Notaris Gerta Silamba, S.H.,M.Kn di Samarinda Kalimantan Timur. Dengan nomor akta 12 tanggal 17 Desember 2020 dengan nomor AHU-0069.AH.02.01.TAHUN 2020. Vander Inti Energi sebagai pemegang Izin Usaha Jasa Pertambangan telah mendapat persetujuan oleh Kepala Badan Koordinasi Penanaman Modal Republik Indonesia Nomor 47/1/IUJP/PMDN/2021 pada tanggal 08 Maret 2021.
+                </p>
+            </div>
+
+            <div class="col-span-full">
+                <p class="leading-relaxed text-base text-justify indent-8">
+                    Sebagai perusahaan jasa konsultan, Vander Inti Energi diperkuat oleh para tenaga ahli konsultan dan staf yang sangat berpengalaman dibidangnya, kami memiliki komitmen penuh untuk berkontribusi pada perkembangan bisnis di bidang pertambangan, perkebunan, Pelabuhan, dll. Melalui layanan sumber daya manusia yang kami miliki.
+                </p>
+            </div>
+
+            <div class="col-span-full">
+                <p class="text-base text-gray-700">
+                    Pelatihan:
+                </p>
+                <ul class="list-disc list-inside leading-loose tracking-wide">
+                    <li>POP</li>
+                    <li>POM</li>
+                    <li>POU</li>
+                    <li>Ahli K3 Umum</li>
+                </ul>
+            </div>
+
+            <div class="col-span-full">
+                <p class="text-base text-gray-700">
+                    Layanan Jasa Pembuatan Dokumen:
+                </p>
+                <ul class="list-disc list-inside leading-loose tracking-wide">
+                    <li>Eksplorasi</li>
+                    <li>Studi Kelayakan (FS)</li>
+                    <li>SRencana Reklamasi (RR)</li>
+                    <li>Rencana Pascatambang (RPT)</li>
+                    <li>Rencana Kerja Anggaran Biaya (RKAB)</li>
+                    <li>Analisis Mengenai Dampak Lingkungan (AMDAL)</li>
+                    <li>Upaya Pengelolaan Lingkungan (UKL) dan Upaya Pemantauan Lingkungan (UPL)</li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+</x-content>

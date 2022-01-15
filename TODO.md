@@ -7,4 +7,23 @@
 [X] Tambahkan footer
 [X] Link nav scroll ketika ke klik
 [X] Tambahkan maps pada kontak
-[] Ubah desain nav link
+[X] Ubah desain nav link
+
+# Revisi 1
+[X] Ubah sususan logo perusahaan mitra
+[X] Pada mitra section hapus PT. Borneo Emas
+[X] Buat card afiliasi pada about section
+[X] Vander Geo lab *pakai spasi
+[X] CRUD news & event
+[] Foto di slide diganti
+[] Deskripsi Indo Training diperbaiki
+[] Foto pada setiap halaman perusahaan dibuat slide show
+[X] Pindahkan detail about section pada halaman profil perusahaan
+[] Kontak setiap event dibuat dinamis
+[] CRUD pada perusahaan afiliasi
+    - Nama perusahaan
+    - Logo
+    - Deskripsi/Detail/About
+    - Foto
+    - Kontak
+[] Perusahaan afiliasi bisa punya kontak section tersendiri (dinamis)

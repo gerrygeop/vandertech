@@ -2,7 +2,7 @@
     <div class="px-2 py-4">
         <img 
             class="h-12 w-auto mx-auto" 
-            src="{{ url('image/mitra/'.$mitraLogo) }}" 
+            src="{{ url('image/logo-mitra/'.$mitraLogo) }}" 
             alt="{{ $mitraName }}"
         >
     </div>

@@ -1,15 +1,15 @@
-<div class="py-20" id="mitra">
-    <div class="max-w-7xl mx-auto px-6">
+<div class="py-14 bg-white" id="mitra">
+    <div class="max-w-6xl mx-auto px-6">
 
-        <div class="flex justify-center w-full mb-6 lg:mb-10">
+        <div class="flex justify-center w-full mb-6 lg:mb-8">
             <div>
-                <h1 class="text-2xl md:text-3xl font-medium mb-2 text-gray-800">Mitra Perusahaan</h1>
-                <div class="h-1 w-full bg-blue-500 rounded"></div>
+                <h1 class="text-2xl md:text-3xl font-medium font-heading tracking-wide mb-2 text-gray-800">Mitra Perusahaan</h1>
+                <div class="h-0.5 w-full bg-blue-500 rounded"></div>
             </div>
         </div>
 
-        <div class="bg-white rounded-md shadow overflow-hidden mb-3 py-6">
-            <div class="mb-8 px-4 w-11/12 bg-gradient-to-r from-blue-500">
+        <div class="bg-white rounded-md overflow-hidden mb-3 py-6">
+            <div class="mb-8 px-4 w-11/12 bg-gradient-to-r from-blue-600">
                 <h3 class="text-base tracking-wider font-medium text-blue-50">Perizinan</h3>
             </div>
 
@@ -40,8 +40,8 @@
             </div>
         </div>
 
-        <div class="bg-white rounded-md shadow overflow-hidden mb-3 py-6">
-            <div class="mb-8 px-4 w-11/12 bg-gradient-to-r from-blue-500">
+        <div class="bg-white rounded-md overflow-hidden mb-3 py-6">
+            <div class="mb-8 px-4 w-11/12 bg-gradient-to-r from-blue-600">
                 <h3 class="text-base tracking-wider font-medium text-blue-50">Pelatihan</h3>
             </div>
             
@@ -50,13 +50,13 @@
                     <x-card-mitra mitraLogo="12. PT. Kobexindo Limestone.png" mitraName="PT. Kobexindo Limestone" />
                 </div>
                 <div class="col-span-1">
-                    <x-card-mitra mitraLogo="13. CV. Kutai Kumala Energy.png" mitraName="CV. Kutai Kumala Energy" />
+                    <x-card-mitra mitraLogo="6. PT. Jaya Mineral.png" mitraName="PT. Jaya Mineral" />
                 </div>
             </div>
         </div>
 
-        <div class="bg-white rounded-md shadow overflow-hidden mb-3 py-6">
-            <div class="mb-8 px-4 w-11/12 bg-gradient-to-r from-blue-500">
+        <div class="bg-white rounded-md overflow-hidden mb-3 py-6">
+            <div class="mb-8 px-4 w-11/12 bg-gradient-to-r from-blue-600">
                 <h3 class="text-base tracking-wider font-medium text-blue-50">Pembuatan Dokumen</h3>
             </div>
 
@@ -98,9 +98,17 @@
                 </div>
                 
                 <div class="col-span-1">
-                    <x-card-mitra mitraLogo="23. PT. Borneo Emas Hitam.png" mitraName="PT. Borneo Emas Hitam" />
+                    <x-card-mitra mitraLogo="13. CV. Kutai Kumala Energy.png" mitraName="CV. Kutai Kumala Energy" />
+                    {{-- <x-card-mitra mitraLogo="23. PT. Borneo Emas Hitam.png" mitraName="PT. Borneo Emas Hitam" /> --}}
                 </div>
                 
+                <div class="col-span-1">
+                    <x-card-mitra mitraLogo="alam karya gemilang.jpeg" mitraName="PT. Alam Karya Gemilang" />
+                </div>
+                <div class="col-span-1">
+                    <x-card-mitra mitraLogo="david bumi perkasa.jpeg" mitraName="PT. David Bumi Perkasa" />
+                </div>
+
                 <div class="col-span-1">
                     <x-card-mitra mitraLogo="24. PT. Gunung Bara Utama.png" mitraName="PT. Gunung Bara Utama" />
                 </div>

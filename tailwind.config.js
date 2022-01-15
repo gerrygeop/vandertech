@@ -11,7 +11,7 @@ module.exports = {
     theme: {
         extend: {
             fontFamily: {
-                sans: ['Poppins', 'Nunito', ...defaultTheme.fontFamily.sans],
+                sans: ['Inter', 'Nunito', ...defaultTheme.fontFamily.sans],
             },
         },
     },

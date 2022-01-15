@@ -1,20 +1,24 @@
 <x-guest-layout>
 
-    <section class="mt-20 text-gray-600">    
-        <div class="max-w-6xl mx-auto py-16">
+    <section class="min-h-screen mt-16 text-gray-600">    
+        <div class="max-w-6xl mx-auto px-4 pb-14 pt-8 lg:pt-12">
 
-            <div class="flex flex-wrap w-full mb-20">
-                <div class="lg:w-1/2 w-full mb-6 lg:mb-0">
-                    <h1 class="sm:text-3xl text-2xl font-medium mb-2 text-gray-900">News & Event</h1>
-                    <div class="h-1 w-20 bg-indigo-500 rounded"></div>
+            <div class="flex flex-wrap w-full mb-6 lg:mb-8">
+                <div>
+                    <h1 class="text-2xl lg:text-3xl font-medium mb-2 text-gray-800 dark:text-gray-100">News & Event</h1>
+                    <div class="h-0.5 w-20 bg-indigo-500 dark:bg-indigo-300 rounded"></div>
                 </div>
             </div>
 
-            <div class="flex flex-wrap -m-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
 
                 @foreach ($news as $new)
-                    <x-card-news link="{{ route('news-event-detail', $new) }}" cover="{{ $new->getPhoto() }}" heading="{{ $new->title }}">
-                        {{ $new->body }}
+                    <x-card-news 
+                        link="{{ route('news-event.detail', $new) }}" 
+                        cover="{{ $new->getPhoto() }}" 
+                        heading="{{ $new->title }}"
+                        isEvent="{{ $new->is_event }}"
+                    >
                     </x-card-news>
                 @endforeach
 

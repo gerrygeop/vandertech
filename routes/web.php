@@ -13,7 +13,12 @@ Route::get('/', function () {
 
 // Route News & Event
 Route::get('/news-event', [FrontNewsController::class, 'index'])->name('news-event');
-Route::get('/news-event-detail/{new}', [FrontNewsController::class, 'show'])->name('news-event-detail');
+Route::get('/news-event/{news}', [FrontNewsController::class, 'show'])->name('news-event.detail');
+
+// Profile Vandertech
+Route::get('/profile-vandertech', function () {
+    return view('detail');
+})->name('profile-vandertech');
 
 // Route Afiliasi
 Route::get('/vander-inti-energi', function () {

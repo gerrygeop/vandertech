@@ -1,14 +1,16 @@
-<footer class="text-gray-600 border-t">
-    <div class="container px-5 py-8 mx-auto flex items-center sm:flex-row flex-col">
+<footer class="text-gray-600 bg-white border-t">
+    <div class="max-w-6xl px-2 sm:px-5 py-5 mx-auto flex items-center">
 
-        <a class="flex font-medium items-center md:justify-start justify-center text-gray-900">
-            <img src="{{ url('image/logo-w.png') }}" alt="Logo Wana" class="w-14 h-auto">
-            <span class="ml-3 text-xl">Wana</span>
+        <a class="flex items-center justify-center md:justify-start">
+            <img src="{{ url('image/logo-w.png') }}" alt="Logo Wana" class="w-8 md:w-12 h-auto">
+            <span class="ml-2 text-base md:text-lg text-gray-600 md:font-semibold tracking-wide">Wana</span>
         </a>
 
-        <p class="text-sm text-gray-500 sm:ml-4 sm:pl-4 sm:border-l-2 sm:border-gray-200 sm:py-2 sm:mt-0 mt-4">© {{ Carbon\Carbon::now()->year }} Wana</p>
+        <p class="text-xs sm:text-sm text-gray-500 ml-3 sm:ml-4 pl-3 sm:pl-4 border-l-2 border-gray-200 sm:py-2">
+            © {{ Carbon\Carbon::now()->year }} Wana
+        </p>
 
-        <span class="inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start">
+        <span class="inline-flex ml-auto justify-start">
             <a class="text-gray-500">
                 <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                     <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"></path>

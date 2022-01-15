@@ -27,5 +27,6 @@ class News extends Model
     protected function defaultProfilePhotoUrl()
     {
         return 'https://dummyimage.com/720x400';
+        // 'https://dummyimage.com/600x360'
     }
 }

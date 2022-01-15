@@ -13,7 +13,9 @@ class CreateNewsTable extends Migration
             $table->string('title');
             $table->text('body');
             $table->text('news_photo_path');
-            $table->boolean('is_event');
+            $table->boolean('is_event')->default(0);
+            $table->string('status')->default('aktif');
+            $table->string('contact')->nullable();
             $table->timestamps();
         });
     }

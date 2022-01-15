@@ -1,6 +1,6 @@
 <x-guest-layout>
 
-    <section class="mt-20">
+    <section class="mt-16">
         @include('_swiper-image')
 
         <x-divide-section />
