@@ -8,13 +8,13 @@
             
             <section class="p-8 mx-auto bg-white rounded-md shadow-md dark:bg-gray-800">
                 
-                <form action="{{ route('news.store') }}" method="POST" enctype="multipart/form-data">
+                <form action="{{ route('d.news.store') }}" method="POST" enctype="multipart/form-data">
                     @csrf
 
                     <div class="grid grid-cols-1 gap-y-8">
                         <div>
                             <x-label for="title" class="mb-2">Judul</x-label>
-                            <x-input id="title" type="text" name="title" class="w-full px-4 py-2" value="{{ old('title') }}" />
+                            <x-input id="title" type="text" name="title" class="w-full" value="{{ old('title') }}" />
 
                             @error('title')
                                 <p class="text-red-500 text-xs mt-1">{{ $message }}</p>
@@ -60,7 +60,7 @@
 
                             <div class="mt-6">
                                 <x-label for="contact" class="mb-2">Whatsapp</x-label>
-                                <x-input id="contact" type="tel" name="contact" class="w-full px-4 py-2" placeholder="628123456789" value="{{ old('contact') }}" />
+                                <x-input id="contact" type="tel" name="contact" class="w-full" placeholder="628123456789" value="{{ old('contact') }}" />
     
                                 @error('contact')
                                     <p class="text-red-500 text-xs mt-1">{{ $message }}</p>

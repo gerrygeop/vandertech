@@ -1,7 +1,7 @@
 <x-guest-layout>
 
-    <section class="min-h-screen my-16 text-gray-600">
-        <div class="max-w-5xl mx-auto py-0 xl:py-10">
+    <section class="min-h-screen mt-16 pb-24 bg-white text-gray-600">
+        <div class="max-w-5xl mx-auto">
             @include('_news-detail')
 
             

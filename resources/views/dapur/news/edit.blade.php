@@ -5,16 +5,15 @@
 
     <div class="py-8">
         <div class="max-w-6xl mx-auto sm:px-6 lg:px-8">
-
             <section class="p-8 mx-auto bg-white rounded-md shadow-md dark:bg-gray-800">
                 
-                <form action="{{ route('news.update', $news) }}" method="POST" enctype="multipart/form-data">
+                <form action="{{ route('d.news.update', $news) }}" method="POST" enctype="multipart/form-data">
                     @csrf
                     @method('PUT')
 
-                    <div class="w-32">
+                    <div class="w-28">
                         <x-toggle-switch name="status" checked="{{ $news->status }}">
-                            Status
+                            Aktif
                         </x-toggle-switch>
                     </div>
 

@@ -3,8 +3,10 @@
 use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\{
-    NewsController,
     FrontNewsController,
+    NewsController,
+    AffiliationController,
+    AffiliationImageController,
 };
 
 Route::get('/', function () {
@@ -37,11 +39,19 @@ Route::get('/9t-coffee', function () {
     return view('afiliasi.9t-coffee');
 })->name('9t-coffee');
 
-// Route News
-Route::resource('news', NewsController::class)->middleware(['auth']);
 
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth'])->name('dashboard');
+Route::middleware('auth')->prefix('d')->name('d.')->group(function() {
+    // News & Event
+    Route::resource('news', NewsController::class);
+
+    // Afiliasi
+    Route::resource('affiliation', AffiliationController::class);
+    Route::post('/affiliations/{affiliation}/images', [AffiliationImageController::class, 'store'])->name('store.image');
+    Route::delete('/affiliations/{affiliation}/images/{image}', [AffiliationImageController::class, 'destroy'])->name('destroy.image');
+    
+    Route::get('/dashboard', function () {
+        return view('dashboard');
+    })->middleware(['auth'])->name('dashboard');
+});
 
 require __DIR__.'/auth.php';

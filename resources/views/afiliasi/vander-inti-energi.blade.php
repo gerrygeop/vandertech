@@ -1,32 +1,42 @@
 <x-content>
-    <div class="bg-white lg:shadow">
+    <div class="bg-white">
 
-        <div class="h-full w-full mb-8">
+        <div class="h-full w-full mb-12">
             <div class="swiper mySwiper">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide min-h-full aspect-video">
                         <img 
-                            src="{{ url('image/img-1.jpg') }}" 
+                            src="{{ url('image/intienergi/10.jpeg') }}" 
                             alt="">
                     </div>
                     <div class="swiper-slide min-h-full aspect-video">
                         <img 
-                        src="{{ url('image/img-2.jpg') }}"
+                            src="{{ url('image/intienergi/2.jpeg') }}" 
                             alt="">
                     </div>
                     <div class="swiper-slide min-h-full aspect-video">
                         <img 
-                            src="{{ url('image/img-3.jpg') }}"
+                            src="{{ url('image/intienergi/5.jpeg') }}" 
                             alt="">
                     </div>
                     <div class="swiper-slide min-h-full aspect-video">
                         <img 
-                            src="{{ url('image/img-4.jpg') }}"
+                            src="{{ url('image/intienergi/inti-1.jpeg') }}" 
                             alt="">
                     </div>
                     <div class="swiper-slide min-h-full aspect-video">
                         <img 
-                            src="{{ url('image/img-5.jpg') }}"
+                            src="{{ url('image/intienergi/inti-2.jpeg') }}" 
+                            alt="">
+                    </div>
+                    <div class="swiper-slide min-h-full aspect-video">
+                        <img 
+                            src="{{ url('image/intienergi/inti-3.jpeg') }}" 
+                            alt="">
+                    </div>
+                    <div class="swiper-slide min-h-full aspect-video">
+                        <img 
+                            src="{{ url('image/intienergi/inti-4.jpeg') }}" 
                             alt="">
                     </div>
                 </div>
@@ -42,7 +52,7 @@
                 <img 
                     src="{{ url('image/logo-afiliasi/vander-inti.png') }}" 
                     alt="Vander Inti Energi"
-                    class="w-full shrink"
+                    class="w-auto max-h-44 lg:max-h-60 mx-auto shrink"
                 >
             </div>
 

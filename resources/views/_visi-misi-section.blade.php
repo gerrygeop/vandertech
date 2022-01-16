@@ -1,5 +1,5 @@
 <div style="background-image: url({{ asset('image/img-1.jpg') }})" class="background-img backdrop-filter backdrop-blur" id="visi-misi">
-    <div class="bg-blue-600 bg-opacity-90 py-14">
+    <div class="bg-blue-600 bg-opacity-90 py-14 min-h-screen">
         <div class="max-w-6xl mx-auto px-6">
 
             <div class="flex justify-center w-full mb-6 lg:mb-8">

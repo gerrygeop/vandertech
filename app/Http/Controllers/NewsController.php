@@ -13,12 +13,12 @@ class NewsController extends Controller
     public function index()
     {
         $news = News::latest()->get();
-        return view('news.index', compact('news'));
+        return view('dapur.news.index', compact('news'));
     }
 
     public function create()
     {
-        return view('news.create');
+        return view('dapur.news.create');
     }
 
     public function store(Request $request)
@@ -50,17 +50,17 @@ class NewsController extends Controller
             'contact' => $request->contact,
         ]);
 
-        return redirect()->route('news.index')->with('success', 'Berhasil Menambahkan News');
+        return redirect()->route('d.news.index')->with('success', 'Berhasil Menambahkan News');
     }
 
     public function show(News $news)
     {
-        return view('news.show', compact('news'));
+        return view('dapur.news.show', compact('news'));
     }
 
     public function edit(News $news)
     {
-        return view('news.edit', compact('news'));
+        return view('dapur.news.edit', compact('news'));
     }
 
     public function update(Request $request, News $news)
@@ -108,7 +108,7 @@ class NewsController extends Controller
             'status' => $status,
         ]);
 
-        return redirect()->route('news.index')->with('success', 'Berhasil Mengupdate News');
+        return redirect()->route('d.news.index')->with('success', 'Berhasil Mengupdate News');
     }
 
     public function destroy(News $news)

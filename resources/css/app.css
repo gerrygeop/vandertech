@@ -19,4 +19,11 @@
     .btn-add-primary {
         @apply inline-flex items-center px-4 py-2 bg-indigo-500 text-white text-sm rounded-md shadow shadow-indigo-500/50;
     }
+
+    .btn-hover-primary {
+        @apply p-2 text-indigo-600 hover:text-indigo-800 hover:underline;
+    }
+    .btn-hover-danger {
+        @apply p-2 text-red-500 hover:text-red-700 hover:underline;
+    }
 }

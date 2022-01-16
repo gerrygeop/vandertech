@@ -16,14 +16,14 @@
 [X] Vander Geo lab *pakai spasi
 [X] CRUD news & event
 [] Foto di slide diganti
-[] Deskripsi Indo Training diperbaiki
-[] Foto pada setiap halaman perusahaan dibuat slide show
+[] Foto pada setiap halaman perusahaan afiliasi dibuat slide show
 [X] Pindahkan detail about section pada halaman profil perusahaan
-[] Kontak setiap event dibuat dinamis
+[X] Kontak setiap event dibuat dinamis
 [] CRUD pada perusahaan afiliasi
     - Nama perusahaan
     - Logo
     - Deskripsi/Detail/About
+    - List pelatihan/fitur dsb (optional) *buat tabel khusus
     - Foto
     - Kontak
-[] Perusahaan afiliasi bisa punya kontak section tersendiri (dinamis)
+[X] Perusahaan afiliasi bisa punya kontak section tersendiri (dinamis)

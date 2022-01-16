@@ -10,12 +10,13 @@
                 </div>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
 
                 @foreach ($news as $new)
                     <x-card-news 
                         link="{{ route('news-event.detail', $new) }}" 
                         cover="{{ $new->getPhoto() }}" 
+                        timestamp="{{ $new->created_at }}"
                         heading="{{ $new->title }}"
                         isEvent="{{ $new->is_event }}"
                     >

@@ -8,8 +8,6 @@
 
         <div class="w-full lg:w-2/3 mx-auto">
             <div class="flex flex-col">
-                <x-input type="text" class="hidden" id="nama-kegiatan" value="{{ $news->title }}" />
-
                 <div class="mb-4">
                     <x-label for="nama" class="mb-2">Nama</x-label>
                     <x-input type="text" class="w-full" id="nama" required />
@@ -33,19 +31,15 @@
         const btnKirim = document.getElementById('btn-wa');
 
         btnKirim.addEventListener('click', function() {
-            // const pesan = document.getElementById('pesan').value;
-            const kegiatan = document.getElementById('nama-kegiatan').value;
             const nama = document.getElementById('nama').value;
             const asal = document.getElementById('asal').value;
 
-            const text = 'Halo, Nama saya *'+nama+'* dari *'+asal+'* ingin mendaftar pada kegiatan *'+kegiatan+'*';
+            const text = 'Halo, Nama saya *'+nama+'* dari *'+asal+'* ingin mendaftar pada kegiatan *'+@json($news->title)+'*';
 
-            let win = window.open('https://api.whatsapp.com/send?phone=6281319382454&text='+text);
+            let win = window.open('https://api.whatsapp.com/send?phone='+@json($news->contact)+'&text='+text);
             if (win) {
-                //Browser has allowed it to be opened
                 win.focus();
             } else {
-                //Browser has blocked it
                 alert('Please allow popups for this website');
             }
             return false;

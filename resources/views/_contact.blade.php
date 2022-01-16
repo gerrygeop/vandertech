@@ -24,7 +24,8 @@
                         <a class="text-indigo-500 leading-relaxed text-sm">example@email.com</a>
                         
                         <h2 class="font-semibold text-gray-600 tracking-widest text-xs mt-4">TELP</h2>
-                        <p class="leading-relaxed">123-456-7890</p>
+                        <p id="telp1" class="text-indigo-500 text-sm leading-relaxed cursor-pointer hover:underline">+62 812-5035-5998</p>
+                        <p id="telp2" class="text-indigo-500 text-sm leading-relaxed cursor-pointer hover:underline">+62 822-3299-9294</p>
                     </div>
                 </div>
             </div>
@@ -43,3 +44,33 @@
 
     </div>
 </section>
+
+@push('scripts')
+    <script>
+        const telp1 = document.getElementById('telp1');
+        const telp2 = document.getElementById('telp2');
+
+        telp1.addEventListener('click', function() {
+            let win = window.open('https://api.whatsapp.com/send?phone=6281250355998');
+            if (win) {
+                //Browser has allowed it to be opened
+                win.focus();
+            } else {
+                //Browser has blocked it
+                alert('Please allow popups for this website');
+            }
+            return false;
+        });
+        telp2.addEventListener('click', function() {
+            let win = window.open('https://api.whatsapp.com/send?phone=6282232999294');
+            if (win) {
+                //Browser has allowed it to be opened
+                win.focus();
+            } else {
+                //Browser has blocked it
+                alert('Please allow popups for this website');
+            }
+            return false;
+        });
+    </script>
+@endpush
