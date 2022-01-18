@@ -25,13 +25,14 @@ class AffiliationRequest extends FormRequest
     {
         return [
             'name' => 'required|string',
-            'logo_path' => 'required|image|mimes:jpg,jpeg,png',
+            'logo_path' => 'image|mimes:jpg,jpeg,png',
             'description' => 'required',
             'address' => 'nullable',
             'telp' => 'nullable|numeric|digits_between:12,14',
             'email' => 'nullable|email',
             'maps' => 'nullable',
             'hidden' => 'bool',
+            'slug' => 'nullable',
         ];
     }
 }

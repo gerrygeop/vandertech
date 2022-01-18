@@ -6,7 +6,7 @@ use App\Http\Controllers\{
     FrontNewsController,
     NewsController,
     AffiliationController,
-    AffiliationImageController,
+    AffiliationPhotoController,
 };
 
 Route::get('/', function () {
@@ -46,8 +46,8 @@ Route::middleware('auth')->prefix('d')->name('d.')->group(function() {
 
     // Afiliasi
     Route::resource('affiliation', AffiliationController::class);
-    Route::post('/affiliations/{affiliation}/images', [AffiliationImageController::class, 'store'])->name('store.image');
-    Route::delete('/affiliations/{affiliation}/images/{image}', [AffiliationImageController::class, 'destroy'])->name('destroy.image');
+    Route::post('/affiliations/{affiliation}/photos', [AffiliationPhotosController::class, 'store'])->name('store.photo');
+    Route::delete('/affiliations/{affiliation}/photos/{photo}', [AffiliationPhotosController::class, 'destroy'])->name('destroy.photo');
     
     Route::get('/dashboard', function () {
         return view('dashboard');

@@ -12,7 +12,7 @@
                     @method('PUT')
 
                     <div class="w-32">
-                        <x-toggle-switch name="hidden" checked="{{ $affiliation->status }}">
+                        <x-toggle-switch name="hidden" value="1" checked="{{ $affiliation->status }}">
                             Sembunyikan
                         </x-toggle-switch>
                     </div>
@@ -85,7 +85,12 @@
 
                             <div class="mt-6">
                                 <x-label for="maps" class="mb-2">Maps</x-label>
-                                <x-input id="maps" type="text" name="maps" class="w-full" value="{{ old('maps', $affiliation->maps) }}" />
+                                <textarea 
+                                    name="maps" 
+                                    id="maps" 
+                                    rows="5"
+                                    class="w-full form-input"
+                                    placeholder="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15958...">{{ old('maps', $affiliation->maps) }}</textarea>
     
                                 @error('maps')
                                     <p class="text-red-500 text-xs mt-1">{{ $message }}</p>

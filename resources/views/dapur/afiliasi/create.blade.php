@@ -41,7 +41,7 @@
 
                         <div class="flex flex-col p-4 mt-4 border rounded-md">
                             <div class="mb-3">
-                                <p class="font-light text-sm text-gray-500 italic">*Kontak (kosongkan jika tidak diperlukan)</p>
+                                <p class="font-light text-sm text-gray-500 italic">*Kontak (Dapat dikosongkan)</p>
                             </div>
 
                             <div class="mt-6">
@@ -73,7 +73,12 @@
 
                             <div class="mt-6">
                                 <x-label for="maps" class="mb-2">Maps</x-label>
-                                <x-input id="maps" type="text" name="maps" class="w-full" value="{{ old('maps') }}" />
+                                <textarea 
+                                    name="maps" 
+                                    id="maps" 
+                                    rows="5"
+                                    class="w-full form-input"
+                                    placeholder="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15958...">{{ old('maps') }}</textarea>
     
                                 @error('maps')
                                     <p class="text-red-500 text-xs mt-1">{{ $message }}</p>

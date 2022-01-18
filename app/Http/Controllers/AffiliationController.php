@@ -14,16 +14,14 @@ class AffiliationController extends Controller
 {
     public function index()
     {
-        $affiliations = Affiliation::latest()
-            ->with('images')
-            ->get();
+        $affiliations = Affiliation::latest()->get();
 
         return view('dapur.afiliasi.index', compact('affiliations'));
     }
 
     public function show(Affiliation $affiliation)
     {
-        $affiliation->load('images');
+        $affiliation->load('photos');
         return view('dapur.afiliasi.show', compact('affiliation'));
     }
 
@@ -34,6 +32,9 @@ class AffiliationController extends Controller
 
     public function store(AffiliationRequest $request)
     {
+        $request->validate([
+            'logo_path' => 'required',
+        ]);
         $validator = $request->validated();
 
         if ($request->hasFile('logo_path')) {
@@ -43,6 +44,7 @@ class AffiliationController extends Controller
             $validator['logo_path'] = $logo_name;
         }
 
+        $validator['slug'] = Str::slug($validator['name']);
         Affiliation::create($validator);
 
         return redirect()->route('d.affiliation.index')->with('success', 'Berhasil menambahkan perusahaan afiliasi');
@@ -55,17 +57,13 @@ class AffiliationController extends Controller
 
     public function update(AffiliationRequest $request, Affiliation $affiliation)
     {
-        if (!$request->hasFile('logo_path')) {
-            $request['logo_path'] = $affiliation['logo_path'];
-        }
-
         $validator = $request->validated();
-
+        
         if ($request->hasFile('logo_path')) {
             $old_logo = $affiliation->logo_path;
 
-            if (Storage::disk('public')->exists('logo-afiliasi/'.$old_logo)) {
-                Storage::disk('public')->delete('logo-afiliasi/'.$old_logo);
+            if (Storage::exists('logo-afiliasi/'.$old_logo)) {
+                Storage::delete('logo-afiliasi/'.$old_logo);
             }
 
             $new_logo = $request->logo_path;
@@ -75,6 +73,11 @@ class AffiliationController extends Controller
             $validator['logo_path'] = $logo_name;
         }
 
+        if ($request->hidden) {
+            $validator['hidden'] = 1;
+        }
+
+        $validator['slug'] = Str::slug($validator['name']);
         DB::transaction(function() use ($affiliation, $validator) {
             $affiliation->update($validator);
         });
@@ -84,6 +87,11 @@ class AffiliationController extends Controller
 
     public function destroy(Affiliation $affiliation)
     {
+        $affiliation->photos()->each(function($photo) {
+            Storage::delete($photo->path);
+            $photo->delete();
+        });
+
         $affiliation->delete();
         return redirect()->route('d.affiliation.index')->with('success', 'Berhasil menghapus perusahaan afiliasi');
     }

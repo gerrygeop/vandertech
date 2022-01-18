@@ -44,6 +44,7 @@ class NewsController extends Controller
 
         News::create([
             'title' => $request->title,
+            'slug' => Str::slug($request->title),
             'body' => $request->body,
             'news_photo_path' => $new_name,
             'is_event' => $is_event,
@@ -77,8 +78,8 @@ class NewsController extends Controller
         if ($request->hasFile('news_photo_path')) {
             $old_cover = $news->news_photo_path;
 
-            if (Storage::disk('public')->exists('news-cover/'.$old_cover)) {
-                Storage::disk('public')->delete('news-cover/'.$old_cover);
+            if (Storage::exists('news-cover/'.$old_cover)) {
+                Storage::delete('news-cover/'.$old_cover);
             }
 
             $cover = $request->news_photo_path;
@@ -102,6 +103,7 @@ class NewsController extends Controller
 
         $news->update([
             'title' => $request->title,
+            'slug' => Str::slug($request->title),
             'body' => $request->body,
             'is_event' => $is_event,
             'contact' => $request->contact,
@@ -114,8 +116,8 @@ class NewsController extends Controller
     public function destroy(News $news)
     {
         $old_cover = Str::after($news->news_photo_path, 'public/');
-        if (Storage::disk('public')->exists($old_cover)) {
-            Storage::disk('public')->delete($old_cover);
+        if (Storage::exists($old_cover)) {
+            Storage::delete($old_cover);
         }
 
         $news->delete();

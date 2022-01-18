@@ -13,13 +13,12 @@ class CreateAffiliationsTable extends Migration
             $table->string('name');
             $table->text('logo_path');
             $table->text('description');
-            $table->string('address')->nullable();
+            $table->text('address')->nullable();
             $table->string('telp')->nullable();
             $table->string('email')->nullable();
             $table->text('maps')->nullable();
             $table->boolean('hidden')->default(false);
             $table->timestamps();
-            $table->softDeletes();
         });
     }
 

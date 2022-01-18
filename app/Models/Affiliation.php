@@ -4,17 +4,15 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Eloquent\SoftDeletes;
 
-use Illuminate\Database\Eloquent\Relations\MorphMany;
-use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 
 use Illuminate\Support\Str;
 use Illuminate\Support\Facades\Storage;
 
 class Affiliation extends Model
 {
-    use HasFactory, SoftDeletes;
+    use HasFactory;
 
     protected $guarded = ['id'];
 
@@ -22,20 +20,20 @@ class Affiliation extends Model
         'hidden' => 'bool'
     ];
 
-    public function images(): MorphMany
+    public function getRouteKeyName()
     {
-        return $this->morphMany(Image::class, 'resource');
+        return 'slug';
     }
 
-    public function featuredImage(): BelongsTo
+    public function photos(): HasMany
     {
-        return $this->belongsTo(Image::class, 'featured_image_id');
+        return $this->hasMany(Photo::class);
     }
 
     public function getLogo()
     {
         $logo = $this->logo_path;
-        if ($this->logo_path && Storage::disk('public')->exists('logo-afiliasi/'.$logo)) {
+        if ($this->logo_path && Storage::exists('logo-afiliasi/'.$logo)) {
             return asset('storage/logo-afiliasi/' . $this->logo_path);
         }
 

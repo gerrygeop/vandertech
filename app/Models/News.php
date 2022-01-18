@@ -14,10 +14,15 @@ class News extends Model
 
     protected $guarded = ['id'];
 
+    public function getRouteKeyName()
+    {
+        return 'slug';
+    }
+
     public function getPhoto()
     {
         $photo = $this->news_photo_path;
-        if ($this->news_photo_path && Storage::disk('public')->exists('news-cover/'.$photo)) {
+        if ($this->news_photo_path && Storage::exists('news-cover/'.$photo)) {
             return asset('storage/news-cover/' . $this->news_photo_path);
         }
 

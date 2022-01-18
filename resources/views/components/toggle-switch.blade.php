@@ -1,4 +1,4 @@
-@props(['name', 'checked' => ''])
+@props(['name', 'value' => 'aktif', 'checked' => ''])
 
 @php
     if ($checked === 'aktif' || $checked === 1) {
@@ -11,7 +11,7 @@
     <input 
         type="checkbox" 
         name="{{ $name }}"
-        value="aktif"
+        value="{{ $value }}"
         class="absolute left-1/2 -translate-x-1/2 w-full h-full peer appearance-none hidden rounded-md" 
         {{ $checked }}
     />
