@@ -5,7 +5,7 @@
 
     <div class="py-8">
         <div class="max-w-6xl mx-auto sm:px-6 lg:px-8">
-            <section class="p-8 mx-auto bg-white rounded-md shadow-md dark:bg-gray-800">
+            <section class="p-8 mx-auto bg-white rounded-md shadow-md dark:bg-slate-800">
                 
                 <form action="{{ route('d.affiliation.store') }}" method="POST" enctype="multipart/form-data">
                     @csrf
@@ -41,7 +41,7 @@
 
                         <div class="flex flex-col p-4 mt-4 border rounded-md">
                             <div class="mb-3">
-                                <p class="font-light text-sm text-gray-500 italic">*Kontak (Dapat dikosongkan)</p>
+                                <p class="font-light text-sm text-slate-500 italic">*Kontak (Dapat dikosongkan)</p>
                             </div>
 
                             <div class="mt-6">

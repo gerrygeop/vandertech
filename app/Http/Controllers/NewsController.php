@@ -34,7 +34,7 @@ class NewsController extends Controller
         if ($request->hasFile('news_photo_path')) {
             $cover = $request->news_photo_path;
             $new_name = Str::random(11).time().'.'.$cover->getClientOriginalExtension();
-            $request->file('news_photo_path')->storeAs('public/news-cover', $new_name);
+            $request->file('news_photo_path')->storeAs('news-cover', $new_name);
         }
 
         $is_event = 0;
@@ -76,15 +76,12 @@ class NewsController extends Controller
         ]);
 
         if ($request->hasFile('news_photo_path')) {
-            $old_cover = $news->news_photo_path;
-
-            if (Storage::exists('news-cover/'.$old_cover)) {
-                Storage::delete('news-cover/'.$old_cover);
+            if (Storage::exists('news-cover/'.$news->news_photo_path)) {
+                Storage::delete('news-cover/'.$news->news_photo_path);
             }
 
-            $cover = $request->news_photo_path;
-            $new_name = Str::random(11).time().'.'.$cover->getClientOriginalExtension();
-            $request->file('news_photo_path')->storeAs('public/news-cover', $new_name);
+            $new_name = Str::random(11).time().'.'.$request->news_photo_path->getClientOriginalExtension();
+            $request->file('news_photo_path')->storeAs('news-cover', $new_name);
 
             $news->update([
                 'news_photo_path' => $new_name,
@@ -115,9 +112,8 @@ class NewsController extends Controller
 
     public function destroy(News $news)
     {
-        $old_cover = Str::after($news->news_photo_path, 'public/');
-        if (Storage::exists($old_cover)) {
-            Storage::delete($old_cover);
+        if (Storage::exists('news-cover/'.$news->news_photo_path)) {
+            Storage::delete('news-cover/'.$news->news_photo_path);
         }
 
         $news->delete();

@@ -7,6 +7,8 @@ use App\Http\Controllers\{
     NewsController,
     AffiliationController,
     AffiliationPhotoController,
+    PartnerController,
+    CategoryController,
 };
 
 Route::get('/', function () {
@@ -44,10 +46,16 @@ Route::middleware('auth')->prefix('d')->name('d.')->group(function() {
     // News & Event
     Route::resource('news', NewsController::class);
 
+    // Mitra / partners
+    Route::resource('partner', PartnerController::class);
+    
+    // Kategori mitra
+    Route::resource('category', CategoryController::class)->except('show');
+
     // Afiliasi
     Route::resource('affiliation', AffiliationController::class);
-    Route::post('/affiliations/{affiliation}/photos', [AffiliationPhotosController::class, 'store'])->name('store.photo');
-    Route::delete('/affiliations/{affiliation}/photos/{photo}', [AffiliationPhotosController::class, 'destroy'])->name('destroy.photo');
+    Route::post('/affiliations/{affiliation}/photos', [AffiliationPhotoController::class, 'store'])->name('store.photo');
+    Route::delete('/affiliations/{affiliation}/photos/{photo}', [AffiliationPhotoController::class, 'destroy'])->name('destroy.photo');
     
     Route::get('/dashboard', function () {
         return view('dashboard');

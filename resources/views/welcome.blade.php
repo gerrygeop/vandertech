@@ -1,9 +1,7 @@
 <x-guest-layout>
 
-    <section class="mt-16">
+    <section class="pt-20">
         @include('_swiper-image')
-
-        <x-divide-section />
 
         @include('_about-section')
 
@@ -11,11 +9,7 @@
 
         @include('_mitra-section')
 
-        <x-divide-section />
-
         @include('_contact')
-
-        @include('_footer')
     </section>
 
 </x-guest-layout>

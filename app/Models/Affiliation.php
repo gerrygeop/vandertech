@@ -30,7 +30,7 @@ class Affiliation extends Model
         return $this->hasMany(Photo::class);
     }
 
-    public function getLogo()
+    public function getLogoAffiliation()
     {
         $logo = $this->logo_path;
         if ($this->logo_path && Storage::exists('logo-afiliasi/'.$logo)) {

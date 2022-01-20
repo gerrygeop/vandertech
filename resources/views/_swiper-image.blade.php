@@ -33,7 +33,7 @@
         }
         .swiper-button-next,
         .swiper-button-prev{
-            color: #2563eb;
+            color: #334155;
             height: 20px !important;
             width: 10px !important;
             font-weight: bold
@@ -72,8 +72,8 @@
             </div>
         </div>
 
-        <div class="swiper-button-next bg-gray-50/40 p-6"></div>
-        <div class="swiper-button-prev bg-gray-50/40 p-6"></div>
+        <div class="swiper-button-next bg-slate-50/40 p-6"></div>
+        <div class="swiper-button-prev bg-slate-50/40 p-6"></div>
         <div class="swiper-pagination"></div>
     </div>
 </div>

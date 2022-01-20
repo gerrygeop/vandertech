@@ -1,1 +1,1 @@
-<div class="border-t border-gray-300"></div>
+<div class="border-t border-slate-300"></div>

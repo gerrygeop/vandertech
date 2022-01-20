@@ -1,6 +1,5 @@
 <x-content>
-    <div class="bg-white">
-
+    <x-slot name="swiper">
         <div class="h-full w-full mb-12">
             <div class="swiper mySwiper">
                 <div class="swiper-wrapper">
@@ -40,13 +39,15 @@
                             alt="">
                     </div>
                 </div>
-
-                <div class="swiper-button-next bg-gray-50/40 p-4 lg:p-6"></div>
-                <div class="swiper-button-prev bg-gray-50/40 p-4 lg:p-6"></div>
+    
+                <div class="swiper-button-next bg-slate-50/40 p-4 lg:p-6"></div>
+                <div class="swiper-button-prev bg-slate-50/40 p-4 lg:p-6"></div>
                 <div class="swiper-pagination"></div>
             </div>
         </div>
+    </x-slot>
 
+    <div class="bg-white">
         <div class="grid grid-cols-6 gap-y-4 gap-x-8 items-center px-4 lg:px-14 pb-12">
             <div class="col-span-full md:col-span-2 p-4 md:p-0">
                 <img 
@@ -73,19 +74,7 @@
             </div>
 
             <div class="col-span-full">
-                <p class="text-base text-gray-700">
-                    Pelatihan:
-                </p>
-                <ul class="list-disc list-inside leading-loose tracking-wide">
-                    <li>POP</li>
-                    <li>POM</li>
-                    <li>POU</li>
-                    <li>Ahli K3 Umum</li>
-                </ul>
-            </div>
-
-            <div class="col-span-full">
-                <p class="text-base text-gray-700">
+                <p class="text-base text-slate-700">
                     Layanan Jasa Pembuatan Dokumen:
                 </p>
                 <ul class="list-disc list-inside leading-loose tracking-wide">
@@ -99,6 +88,5 @@
                 </ul>
             </div>
         </div>
-
     </div>
 </x-content>

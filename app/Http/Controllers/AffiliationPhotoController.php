@@ -22,7 +22,7 @@ class AffiliationPhotoController extends Controller
             'photo' => 'image|max:5000|mimes:jpg,jpeg,png',
         ]);
 
-        $path = $request->file('photo')->storePublicly('/', ['disk' => 'public']);
+        $path = $request->file('photo')->storePublicly('/');
 
         $photo = $affiliation->photos()->create([
             'path' => $path,

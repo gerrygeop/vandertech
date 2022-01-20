@@ -1,9 +1,9 @@
 <div class="min-h-screen px-6 py-16 mx-auto text-center flex justify-center items-center">
     <div class="max-w-lg mx-auto">
-        <h1 class="text-4xl md:text-5xl font-bold text-gray-800 dark:text-white">Vander Tech</h1>
-        <h2 class="text-xl md:text-2xl font-semibold text-gray-800 dark:text-white uppercase">Resource</h2>
+        <h1 class="text-4xl md:text-5xl font-bold text-slate-800 dark:text-white">Vander Tech</h1>
+        <h2 class="text-xl md:text-2xl font-semibold text-slate-800 dark:text-white uppercase">Resource</h2>
         
-        <p class="mt-6 text-gray-500 dark:text-gray-300">
+        <p class="mt-6 text-slate-500 dark:text-slate-300">
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Libero similique obcaecati illum mollitia.
         </p>
 

@@ -16,10 +16,10 @@
 
             <main class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
                 <div class="text-left">
-                    <h2 class="text-3xl tracking-tight font-semibold text-gray-900">
+                    <h2 class="text-3xl tracking-tight font-semibold text-slate-900">
                         <span class="block xl:inline">Data to enrich your</span>
                     </h2>
-                    <p class="mt-3 text-base text-gray-500 sm:mt-5 sm:max-w-xl sm:mx-auto md:mt-5 lg:mx-0 indent-8">
+                    <p class="mt-3 text-base text-slate-500 sm:mt-5 sm:max-w-xl sm:mx-auto md:mt-5 lg:mx-0 indent-8">
                         Lorem ipsum dolor, sit amet consectetur adipisicing elit. Expedita ipsum, distinctio exercitationem possimus doloremque nemo deleniti perspiciatis fugit aliquid quod nesciunt vitae laborum eligendi? Maiores tempora perspiciatis suscipit quidem voluptates. Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat fugiat aliqua. Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati maxime ea dolorem minus temporibus vitae architecto velit eveniet error? Laboriosam nihil saepe et ab repudiandae eos dolorem illum ipsam soluta. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vitae, enim reiciendis vero voluptatum laborum blanditiis ipsam iure explicabo voluptates, repellendus molestiae iste velit quibusdam accusantium. Sunt iusto id consectetur magni.
                     </p>
                 </div>

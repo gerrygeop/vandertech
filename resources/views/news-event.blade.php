@@ -1,11 +1,11 @@
 <x-guest-layout>
 
-    <section class="min-h-screen mt-16 text-gray-600">    
-        <div class="max-w-6xl mx-auto px-4 pb-14 pt-8 lg:pt-12">
+    <section class="min-h-screen bg-slate-100/75 pt-20">    
+        <div class="max-w-6xl mx-auto px-3 lg:px-6 pb-12 pt-8 lg:pt-12">
 
             <div class="flex flex-wrap w-full mb-6 lg:mb-8">
                 <div>
-                    <h1 class="text-2xl lg:text-3xl font-medium mb-2 text-gray-800 dark:text-gray-100">News & Event</h1>
+                    <h1 class="text-2xl lg:text-3xl font-medium mb-2 text-slate-700 dark:text-slate-100">News & Event</h1>
                     <div class="h-0.5 w-20 bg-indigo-500 dark:bg-indigo-300 rounded"></div>
                 </div>
             </div>
@@ -26,7 +26,5 @@
             </div>
         </div>
     </section>
-
-    @include('_footer')
 
 </x-guest-layout>

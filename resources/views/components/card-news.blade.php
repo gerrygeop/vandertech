@@ -1,20 +1,19 @@
 <div class="col-span-1">
     <a href="{{ $link }}">
-        <div class="bg-white p-4 rounded-lg group hover:-translate-y-2 hover:shadow-lg overflow-hidden transition duration-200">
-            <img class="h-40 rounded w-full object-cover object-center mb-4" src="{{ $cover }}" alt="content">
+        <div class="bg-white p-4 rounded-lg group overflow-hidden transition duration-200">
+            <img class="h-44 lg:h-60 rounded w-full object-cover object-center mb-4" src="{{ $cover }}" alt="content">
 
             <div class="flex items-center py-1">
                 @if ($isEvent)
-                    <span class="tracking-widest text-indigo-500 text-xs font-medium uppercase pr-4">Pelatihan</span>
+                    <span class="tracking-widest text-blue-500 text-xs font-medium uppercase pr-4">Pelatihan</span>
                 @endif
 
-                <span class="text-xs text-gray-500">
+                <span class="text-xs text-slate-500">
                     {{ Carbon\Carbon::parse($timestamp)->toFormattedDateString() }}
                 </span>
             </div>
 
-            <h2 class="text-lg text-gray-900 font-medium mb-2 group-hover:underline">{{ $heading }}</h2>
-            {{-- <p class="leading-relaxed text-sm max-h-20 line-clamp-3">{{ $slot }}</p> --}}
+            <h2 class="text-lg text-slate-900 font-medium mb-2 group-hover:underline">{{ $heading }}</h2>
 
             <p class="inline-flex items-center -mx-1 mt-1 text-sm text-blue-500 capitalize transition duration-200 dark:text-blue-400 group-hover:underline group-hover:text-blue-600 dark:group-hover:text-blue-500">
                 <span class="mx-1">Selengkapnya</span>

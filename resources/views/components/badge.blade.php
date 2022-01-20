@@ -1,7 +1,7 @@
 @props(['status'])
 
 @php
-    $classes = 'bg-gray-100 text-gray-700';
+    $classes = 'bg-slate-100 text-slate-700';
 
     if ($status === 'sudah' || $status === 'aktif') {
         $classes = 'bg-green-100 text-green-700';

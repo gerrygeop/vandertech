@@ -1,9 +1,13 @@
 @extends('layouts.main-layout')
 
 @section('content')
-    <div class="bg-gray-100 dark:bg-gray-800">
-        <x-navbar />
-
-        {{ $slot }}
-    </div>
+    <main class="bg-pattern bg-slate-100">
+        <div class="max-w-7xl mx-auto">
+            <x-navbar />
+    
+            {{ $slot }}
+    
+            @include('_footer')
+        </div>
+    </main>
 @endsection

@@ -2,8 +2,8 @@
 
 @php
 
-$activeClass = 'text-indigo-700 bg-indigo-100';
-$inactiveClass = 'text-gray-500 hover:bg-gray-100 hover:text-gray-700';
+$activeClass = 'text-indigo-200 bg-indigo-700 shadow';
+$inactiveClass = 'text-slate-500 hover:bg-slate-100 hover:text-slate-700';
 
 $classes = ($active ?? false)
             ? $activeClass

@@ -14,7 +14,7 @@
             </div>
 
             <x-table>
-                <thead class="bg-gray-50">
+                <thead class="bg-slate-50">
                     <tr>
                         <x-th>
                             List Perusahaan
@@ -25,17 +25,17 @@
                     </tr>
                 </thead>
 
-                <tbody class="bg-white divide-y divide-gray-200">
+                <tbody class="bg-white divide-y divide-slate-200">
                     @forelse ($affiliations as $affiliation)
                         <tr>
                             <td class="px-6 py-4 whitespace-nowrap">
                                 <div class="flex items-center">
                                     <div class="flex-shrink-0 h-10 w-32">
-                                        <img class="h-full w-auto mx-auto" src="{{ $affiliation->getLogo() }}" alt="{{ $affiliation->name }}">
+                                        <img class="h-full w-auto mx-auto" src="{{ $affiliation->getLogoAffiliation() }}" alt="{{ $affiliation->name }}">
                                     </div>
 
                                     <div class="ml-4">
-                                        <div class="text-base font-normal text-gray-700">
+                                        <div class="text-base font-normal text-slate-700">
                                             {{ $affiliation->name }}
                                         </div>
                                     </div>
@@ -60,7 +60,7 @@
                     @empty
                         <tr>
                             <td class="px-6 py-4 whitespace-nowrap" colspan="2">
-                                <p class="text-sm text-center text-gray-500 italic">Belum ada data</p>
+                                <p class="text-sm text-center text-slate-500 italic">Belum ada data</p>
                             </td>
                         </tr>
 

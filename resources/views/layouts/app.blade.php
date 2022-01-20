@@ -2,7 +2,7 @@
 
 @section('content')
 
-    <div class="min-h-screen bg-gray-100 flex flex-col lg:flex-row">
+    <div class="min-h-screen bg-slate-100 flex flex-col lg:flex-row">
 
         <div class="block lg:hidden">
             @include('layouts.navigation')
@@ -18,7 +18,7 @@
                     <div class="flex items-center justify-between">
 
                         @if ($header)
-                            <h2 class="font-medium text-xl text-gray-600 leading-tight">
+                            <h2 class="font-medium text-xl text-slate-600 leading-tight">
                                 {{ $header }}
                             </h2>
                         @endif
@@ -26,7 +26,7 @@
                         <div class="hidden lg:flex lg:items-center sm:ml-6">
                             <x-dropdown align="right" width="48">
                                 <x-slot name="trigger">
-                                    <button class="flex items-center text-sm font-medium text-gray-500 hover:text-gray-700 hover:border-gray-300 focus:outline-none focus:text-gray-700 focus:border-gray-300 transition duration-150 ease-in-out">
+                                    <button class="flex items-center text-sm font-medium text-slate-500 hover:text-slate-700 hover:border-slate-300 focus:outline-none focus:text-slate-700 focus:border-slate-300 transition duration-150 ease-in-out">
                                         <div>{{ Auth::user()->name }}</div>
             
                                         <div class="ml-1">

@@ -1,78 +1,19 @@
-<div class="py-14 bg-white" id="mitra">
+<div class="bg-slate-100/75 py-14" id="mitra">
     <div class="max-w-6xl mx-auto px-6">
 
         <div class="flex justify-center w-full mb-6 lg:mb-8">
             <div>
-                <h1 class="text-2xl md:text-3xl font-medium font-heading tracking-wide mb-2 text-gray-800">Mitra Perusahaan</h1>
-                <div class="h-0.5 w-full bg-blue-500 rounded"></div>
+                <h1 class="text-2xl text-slate-700 md:text-3xl font-semibold font-heading tracking-wide mb-1">Mitra Perusahaan</h1>
+                <div class="h-1 w-full bg-blue-500"></div>
             </div>
         </div>
 
-        <div class="bg-white rounded-md overflow-hidden mb-3 py-6">
-            <div class="mb-8 px-4 w-11/12 bg-gradient-to-r from-blue-600">
-                <h3 class="text-base tracking-wider font-medium text-blue-50">Perizinan</h3>
-            </div>
-
-            <div class="grid grid-cols-2 gap-6 md:grid-cols-3 lg:grid-cols-6 px-2">
-                <div class="col-span-1">
-                    <x-card-mitra mitraLogo="6. PT. Jaya Mineral.png" mitraName="PT. Jaya Mineral" />
-                </div>
-    
-                <div class="col-span-1">
-                    <x-card-mitra mitraLogo="7. PT. Tambang Mulia.png" mitraName="PT. Tambang Mulia" />
-                </div>
-                
-                <div class="col-span-1">
-                    <x-card-mitra mitraLogo="8. PT. Chaido Mega Mineral.png" mitraName="PT. Chaido Mega Mineral" />
-                </div>
-                
-                <div class="col-span-1">
-                    <x-card-mitra mitraLogo="9. PT. Kevindo Ratu Mineral.png" mitraName="PT. Kevindo Ratu Mineral" />
-                </div>
-                
-                <div class="col-span-1">
-                    <x-card-mitra mitraLogo="10. PT. Borneo Indo Mineral.png" mitraName="PT. Borneo Indo Mineral" />
-                </div>
-                
-                <div class="col-span-1">
-                    <x-card-mitra mitraLogo="11. PT. Bumi Muller Kalteng.png" mitraName="PT. Bumi Muller Kalteng" />
-                </div>
-            </div>
-        </div>
-
-        <div class="bg-white rounded-md overflow-hidden mb-3 py-6">
-            <div class="mb-8 px-4 w-11/12 bg-gradient-to-r from-blue-600">
-                <h3 class="text-base tracking-wider font-medium text-blue-50">Pelatihan</h3>
-            </div>
-            
-            <div class="grid grid-cols-2 gap-6 md:grid-cols-3 lg:grid-cols-6 px-2">
-                <div class="col-span-1">
-                    <x-card-mitra mitraLogo="12. PT. Kobexindo Limestone.png" mitraName="PT. Kobexindo Limestone" />
-                </div>
-                <div class="col-span-1">
-                    <x-card-mitra mitraLogo="6. PT. Jaya Mineral.png" mitraName="PT. Jaya Mineral" />
-                </div>
-            </div>
-        </div>
-
-        <div class="bg-white rounded-md overflow-hidden mb-3 py-6">
-            <div class="mb-8 px-4 w-11/12 bg-gradient-to-r from-blue-600">
+        <div class="bg-white overflow-hidden mb-6 shadow-md">
+            <div class="mb-6 px-4 py-1 bg-gradient-to-r from-blue-600">
                 <h3 class="text-base tracking-wider font-medium text-blue-50">Pembuatan Dokumen</h3>
             </div>
 
-            <div class="grid grid-cols-2 gap-6 md:grid-cols-3 lg:grid-cols-6 px-2">
-                <div class="col-span-1">
-                    <x-card-mitra mitraLogo="14. CV. Bara Jaya Makmur.png" mitraName="CV. Bara Jaya Makmur" />
-                </div>
-                
-                <div class="col-span-1">
-                    <x-card-mitra mitraLogo="15. CV. Bara Mahakam.png" mitraName="CV. Bara Mahakam" />
-                </div>
-                
-                <div class="col-span-1">
-                    <x-card-mitra mitraLogo="16. CV. Bunga Bone.png" mitraName="CV. Bunga Bone" />
-                </div>
-                
+            <div class="grid grid-cols-2 gap-6 md:grid-cols-3 lg:grid-cols-6 p-2">
                 <div class="col-span-1">
                     <x-card-mitra mitraLogo="17. PT. Rabani Corporindo.png" mitraName="PT. Rabani Corporindo" />
                 </div>
@@ -98,13 +39,9 @@
                 </div>
                 
                 <div class="col-span-1">
-                    <x-card-mitra mitraLogo="13. CV. Kutai Kumala Energy.png" mitraName="CV. Kutai Kumala Energy" />
-                    {{-- <x-card-mitra mitraLogo="23. PT. Borneo Emas Hitam.png" mitraName="PT. Borneo Emas Hitam" /> --}}
-                </div>
-                
-                <div class="col-span-1">
                     <x-card-mitra mitraLogo="alam karya gemilang.jpeg" mitraName="PT. Alam Karya Gemilang" />
                 </div>
+
                 <div class="col-span-1">
                     <x-card-mitra mitraLogo="david bumi perkasa.jpeg" mitraName="PT. David Bumi Perkasa" />
                 </div>
@@ -163,6 +100,69 @@
                 
                 <div class="col-span-1">
                     <x-card-mitra mitraLogo="31. PT. Kintamani Bara Utama.png" mitraName="PT. Kintamani Bara Utama" />
+                </div>
+
+                <div class="col-span-1">
+                    <x-card-mitra mitraLogo="14. CV. Bara Jaya Makmur.png" mitraName="CV. Bara Jaya Makmur" />
+                </div>
+                
+                <div class="col-span-1">
+                    <x-card-mitra mitraLogo="15. CV. Bara Mahakam.png" mitraName="CV. Bara Mahakam" />
+                </div>
+                
+                <div class="col-span-1">
+                    <x-card-mitra mitraLogo="16. CV. Bunga Bone.png" mitraName="CV. Bunga Bone" />
+                </div>
+
+                <div class="col-span-1">
+                    <x-card-mitra mitraLogo="13. CV. Kutai Kumala Energy.png" mitraName="CV. Kutai Kumala Energy" />
+                </div>
+            </div>
+        </div>
+
+        <div class="bg-white overflow-hidden mb-6 shadow-md">
+            <div class="mb-6 px-4 py-1 bg-gradient-to-r from-blue-600">
+                <h3 class="text-base tracking-wider font-medium text-blue-50">Pelatihan</h3>
+            </div>
+            
+            <div class="grid grid-cols-2 gap-6 md:grid-cols-3 lg:grid-cols-6 p-2">
+                <div class="col-span-1">
+                    <x-card-mitra mitraLogo="12. PT. Kobexindo Limestone.png" mitraName="PT. Kobexindo Limestone" />
+                </div>
+                <div class="col-span-1">
+                    <x-card-mitra mitraLogo="6. PT. Jaya Mineral.png" mitraName="PT. Jaya Mineral" />
+                </div>
+            </div>
+        </div>
+
+        <div class="bg-white overflow-hidden mb-6 shadow-md">
+            <div class="mb-6 px-4 py-1 bg-gradient-to-r from-blue-600">
+                <h3 class="text-base tracking-wider font-medium text-blue-50">Perizinan</h3>
+            </div>
+
+            <div class="grid grid-cols-2 gap-6 md:grid-cols-3 lg:grid-cols-6 p-2">
+                <div class="col-span-1">
+                    <x-card-mitra mitraLogo="6. PT. Jaya Mineral.png" mitraName="PT. Jaya Mineral" />
+                </div>
+    
+                <div class="col-span-1">
+                    <x-card-mitra mitraLogo="7. PT. Tambang Mulia.png" mitraName="PT. Tambang Mulia" />
+                </div>
+                
+                <div class="col-span-1">
+                    <x-card-mitra mitraLogo="8. PT. Chaido Mega Mineral.png" mitraName="PT. Chaido Mega Mineral" />
+                </div>
+                
+                <div class="col-span-1">
+                    <x-card-mitra mitraLogo="9. PT. Kevindo Ratu Mineral.png" mitraName="PT. Kevindo Ratu Mineral" />
+                </div>
+                
+                <div class="col-span-1">
+                    <x-card-mitra mitraLogo="10. PT. Borneo Indo Mineral.png" mitraName="PT. Borneo Indo Mineral" />
+                </div>
+                
+                <div class="col-span-1">
+                    <x-card-mitra mitraLogo="11. PT. Bumi Muller Kalteng.png" mitraName="PT. Bumi Muller Kalteng" />
                 </div>
             </div>
         </div>

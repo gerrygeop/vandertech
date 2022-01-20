@@ -1,6 +1,5 @@
 <x-content>
-    <div class="bg-white">
-
+    <x-slot name="swiper">
         <div class="h-full w-full mb-12">
             <div class="swiper mySwiper">
                 <div class="swiper-wrapper">
@@ -25,13 +24,15 @@
                             alt="">
                     </div>
                 </div>
-
-                <div class="swiper-button-next bg-gray-50/40 p-4 lg:p-6"></div>
-                <div class="swiper-button-prev bg-gray-50/40 p-4 lg:p-6"></div>
+    
+                <div class="swiper-button-next bg-slate-50/40 p-4 lg:p-6"></div>
+                <div class="swiper-button-prev bg-slate-50/40 p-4 lg:p-6"></div>
                 <div class="swiper-pagination"></div>
             </div>
         </div>
+    </x-slot>
 
+    <div class="bg-white">
         <div class="grid grid-cols-6 gap-y-4 gap-x-8 items-center px-4 lg:px-14 pb-12">
             <div class="col-span-full md:col-span-2 p-4 md:p-0">
                 <img 
@@ -45,6 +46,5 @@
                 PT Vander Geo Laboratory adalah perusahaan yang bergerak dibidang jasa layanan laboratorium geoteknik dan geohidrologi dengan senantiasa memberikan rekomendasi terbaik bagi setiap mitra bisnis.
             </p>
         </div>
-
     </div>
 </x-content>

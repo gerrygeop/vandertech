@@ -29,13 +29,13 @@
 
             .swiper-slide img {
                 display: block;
-                width: auto;
+                width: 100%;
                 height: 100%;
                 object-fit: cover;
             }
             .swiper-button-next,
             .swiper-button-prev{
-                color: #2563eb;
+                color: #334155;
                 height: 20px !important;
                 width: 10px !important;
                 font-weight: bold
@@ -43,15 +43,15 @@
         </style>
     @endpush
 
-    <section class="min-h-screen mt-16 pb-24 bg-white text-gray-600">
-        <div class="max-w-5xl mx-auto">
+    <section class="min-h-screen pt-20 pb-24 bg-white text-slate-600">
+        <div>
+            {{ $swiper }}
+        </div>
 
+        <div class="max-w-6xl mx-auto">
             {{ $slot }}
-
         </div>
     </section>
-
-    @include('_footer')
 
     @push('scripts')
         <script>

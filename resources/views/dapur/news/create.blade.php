@@ -6,7 +6,7 @@
     <div class="py-8">
         <div class="max-w-6xl mx-auto sm:px-6 lg:px-8">
             
-            <section class="p-8 mx-auto bg-white rounded-md shadow-md dark:bg-gray-800">
+            <section class="p-8 mx-auto bg-white rounded-md shadow-md dark:bg-slate-800">
                 
                 <form action="{{ route('d.news.store') }}" method="POST" enctype="multipart/form-data">
                     @csrf
@@ -42,13 +42,13 @@
 
                         <div class="flex flex-col p-4 mt-4 border rounded-md">
                             <div class="mb-3">
-                                <p class="font-light text-sm text-gray-500 italic">*Form/kontak pendaftaran untuk pelatihan (kosongkan jika tidak diperlukan)</p>
+                                <p class="font-light text-sm text-slate-500 italic">*Form/kontak pendaftaran untuk pelatihan (kosongkan jika tidak diperlukan)</p>
                             </div>
 
                             <div>
                                 <div class="flex items-center">
                                     <x-input id="is_event" name="is_event" type="checkbox" value="1" />
-                                    <label for="is_event" class="ml-2 block text-sm font-medium text-gray-700">
+                                    <label for="is_event" class="ml-2 block text-sm font-medium text-slate-700">
                                         Aktifkan
                                     </label>
                                 </div>

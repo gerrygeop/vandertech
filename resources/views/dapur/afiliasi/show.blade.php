@@ -48,8 +48,8 @@
                             </div>
                         </div>
         
-                        <div class="swiper-button-next bg-gray-50/40 p-4 lg:p-6"></div>
-                        <div class="swiper-button-prev bg-gray-50/40 p-4 lg:p-6"></div>
+                        <div class="swiper-button-next bg-slate-50/40 p-4 lg:p-6"></div>
+                        <div class="swiper-button-prev bg-slate-50/40 p-4 lg:p-6"></div>
                         <div class="swiper-pagination"></div>
                     </div>
                 </div>
@@ -58,7 +58,7 @@
                     <div class="border">
                         <div class="float-none lg:float-left lg:pr-8">
                             <img 
-                                src="{{ $affiliation->getLogo() }}" 
+                                src="{{ $affiliation->getLogoAffiliation() }}" 
                                 alt="{{ $affiliation->name }}"
                                 class="w-auto max-h-40 lg:max-h-52 mx-auto shrink"
                             >
@@ -70,7 +70,7 @@
                     </div>
         
                     <div class="clear-both mt-8">
-                        <p class="text-base text-gray-700">
+                        <p class="text-base text-slate-700">
                             Layanan Jasa Pembuatan Dokumen:
                         </p>
                         <ul class="list-disc list-inside leading-loose tracking-wide">

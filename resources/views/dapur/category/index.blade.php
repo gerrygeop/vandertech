@@ -1,15 +1,15 @@
 <x-app-layout>
     <x-slot name="header">
-        {{ __('News & Event') }}
+        Kategori
     </x-slot>
 
     <div class="py-8">
         <div class="max-w-6xl mx-auto sm:px-6 lg:px-8">
 
             <div class="mb-3">
-                <a href="{{ route('d.news.create') }}" class="btn-add-primary">
+                <a href="{{ route('d.category.create') }}" class="btn-add-primary">
                     <x-icon classes="w-5 h-5 mr-1" d="M12 9v3m0 0v3m0-3h3m-3 0H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z" />
-                    News & Event
+                    Kategori
                 </a>
             </div>
 
@@ -17,10 +17,7 @@
                 <thead class="bg-slate-50">
                     <tr>
                         <x-th>
-                            Judul
-                        </x-th>
-                        <x-th>
-                            Status
+                            List Kategori
                         </x-th>
                         <th scope="col" class="relative px-6 py-3">
                             <span class="sr-only">Edit</span>
@@ -29,26 +26,17 @@
                 </thead>
 
                 <tbody class="bg-white divide-y divide-slate-200">
-                    @forelse ($news as $new)
+                    @forelse ($categories as $category)
                         <tr>
-                            <td class="px-6 py-4 whitespace-nowrap">
-                                <div class="flex items-center">
-                                    <p class="text-sm text-slate-700">
-                                        {{ $new->title }}
-                                    </p>
-                                </div>
+                            <td class="px-6 py-4 text-base font-medium text-slate-700 whitespace-nowrap">
+                                {{ $category->name }}
                             </td>
-                            <td class="px-6 py-4 whitespace-nowrap">
-                                <x-badge status="{{ $new->status }}">
-                                    {{ $new->status }}
-                                </x-badge>
-                            </td>
+
                             <td class="px-6 py-4 whitespace-nowrap text-sm">
                                 <div class="flex items-center justify-end">
-                                    <a href="{{ route('d.news.show', $new) }}" class="btn-hover-primary">Detail</a>
-                                    <a href="{{ route('d.news.edit', $new) }}" class="btn-hover-primary">Edit</a>
+                                    <a href="{{ route('d.category.edit', $category) }}" class="btn-hover-primary">Edit</a>
 
-                                    <form action="{{ route('d.news.destroy', $new) }}" method="POST">
+                                    <form action="{{ route('d.category.destroy', $category) }}" method="POST">
                                         @csrf
                                         @method('DELETE')
 
@@ -60,7 +48,7 @@
 
                     @empty
                         <tr>
-                            <td class="px-6 py-4 whitespace-nowrap" colspan="3">
+                            <td class="px-6 py-4 whitespace-nowrap" colspan="2">
                                 <p class="text-sm text-center text-slate-500 italic">Belum ada data</p>
                             </td>
                         </tr>

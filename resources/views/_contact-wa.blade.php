@@ -2,7 +2,7 @@
     <div class="max-w-4xl mx-auto">
 
         <div class="flex flex-col text-center w-full mb-8">
-            <h1 class="sm:text-3xl text-2xl font-medium mb-4 text-gray-900">Contact Us</h1>
+            <h1 class="sm:text-3xl text-2xl font-medium mb-4 text-slate-900">Contact Us</h1>
             <p class="lg:w-2/3 mx-auto leading-relaxed text-base">Jika ingin mendaftar pada kegiatan ini silahkan mengisi form dibawah ini lalu klik kirim.</p>
         </div>
 
