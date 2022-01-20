@@ -40,7 +40,7 @@ class AffiliationController extends Controller
         if ($request->hasFile('logo_path')) {
             $logo = $request->logo_path;
             $logo_name = Str::random(10).time().'.'.$logo->getClientOriginalExtension();
-            $request->file('logo_path')->storeAs('public/logo-afiliasi', $logo_name);
+            $request->file('logo_path')->storeAs('logo-afiliasi', $logo_name);
             $validator['logo_path'] = $logo_name;
         }
 
@@ -60,15 +60,12 @@ class AffiliationController extends Controller
         $validator = $request->validated();
         
         if ($request->hasFile('logo_path')) {
-            $old_logo = $affiliation->logo_path;
-
-            if (Storage::exists('logo-afiliasi/'.$old_logo)) {
-                Storage::delete('logo-afiliasi/'.$old_logo);
+            if (Storage::exists('logo-afiliasi/'.$affiliation->logo_path)) {
+                Storage::delete('logo-afiliasi/'.$affiliation->logo_path);
             }
 
-            $new_logo = $request->logo_path;
-            $logo_name = Str::random(10).time().'.'.$new_logo->getClientOriginalExtension();
-            $request->file('logo_path')->storeAs('public/logo-afiliasi', $logo_name);
+            $logo_name = Str::random(10).time().'.'.$request->logo_path->getClientOriginalExtension();
+            $request->file('logo_path')->storeAs('logo-afiliasi', $logo_name);
 
             $validator['logo_path'] = $logo_name;
         }
@@ -91,6 +88,10 @@ class AffiliationController extends Controller
             Storage::delete($photo->path);
             $photo->delete();
         });
+
+        if (Storage::exists('logo-afiliasi/'.$affiliation->logo_path)) {
+            Storage::delete('logo-afiliasi/'.$affiliation->logo_path);
+        }
 
         $affiliation->delete();
         return redirect()->route('d.affiliation.index')->with('success', 'Berhasil menghapus perusahaan afiliasi');
