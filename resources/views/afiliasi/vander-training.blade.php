@@ -74,6 +74,7 @@
                     <li>POP</li>
                     <li>POM</li>
                     <li>POU</li>
+                    <li>Pelatihan Sistem Manajemen Keselamatan Pertembangan (SMKP) </li>
                     <li>Ahli K3 Umum</li>
                 </ul>
             </div>

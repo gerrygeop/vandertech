@@ -34,9 +34,13 @@
         .swiper-button-next,
         .swiper-button-prev{
             color: #334155;
-            height: 20px !important;
-            width: 10px !important;
             font-weight: bold
+        }
+        @media screen and (max-width: 650px) {
+            .swiper-button-next:after,
+            .swiper-button-prev:after {
+                font-size: 12px !important;
+            }
         }
     </style>
 @endpush
@@ -72,8 +76,8 @@
             </div>
         </div>
 
-        <div class="swiper-button-next bg-slate-50/40 p-6"></div>
-        <div class="swiper-button-prev bg-slate-50/40 p-6"></div>
+        <div class="swiper-button-next bg-slate-50/40 p-3 md:p-4 lg:p-6"></div>
+        <div class="swiper-button-prev bg-slate-50/40 p-3 md:p-4 lg:p-6"></div>
         <div class="swiper-pagination"></div>
     </div>
 </div>

@@ -13,6 +13,6 @@ class Category extends Model
 
     public function partners()
     {
-        return $this->belongsToMany(Category::class);
+        return $this->belongsToMany(Partner::class);
     }
 }

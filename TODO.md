@@ -15,11 +15,11 @@
 [X] Buat card afiliasi pada about section
 [X] Vander Geo lab *pakai spasi
 [X] CRUD news & event
-[] Foto di slide diganti
-[] Foto pada setiap halaman perusahaan afiliasi dibuat slide show
+[X] Foto di slide diganti
+[X] Foto pada setiap halaman perusahaan afiliasi dibuat slide show
 [X] Pindahkan detail about section pada halaman profil perusahaan
 [X] Kontak setiap event dibuat dinamis
-[] CRUD pada perusahaan afiliasi
+[X] CRUD pada perusahaan afiliasi
     - Nama perusahaan
     - Logo
     - Deskripsi/Detail/About
@@ -27,3 +27,14 @@
     - Foto
     - Kontak
 [X] Perusahaan afiliasi bisa punya kontak section tersendiri (dinamis)
+
+# Revisi 2
+[X] Update mitra admin
+[] Buat halaman profile admin
+[] update create/edit afiliasi
+[] Update slide show image afiliasi
+[] Tambah opsi pelatihan create/edit afiliasi
+[] Dashboard
+    - visi misi
+    - sejarah / detail vanderteck
+[] Ganti foto slide show afiliasi

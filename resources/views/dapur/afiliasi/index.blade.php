@@ -6,7 +6,7 @@
     <div class="py-8">
         <div class="max-w-6xl mx-auto sm:px-6 lg:px-8">
 
-            <div class="mb-3">
+            <div class="mb-3 px-4 lg:px-0 text-right lg:text-left">
                 <a href="{{ route('d.affiliation.create') }}" class="btn-add-primary">
                     <x-icon classes="w-5 h-5 mr-1" d="M12 9v3m0 0v3m0-3h3m-3 0H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z" />
                     Perusahaan Afiliasi

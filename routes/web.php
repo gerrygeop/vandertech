@@ -43,6 +43,10 @@ Route::get('/9t-coffee', function () {
 
 
 Route::middleware('auth')->prefix('d')->name('d.')->group(function() {
+    Route::get('/dashboard', function () {
+        return view('dashboard');
+    })->middleware(['auth'])->name('dashboard');
+
     // News & Event
     Route::resource('news', NewsController::class);
 
@@ -56,10 +60,6 @@ Route::middleware('auth')->prefix('d')->name('d.')->group(function() {
     Route::resource('affiliation', AffiliationController::class);
     Route::post('/affiliations/{affiliation}/photos', [AffiliationPhotoController::class, 'store'])->name('store.photo');
     Route::delete('/affiliations/{affiliation}/photos/{photo}', [AffiliationPhotoController::class, 'destroy'])->name('destroy.photo');
-    
-    Route::get('/dashboard', function () {
-        return view('dashboard');
-    })->middleware(['auth'])->name('dashboard');
 });
 
 require __DIR__.'/auth.php';

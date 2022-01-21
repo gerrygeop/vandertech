@@ -36,14 +36,18 @@
             .swiper-button-next,
             .swiper-button-prev{
                 color: #334155;
-                height: 20px !important;
-                width: 10px !important;
                 font-weight: bold
+            }
+            @media screen and (max-width: 650px) {
+                .swiper-button-next:after,
+                .swiper-button-prev:after {
+                    font-size: 12px !important;
+                }
             }
         </style>
     @endpush
 
-    <section class="min-h-screen pt-20 pb-24 bg-white text-slate-600">
+    <section class="min-h-screen pt-16 lg:pt-20 pb-24 bg-white text-slate-600">
         <div>
             {{ $swiper }}
         </div>

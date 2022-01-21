@@ -1,15 +1,15 @@
-<div class="bg-slate-100/75 py-14 mx-auto" id="about">
-    <div class="max-w-6xl mx-auto px-6 mb-12">
+<div class="bg-slate-100/75 py-8 sm:py-14 mx-auto" id="about">
+    <div class="max-w-6xl mx-auto px-2 md:px-6 mb-8 lg:mb-12">
 
         <div class="flex justify-center w-full mb-6 lg:mb-8">
             <div>
-                <h1 class="text-2xl text-slate-700 md:text-3xl font-semibold font-heading tracking-wide mb-1">Profil Perusahaan</h1>
-                <div class="h-1 w-full mx-auto bg-green-500"></div>
+                <h1 class="text-xl text-slate-700 md:text-3xl font-semibold font-heading tracking-wide mb-1">Profil Perusahaan</h1>
+                <div class="h-0.5 md:h-1 w-full mx-auto bg-green-500"></div>
             </div>
         </div>
 
         <div class="max-w-4xl mx-auto w-full mb-12">
-            <p class="text-slate-700 text-center text-lg tracking-wide dark:text-slate-300">
+            <p class="text-slate-700 text-center text-sm md:text-lg tracking-wide dark:text-slate-300">
                 PT. Vander Teck Resourses berkomitmen untuk terus berinovasi dan melakukan pengembangan dengan menggunakan konsep value chain dan berupaya menetapkan standarisasi dalam tata kelola perusahaan, menjaga kepercayaan klien dalam pekerjaan.
             </p>
 
@@ -24,7 +24,7 @@
         </div>
 
         <div class="mx-auto mb-8">
-            <img src="{{ url('image/Logo-Vandertech.png') }}" alt="Vandertech" class="mx-auto h-32 w-auto">
+            <img src="{{ url('image/Logo-Vandertech.png') }}" alt="Vandertech" class="mx-auto h-24 md:h-32 w-auto">
         </div>
             
         <section>

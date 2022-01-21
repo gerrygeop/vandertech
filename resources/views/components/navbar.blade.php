@@ -1,13 +1,13 @@
 <nav x-data="{ open: false }" class="fixed top-0 inset-x-0 z-50 max-w-7xl mx-auto bg-white shadow-md shadow-slate-400/20">
     <!-- Primary Navigation Menu -->
-    <div class="max-w-6xl mx-auto px-4">
-        <div class="flex justify-between h-20">
+    <div class="max-w-6xl mx-auto px-2 lg:px-0">
+        <div class="flex justify-between h-16 lg:h-20">
 
             <div class="flex">
                 <!-- Logo -->
                 <div class="shrink-0 flex items-center">
                     <a href="{{ route('/') }}">
-                        <img src="{{ url('image/Logo-Vandertech.png') }}" alt="Vandertech" class="w-44 h-auto">
+                        <img src="{{ url('image/Logo-Vandertech.png') }}" alt="Vandertech" class="w-44 lg:w-48 h-auto">
                     </a>
                 </div>
             </div>

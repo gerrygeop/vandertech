@@ -14,8 +14,7 @@ class PartnerController extends Controller
 {
     public function index()
     {
-        $partners = Partner::latest()->get();
-        return view('dapur.partners.index', compact('partners'));
+        return view('dapur.partners.index');
     }
 
     public function show(Partner $partner)

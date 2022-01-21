@@ -30,4 +30,8 @@
     .form-input {
         @apply rounded-md shadow-sm border-slate-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50;
     }
+
+    .select-menu {
+        @apply bg-white border-indigo-100 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 rounded-md;
+    }
 }

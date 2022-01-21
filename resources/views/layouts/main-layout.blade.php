@@ -47,16 +47,18 @@
     </style>
 
     @stack('styles')
-
+    @livewireStyles
 </head>
 <body class="font-sans antialiased">
 
-    @yield('content')
+    <main class="bg-pattern bg-slate-100">
+        @yield('content')
+    </main>
 
     {{-- Swiper Slide --}}
     <script src="{{ asset('js/swiper-bundle.min.js') }}"></script>
 
     @stack('scripts')
-
+    @livewireScripts
 </body>
 </html>

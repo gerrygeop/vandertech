@@ -1,6 +1,6 @@
 <x-guest-layout>
 
-    <section class="min-h-screen bg-slate-100/75 pt-20">    
+    <section class="min-h-screen bg-slate-100/75 pt-16 lg:pt-20">    
         <div class="max-w-6xl mx-auto px-3 lg:px-6 pb-12 pt-8 lg:pt-12">
 
             <div class="flex flex-wrap w-full mb-6 lg:mb-8">

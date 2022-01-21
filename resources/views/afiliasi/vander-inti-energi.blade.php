@@ -48,42 +48,33 @@
     </x-slot>
 
     <div class="bg-white">
-        <div class="grid grid-cols-6 gap-y-4 gap-x-8 items-center px-4 lg:px-14 pb-12">
-            <div class="col-span-full md:col-span-2 p-4 md:p-0">
+        <div class="px-4 lg:px-14 pb-12">
+            <div class="float-left p-4 md:p-0">
                 <img 
                     src="{{ url('image/logo-afiliasi/vander-inti.png') }}" 
                     alt="Vander Inti Energi"
-                    class="w-auto max-h-44 lg:max-h-60 mx-auto shrink"
+                    class="w-auto max-h-44 p-6 shrink"
                 >
             </div>
 
-            <p class="col-span-full md:col-span-4 leading-relaxed text-base text-justify indent-8">
-                PT Vander Inti Energi merupakan konsultan jasa pertambangan dan lingkungan yang berdiri sejak tahun 2020 dengan skala layanan nasional. Sebagai anak perusahaan grup Vandertech Resources yang berpusat di Kalimantan Timur, Vander Inti Energi didirikan untuk memberikan layanan konsultan pertambangan dan lingkungan dengan prinsip integritas, profesionalitas dan akuntabilitas.
+            <p class="leading-relaxed text-base text-justify indent-8">
+                PT Vander Inti Energi merupakan konsultan jasa pertambangan dan lingkungan yang berdiri sejak tahun 2020 dengan skala layanan nasional. Sebagai anak perusahaan grup Vandertech Resources yang berpusat di Kalimantan Timur, Vander Inti Energi didirikan untuk memberikan layanan konsultan pertambangan dan lingkungan dengan prinsip integritas, profesionalitas dan akuntabilitas. <br />
+                Didirikan di hadapan Notaris Gerta Silamba, S.H.,M.Kn di Samarinda Kalimantan Timur. Dengan nomor akta 12 tanggal 17 Desember 2020 dengan nomor AHU-0069.AH.02.01.TAHUN 2020. Vander Inti Energi sebagai pemegang Izin Usaha Jasa Pertambangan telah mendapat persetujuan oleh Kepala Badan Koordinasi Penanaman Modal Republik Indonesia Nomor 47/1/IUJP/PMDN/2021 pada tanggal 08 Maret 2021. <br />
+                Sebagai perusahaan jasa konsultan, Vander Inti Energi diperkuat oleh para tenaga ahli konsultan dan staf yang sangat berpengalaman dibidangnya, kami memiliki komitmen penuh untuk berkontribusi pada perkembangan bisnis di bidang pertambangan, perkebunan, Pelabuhan, dll. Melalui layanan sumber daya manusia yang kami miliki.
             </p>
 
-            <div class="col-span-full">
-                <p class="leading-relaxed text-base text-justify indent-8">
-                    Didirikan di hadapan Notaris Gerta Silamba, S.H.,M.Kn di Samarinda Kalimantan Timur. Dengan nomor akta 12 tanggal 17 Desember 2020 dengan nomor AHU-0069.AH.02.01.TAHUN 2020. Vander Inti Energi sebagai pemegang Izin Usaha Jasa Pertambangan telah mendapat persetujuan oleh Kepala Badan Koordinasi Penanaman Modal Republik Indonesia Nomor 47/1/IUJP/PMDN/2021 pada tanggal 08 Maret 2021.
-                </p>
-            </div>
-
-            <div class="col-span-full">
-                <p class="leading-relaxed text-base text-justify indent-8">
-                    Sebagai perusahaan jasa konsultan, Vander Inti Energi diperkuat oleh para tenaga ahli konsultan dan staf yang sangat berpengalaman dibidangnya, kami memiliki komitmen penuh untuk berkontribusi pada perkembangan bisnis di bidang pertambangan, perkebunan, Pelabuhan, dll. Melalui layanan sumber daya manusia yang kami miliki.
-                </p>
-            </div>
-
-            <div class="col-span-full">
+            <div class="clear-both mt-8">
                 <p class="text-base text-slate-700">
                     Layanan Jasa Pembuatan Dokumen:
                 </p>
                 <ul class="list-disc list-inside leading-loose tracking-wide">
                     <li>Eksplorasi</li>
                     <li>Studi Kelayakan (FS)</li>
-                    <li>SRencana Reklamasi (RR)</li>
+                    <li>Rencana Reklamasi (RR)</li>
                     <li>Rencana Pascatambang (RPT)</li>
                     <li>Rencana Kerja Anggaran Biaya (RKAB)</li>
                     <li>Analisis Mengenai Dampak Lingkungan (AMDAL)</li>
+                    <li>Rencana Induk Pengembangan Masyarakat</li>
                     <li>Upaya Pengelolaan Lingkungan (UKL) dan Upaya Pemantauan Lingkungan (UPL)</li>
                 </ul>
             </div>

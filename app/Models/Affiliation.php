@@ -32,8 +32,7 @@ class Affiliation extends Model
 
     public function getLogoAffiliation()
     {
-        $logo = $this->logo_path;
-        if ($this->logo_path && Storage::exists('logo-afiliasi/'.$logo)) {
+        if ($this->logo_path && Storage::exists('logo-afiliasi/'.$this->logo_path)) {
             return asset('storage/logo-afiliasi/' . $this->logo_path);
         }
 
