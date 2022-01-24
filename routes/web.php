@@ -41,7 +41,7 @@ Route::get('/9t-coffee', function () {
     return view('afiliasi.9t-coffee');
 })->name('9t-coffee');
 
-
+// Admin
 Route::middleware('auth')->prefix('d')->name('d.')->group(function() {
     Route::get('/dashboard', function () {
         return view('dashboard');
@@ -58,8 +58,10 @@ Route::middleware('auth')->prefix('d')->name('d.')->group(function() {
 
     // Afiliasi
     Route::resource('affiliation', AffiliationController::class);
-    Route::post('/affiliations/{affiliation}/photos', [AffiliationPhotoController::class, 'store'])->name('store.photo');
-    Route::delete('/affiliations/{affiliation}/photos/{photo}', [AffiliationPhotoController::class, 'destroy'])->name('destroy.photo');
+    // Afiliasi Photo
+    Route::get('/affiliation/{affiliation}/photos/create', [AffiliationPhotoController::class, 'create'])->name('affiliation.photo.create');
+    Route::post('/affiliation/{affiliation}/photos', [AffiliationPhotoController::class, 'store'])->name('affiliation.photo.store');
+    Route::delete('/affiliation/{affiliation}/photos/{photo}', [AffiliationPhotoController::class, 'destroy'])->name('affiliation.photo.destroy');
 });
 
 require __DIR__.'/auth.php';

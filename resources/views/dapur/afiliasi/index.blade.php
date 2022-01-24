@@ -1,6 +1,6 @@
 <x-app-layout>
     <x-slot name="header">
-        {{ __('Perusahaan Afiliasi') }}
+        Perusahaan Afiliasi
     </x-slot>
 
     <div class="py-8">
@@ -8,7 +8,7 @@
 
             <div class="mb-3 px-4 lg:px-0 text-right lg:text-left">
                 <a href="{{ route('d.affiliation.create') }}" class="btn-add-primary">
-                    <x-icon classes="w-5 h-5 mr-1" d="M12 9v3m0 0v3m0-3h3m-3 0H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    <x-icon classes="mr-1" d="M12 9v3m0 0v3m0-3h3m-3 0H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z" />
                     Perusahaan Afiliasi
                 </a>
             </div>
@@ -44,6 +44,7 @@
 
                             <td class="px-6 py-4 whitespace-nowrap text-sm">
                                 <div class="flex items-center justify-end">
+                                    <a href="{{ route('d.affiliation.photo.create', $affiliation) }}" class="btn-hover-primary">Foto</a>
                                     <a href="{{ route('d.affiliation.show', $affiliation) }}" class="btn-hover-primary">Detail</a>
                                     <a href="{{ route('d.affiliation.edit', $affiliation) }}" class="btn-hover-primary">Edit</a>
 

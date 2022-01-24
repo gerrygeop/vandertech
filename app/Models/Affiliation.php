@@ -7,7 +7,6 @@ use Illuminate\Database\Eloquent\Model;
 
 use Illuminate\Database\Eloquent\Relations\HasMany;
 
-use Illuminate\Support\Str;
 use Illuminate\Support\Facades\Storage;
 
 class Affiliation extends Model
@@ -36,10 +35,10 @@ class Affiliation extends Model
             return asset('storage/logo-afiliasi/' . $this->logo_path);
         }
 
-        return $this->defaultLogo();
+        return $this->defaultImage();
     }
 
-    protected function defaultLogo()
+    protected function defaultImage()
     {
         return 'https://i.ibb.co/ZxFKchm/logo-wana.png';
     }

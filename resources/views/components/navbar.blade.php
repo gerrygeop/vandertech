@@ -90,31 +90,41 @@
     </div>
 
     <!-- Responsive Navigation Menu -->
-    <div :class="{'block': open, 'hidden': ! open}" @click="open = ! open" class="hidden lg:hidden">
+    <div :class="{'block': open, 'hidden': ! open}" class="hidden lg:hidden">
         <div class="pt-2 pb-3 space-y-1">
-            <x-responsive-nav-link :href="route('/')" :active="request()->routeIs('/')">
+            <x-responsive-nav-link :href="route('/')" :active="request()->routeIs('/')" @click="open = ! open">
                 Beranda
             </x-responsive-nav-link>
 
-            <div class="px-4 py-2 border-y border-slate-200">
-                <span class="block mb-2 text-slate-400 text-sm">Profil</span>
+            <div x-data="{ profil: false }" class="px-4 py-2 border-y border-slate-200">
+                <span @click="profil = ! profil" class="flex items-center justify-between mb-2 text-slate-400 text-sm">
+                    Profil <x-arrow-bottom />
+                </span>
                 
-                <x-responsive-nav-link href="/#about" :active="request()->is('/#about')">Tentang Perusahaan</x-responsive-nav-link>
-                <x-responsive-nav-link href="/#visi-misi" :active="request()->is('/#visi-misi')">Visi & Misi</x-responsive-nav-link>
+                <div :class="{'block': profil, 'hidden': ! profil}" class="hidden lg:hidden">
+                    <x-responsive-nav-link href="/#about" :active="request()->is('/#about')">Tentang Perusahaan</x-responsive-nav-link>
+                    <x-responsive-nav-link href="/#visi-misi" :active="request()->is('/#visi-misi')">Visi & Misi</x-responsive-nav-link>
+                </div>
             </div>
 
-            <div class="px-4 py-2 border-b border-slate-200">
-                <span class="block mb-2 text-slate-400 text-sm">Perusahaan Afiliasi</span>
+            <div x-data="{ afiliasi: false }" class="px-4 py-2 border-b border-slate-200">
+                <span @click="afiliasi = ! afiliasi" class="flex items-center justify-between mb-2 text-slate-400 text-sm">
+                    Perusahaan Afiliasi <x-arrow-bottom />
+                </span>
                 
-                <x-responsive-nav-link :href="route('vander-inti-energi')" :active="request()->routeIs('vander-inti-energi')">Vander Inti Energi</x-responsive-nav-link>
-                <x-responsive-nav-link :href="route('vander-training')" :active="request()->routeIs('vander-training')">Vandertech Indo Training</x-responsive-nav-link>
-                <x-responsive-nav-link :href="route('vander-geolab')" :active="request()->routeIs('vander-geolab')">Vander Geo Laboratory</x-responsive-nav-link>
-                <x-responsive-nav-link :href="route('9t-coffee')" :active="request()->routeIs('9t-coffee')">9T Coffee</x-responsive-nav-link>
+                <div :class="{'block': afiliasi, 'hidden': ! afiliasi}" class="hidden lg:hidden">
+                    <x-responsive-nav-link :href="route('vander-inti-energi')" :active="request()->routeIs('vander-inti-energi')">Vander Inti Energi</x-responsive-nav-link>
+                    <x-responsive-nav-link :href="route('vander-training')" :active="request()->routeIs('vander-training')">Vandertech Indo Training</x-responsive-nav-link>
+                    <x-responsive-nav-link :href="route('vander-geolab')" :active="request()->routeIs('vander-geolab')">Vander Geo Laboratory</x-responsive-nav-link>
+                    <x-responsive-nav-link :href="route('9t-coffee')" :active="request()->routeIs('9t-coffee')">9T Coffee</x-responsive-nav-link>
+                </div>
             </div>
 
-            <x-responsive-nav-link href="/#mitra" :active="request()->is('/#mitra')">Mitra Usaha</x-responsive-nav-link>
-            <x-responsive-nav-link :href="route('news-event')" :active="request()->routeIs('news-event')">News & Event</x-responsive-nav-link>
-            <x-responsive-nav-link href="/#contact" :active="request()->routeIs('/#contact')">Kontak</x-responsive-nav-link>
+            <div @click="open = ! open">
+                <x-responsive-nav-link href="/#mitra" :active="request()->is('/#mitra')">Mitra Usaha</x-responsive-nav-link>
+                <x-responsive-nav-link :href="route('news-event')" :active="request()->routeIs('news-event')">News & Event</x-responsive-nav-link>
+                <x-responsive-nav-link href="/#contact" :active="request()->routeIs('/#contact')">Kontak</x-responsive-nav-link>
+            </div>
         </div>
 
     </div>

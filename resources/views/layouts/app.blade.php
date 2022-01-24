@@ -14,12 +14,12 @@
 
             <div class="w-full">
                 <!-- Page Heading -->
-                <header class="hidden lg:block bg-white lg:bg-transparent border-b">
+                <header class="hidden lg:block bg-white border-b">
                     <div class="max-w-6xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
                         <div class="flex items-center justify-between">
 
                             @if ($header)
-                                <h2 class="font-medium text-xl text-slate-600 leading-tight">
+                                <h2 class="font-medium text-lg text-slate-500 leading-tight">
                                     {{ $header }}
                                 </h2>
                             @endif

@@ -1,6 +1,6 @@
 <x-content>
     <x-slot name="swiper">
-        <div class="h-full w-full mb-12">
+        <div class="h-full w-full mb-10 md:mb-12">
             <div class="swiper mySwiper">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide min-h-full aspect-video">
@@ -53,24 +53,24 @@
     </x-slot>
 
     <div class="bg-white">
-        <div class="grid grid-cols-6 gap-y-4 gap-x-8 items-center px-4 lg:px-14 pb-12">
-            <div class="col-span-full md:col-span-2 p-4 md:p-0">
-                <img 
-                    src="{{ url('image/logo-afiliasi/indo-training.png') }}" 
-                    alt="Vandertech Indo Training"
-                    class="w-auto max-h-44 lg:max-h-60 mx-auto shrink"
-                >
-            </div>
+        <div class="flex mb-10 md:mb-12 px-6">
+            <img 
+                src="{{ url('image/logo-afiliasi/indo-training.png') }}" 
+                alt="Vandertech Indo Training"
+                class="w-auto max-h-40 mx-auto shrink"
+            >
+        </div>
 
-            <p class="col-span-full md:col-span-4 leading-relaxed text-base text-justify indent-8">
+        <div class="px-4 lg:px-14">
+            <p class="leading-relaxed text-base text-justify">
                 Vandertech Indo Training merupakan platform informasi training online program pelatihan berbasis kompetensi dengan sertifikat BNSP (Badan Nasional Sertifikasi Profesi).
             </p>
 
-            <div class="col-span-full">
+            <div class="mt-8">
                 <p class="text-base text-slate-700">
                     Pelatihan:
                 </p>
-                <ul class="list-disc list-inside leading-loose tracking-wide">
+                <ul class="list-disc leading-loose tracking-wide pl-5">
                     <li>POP</li>
                     <li>POM</li>
                     <li>POU</li>
@@ -78,6 +78,7 @@
                     <li>Ahli K3 Umum</li>
                 </ul>
             </div>
+
         </div>
     </div>
 </x-content>

@@ -7,6 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
+use Illuminate\Support\Facades\Storage;
 
 class Photo extends Model
 {
@@ -17,5 +18,19 @@ class Photo extends Model
     public function affiliation(): BelongsTo
     {
         return $this->belongsTo(Affiliation::class);
+    }
+
+    public function getAffiliationPhoto()
+    {
+        if ($this->path && Storage::exists('photo-afiliasi/'.$this->path)) {
+            return asset('storage/photo-afiliasi/' . $this->path);
+        }
+
+        return $this->defaultImage();
+    }
+
+    protected function defaultImage()
+    {
+        return 'https://i.ibb.co/ZxFKchm/logo-wana.png';
     }
 }

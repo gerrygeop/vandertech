@@ -1,6 +1,10 @@
-@props(['classes' => 'w-6 h-6', 'd'])
+@props(['size' => 'w-6 h-6', 'classes' => '', 'd'])
 
-<svg class="{{ $classes }}" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+@php
+    $class = $size. ' ' .$classes;
+@endphp
+
+<svg class="{{ $class }}" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="{{ $d }}"></path>
     {{ $slot }}
 </svg>

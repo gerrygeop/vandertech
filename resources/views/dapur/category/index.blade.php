@@ -8,7 +8,7 @@
 
             <div class="mb-3 px-4 lg:px-0 text-right lg:text-left">
                 <a href="{{ route('d.category.create') }}" class="btn-add-primary">
-                    <x-icon classes="w-5 h-5 mr-1" d="M12 9v3m0 0v3m0-3h3m-3 0H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    <x-icon classes="mr-1" d="M12 9v3m0 0v3m0-3h3m-3 0H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z" />
                     Kategori
                 </a>
             </div>
