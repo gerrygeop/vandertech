@@ -1,4 +1,10 @@
 <x-app-layout>
+    @if (session('success'))
+        <x-slot name="message">
+            {{ session('success') }}
+        </x-slot>
+    @endif
+
     <x-slot name="header">
         Kategori
     </x-slot>

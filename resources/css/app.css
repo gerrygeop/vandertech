@@ -17,7 +17,7 @@
     }
 
     .btn-add-primary {
-        @apply inline-flex items-center px-4 py-2 text-white text-base bg-blue-700 focus:bg-blue-600 active:bg-blue-800 border border-transparent focus:border-blue-200 focus:ring ring-blue-200 rounded-md tracking-wide shadow shadow-blue-700/50 transition ease-in-out duration-150;
+        @apply inline-flex items-center px-4 py-2 text-white text-base bg-blue-700 hover:bg-blue-600 active:bg-blue-800 border border-transparent focus:border-blue-200 focus:ring ring-blue-200 rounded-md tracking-wide shadow shadow-blue-700/50 transition ease-in-out duration-150;
     }
 
     .btn-hover-primary {

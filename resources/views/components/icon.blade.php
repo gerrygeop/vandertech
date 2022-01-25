@@ -1,7 +1,11 @@
 @props(['size' => 'w-6 h-6', 'classes' => '', 'd'])
 
 @php
-    $class = $size. ' ' .$classes;
+    if ($classes) {
+        $class = $size. ' ' .$classes;
+    } else {
+        $class = $size;
+    }
 @endphp
 
 <svg class="{{ $class }}" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">

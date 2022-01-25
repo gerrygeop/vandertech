@@ -1,4 +1,10 @@
 <x-app-layout>
+    @if (session('success'))
+        <x-slot name="message">
+            {{ session('success') }}
+        </x-slot>
+    @endif
+
     <x-slot name="header">
         Foto
     </x-slot>
@@ -9,26 +15,26 @@
                 
                 <form action="{{ route('d.affiliation.photo.store', $affiliation) }}" method="POST" enctype="multipart/form-data">
                     @csrf
-                    <div class="grid grid-cols-1 gap-y-4">
-                        <div class="col-span-full">
-                            <x-label for="photo" class="mb-2">Upload Foto</x-label>
-                            <x-input id="photo" type="file" class="w-full p-2 border border-slate-300 bg-slate-100 bg-clip-padding" name="photo[]" multiple />
+                    <div class="col-span-full">
+                        <x-label for="photo" class="mb-2">Upload Foto</x-label>
+                        <x-input id="photo" type="file" class="w-full p-2 border border-slate-200 file:rounded-md file:border file:border-solid file:border-blue-200 file:py-2 file:px-4 file:text-sm file:bg-blue-100 file:text-blue-700" name="photo[]" multiple />
 
-                            @error('photo')
-                                <p class="text-red-500 text-xs mt-1">{{ $message }}</p>
-                            @enderror
-                        </div>
+                        @error('photo')
+                            <p class="text-red-500 text-xs mt-1">{{ $message }}</p>
+                        @enderror
                     </div>
 
-                    <div class="flex justify-end md:justify-start mt-4">
+                    <div class="flex justify-end md:justify-start mt-6">
                         <x-button>Upload</x-button>
                     </div>
                 </form>
-                
-                <section class="mt-20 mx-auto bg-white">
-                    <h2 class="text-lg text-slate-600 capitalize">Galeri Foto</h2>
 
-                    <div class="p-2 border rounded">
+                <div class="my-10 border-t border-slate-300"></div>
+                
+                <section class="mx-auto bg-white">
+                    <h2 class="text-base text-slate-600 capitalize">Foto Slide</h2>
+
+                    <div class="py-4">
                         <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
                             @forelse ($affiliation->photos as $photo)
                                 <div class="w-full max-w-xs text-center border rounded-md overflow-hidden">

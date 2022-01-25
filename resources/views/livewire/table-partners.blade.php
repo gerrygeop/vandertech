@@ -17,7 +17,7 @@
                 type="search" 
                 wire:model="search" 
                 class="w-full border-l-0 rounded-l-none rounded-r-md lg:rounded-r-none"
-                placeholder="Cari Nama"
+                placeholder="Cari nama perusahaan"
             />
         </div>
 

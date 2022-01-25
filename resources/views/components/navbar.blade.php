@@ -73,7 +73,7 @@
                 </div>
         
                 <x-nav-link href="/#mitra" :active="request()->is('/#mitra')">Mitra Usaha</x-nav-link>
-                <x-nav-link :href="route('news-event')" :active="request()->routeIs('news-event')">News & Event</x-nav-link>
+                <x-nav-link :href="route('news-event.list')" :active="request()->routeIs('news-event.*')">News & Event</x-nav-link>
                 <x-nav-link href="/#contact" :active="request()->routeIs('/#contact')">Kontak</x-nav-link>
             </div>
 
@@ -122,7 +122,7 @@
 
             <div @click="open = ! open">
                 <x-responsive-nav-link href="/#mitra" :active="request()->is('/#mitra')">Mitra Usaha</x-responsive-nav-link>
-                <x-responsive-nav-link :href="route('news-event')" :active="request()->routeIs('news-event')">News & Event</x-responsive-nav-link>
+                <x-responsive-nav-link :href="route('news-event.list')" :active="request()->routeIs('news-event.*')">News & Event</x-responsive-nav-link>
                 <x-responsive-nav-link href="/#contact" :active="request()->routeIs('/#contact')">Kontak</x-responsive-nav-link>
             </div>
         </div>

@@ -16,7 +16,7 @@ Route::get('/', function () {
 })->name('/');
 
 // Route News & Event
-Route::get('/news-event', [FrontNewsController::class, 'index'])->name('news-event');
+Route::get('/news-event', [FrontNewsController::class, 'index'])->name('news-event.list');
 Route::get('/news-event/{news}', [FrontNewsController::class, 'show'])->name('news-event.detail');
 
 // Profile Vandertech

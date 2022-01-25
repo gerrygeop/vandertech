@@ -3,6 +3,11 @@
 @section('content')
 
     <div class="max-w-screen-2xl mx-auto">
+
+        @isset($message)
+            <x-banner-success :message="$message" />
+        @endisset
+
         <div class="min-h-screen bg-slate-100 flex flex-col lg:flex-row">
 
             <div class="block lg:hidden">
@@ -13,7 +18,7 @@
             </div>
 
             <div class="w-full">
-                <!-- Page Heading -->
+                {{-- Page Heading --}}
                 <header class="hidden lg:block bg-white border-b">
                     <div class="max-w-6xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
                         <div class="flex items-center justify-between">
@@ -57,10 +62,11 @@
                     </div>
                 </header>
         
-                <!-- Page Content -->
+                {{-- Page Content --}}
                 <main>
                     {{ $slot }}
                 </main>
+
             </div>
         </div>
     </div>
