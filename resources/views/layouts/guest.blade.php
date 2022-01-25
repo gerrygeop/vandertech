@@ -6,6 +6,6 @@
 
         {{ $slot }}
 
-        @include('_footer')
+        @include('partials._footer-section')
     </div>
 @endsection

@@ -1,16 +1,15 @@
 <x-guest-layout>
 
     <section class="pt-16 lg:pt-20">
-        @include('_swiper-image')
+        @include('partials._swiper-image')
 
-        @include('_about-section')
+        @include('partials._about-section')
 
-        @include('_visi-misi-section')
+        @include('partials._visi-misi-section')
 
-        {{-- @include('_mitra-section') --}}
         <x-mitra />
 
-        @include('_contact')
+        @include('partials._contact-section')
     </section>
 
 </x-guest-layout>

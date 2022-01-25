@@ -30,11 +30,14 @@
 
 # Revisi 2
 [X] Update mitra admin
+[] Buat flash message success create/update/delete
+[] Tambahkan table/kolom pelatihan untuk afiliasi
 [] Buat halaman profile admin
 [] update create/edit afiliasi
 [] Update slide show image afiliasi
 [] Tambah opsi pelatihan create/edit afiliasi
-[] Dashboard
+[] Update Dashboard
     - visi misi
     - sejarah / detail vanderteck
+    - slide foto beranda
 [] Ganti foto slide show afiliasi

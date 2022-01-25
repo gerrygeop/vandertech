@@ -29,22 +29,22 @@
             
         <section>
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-                <div class="col-span-1">
+                <div class="col-span-1 px-7 md:px-0">
                     <x-card-afiliasi link="{{ route('vander-inti-energi') }}" :image="url('image/logo-afiliasi/vander-inti.png')">
                         Vander Inti Energi
                     </x-card-afiliasi>
                 </div>
-                <div class="col-span-1">
+                <div class="col-span-1 px-7 md:px-0">
                     <x-card-afiliasi link="{{ route('vander-geolab') }}" :image="url('image/logo-afiliasi/vander-geo.png')">
                         Vander Geo Laboratory
                     </x-card-afiliasi>
                 </div>
-                <div class="col-span-1">
+                <div class="col-span-1 px-7 md:px-0">
                     <x-card-afiliasi link="{{ route('vander-training') }}" :image="url('image/logo-afiliasi/indo-training.png')">
                         Vandertech Indo Training
                     </x-card-afiliasi>
                 </div>
-                <div class="col-span-1">
+                <div class="col-span-1 px-7 md:px-0">
                     <x-card-afiliasi link="{{ route('9t-coffee') }}" :image="url('image/logo-afiliasi/9t-coffee.png')">
                         9T Coffee
                     </x-card-afiliasi>

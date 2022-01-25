@@ -29,7 +29,7 @@
     
         </div>
 
-        @include('_visi-misi-section')
+        @include('partials._visi-misi-section')
     </div>
 
 </x-guest-layout>

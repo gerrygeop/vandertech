@@ -10,11 +10,11 @@ class FrontNewsController extends Controller
     public function index()
     {
         $news = News::all();
-        return view('news-event', compact('news'));
+        return view('newsevent-page', compact('news'));
     }
 
     public function show(News $news)
     {
-        return view('news-event-detail', compact('news'));
+        return view('newsevent-detail', compact('news'));
     }
 }
