@@ -30,11 +30,13 @@
 
 # Revisi 2
 [X] Update mitra admin
-[] Buat flash message success create/update/delete
-[] Tambahkan table/kolom pelatihan untuk afiliasi
+[X] Buat flash message success create/update/delete
+[] Coba ubah tampilan detail/content news & event
+    - pindah judul di atas gambar
 [] Buat halaman profile admin
 [] update create/edit afiliasi
 [] Update slide show image afiliasi
+[] Tambahkan table/kolom pelatihan untuk afiliasi
 [] Tambah opsi pelatihan create/edit afiliasi
 [] Update Dashboard
     - visi misi
