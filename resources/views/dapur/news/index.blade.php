@@ -54,7 +54,7 @@
                                     <a href="{{ route('d.news.show', $new) }}" class="btn-hover-primary">Detail</a>
                                     <a href="{{ route('d.news.edit', $new) }}" class="btn-hover-primary">Edit</a>
 
-                                    <form action="{{ route('d.news.destroy', $new) }}" method="POST">
+                                    <form action="{{ route('d.news.destroy', $new) }}" method="POST" onsubmit="return confirm('Yakin untuk menghapus?')">
                                         @csrf
                                         @method('DELETE')
 

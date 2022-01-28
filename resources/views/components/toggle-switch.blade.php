@@ -1,7 +1,7 @@
 @props(['name', 'value' => 'aktif', 'checked' => ''])
 
 @php
-    if ($checked === 'aktif' || $checked === 1) {
+    if ($checked == 'aktif' || $checked == 1) {
         $checked = 'checked';
     }
 @endphp

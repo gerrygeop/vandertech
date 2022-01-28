@@ -42,7 +42,7 @@
                                 <div class="flex items-center justify-end">
                                     <a href="{{ route('d.category.edit', $category) }}" class="btn-hover-primary">Edit</a>
 
-                                    <form action="{{ route('d.category.destroy', $category) }}" method="POST">
+                                    <form action="{{ route('d.category.destroy', $category) }}" method="POST" onsubmit="return confirm('Yakin untuk menghapus?')">
                                         @csrf
                                         @method('DELETE')
 

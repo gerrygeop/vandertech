@@ -44,7 +44,11 @@
                                         alt="{{ $affiliation->name }}"
                                     />
 
-                                    <form action="{{ route('d.affiliation.photo.destroy', [$affiliation, $photo]) }}" method="POST">
+                                    <form 
+                                        action="{{ route('d.affiliation.photo.destroy', [$affiliation, $photo]) }}" 
+                                        method="POST" 
+                                        onsubmit="return confirm('Yakin hapus foto ini?')"
+                                    >
                                         @csrf
                                         @method('DELETE')
                                         <button class="w-full py-2 text-sm text-red-500 bg-white hover:text-white hover:bg-red-500 transition duration-150">
