@@ -14,8 +14,7 @@ class AffiliationController extends Controller
 {
     public function index()
     {
-        $affiliations = Affiliation::latest()->get();
-
+        $affiliations = Affiliation::all();
         return view('dapur.afiliasi.index', compact('affiliations'));
     }
 
@@ -27,7 +26,8 @@ class AffiliationController extends Controller
 
     public function create()
     {
-        return view('dapur.afiliasi.create');
+        $affiliation = new Affiliation;
+        return view('dapur.afiliasi.create', compact('affiliation'));
     }
 
     public function store(AffiliationRequest $request)
@@ -70,14 +70,13 @@ class AffiliationController extends Controller
             $validator['logo_path'] = $logo_name;
         }
 
-        if ($request->hidden) {
-            $validator['hidden'] = 1;
+        if (!$request->hidden == 1) {
+            $validator['hidden'] = 0;
         }
 
         $validator['slug'] = Str::slug($validator['name']);
-        DB::transaction(function() use ($affiliation, $validator) {
-            $affiliation->update($validator);
-        });
+
+        $affiliation->update($validator);
 
         return redirect()->route('d.affiliation.index')->with('success', 'Berhasil mengubah perusahaan afiliasi');
     }

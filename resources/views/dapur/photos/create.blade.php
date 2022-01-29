@@ -17,7 +17,7 @@
                     @csrf
                     <div class="col-span-full">
                         <x-label for="photo" class="mb-2">Upload Foto</x-label>
-                        <x-input id="photo" type="file" class="w-full p-2 border border-slate-200 file:rounded-md file:border file:border-solid file:border-blue-200 file:py-2 file:px-4 file:text-sm file:bg-blue-100 file:text-blue-700" name="photo[]" multiple />
+                        <x-input id="photo" type="file" class="w-full p-2 input-file" name="photo[]" multiple />
 
                         @error('photo')
                             <p class="text-red-500 text-xs mt-1">{{ $message }}</p>

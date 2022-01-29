@@ -15,16 +15,15 @@
             <div class="mb-3 px-4 lg:px-0 text-right lg:text-left">
                 <a href="{{ route('d.affiliation.create') }}" class="btn-add-primary">
                     <x-icon classes="mr-1" d="M12 9v3m0 0v3m0-3h3m-3 0H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z" />
-                    Perusahaan Afiliasi
+                    Tambah Afiliasi
                 </a>
             </div>
 
             <x-table>
                 <thead class="bg-slate-50">
                     <tr>
-                        <x-th>
-                            List Perusahaan
-                        </x-th>
+                        <x-th>No</x-th>
+                        <x-th>Nama Afiliasi</x-th>
                         <th scope="col" class="relative px-6 py-3">
                             <span class="sr-only">Edit</span>
                         </th>
@@ -32,11 +31,14 @@
                 </thead>
 
                 <tbody class="bg-white divide-y divide-slate-200">
-                    @forelse ($affiliations as $affiliation)
+                    @forelse ($affiliations->sortBy('order') as $affiliation)
                         <tr>
+                            <td class="px-6 py-4 text-sm text-slate-500">
+                                {{ $affiliation->order }}
+                            </td>
                             <td class="px-6 py-4 whitespace-nowrap">
                                 <div class="flex items-center">
-                                    <div class="flex-shrink-0 h-10 w-32">
+                                    <div class="flex-shrink-0 h-14 w-32">
                                         <img class="h-full w-auto mx-auto" src="{{ $affiliation->getLogoAffiliation() }}" alt="{{ $affiliation->name }}">
                                     </div>
 
@@ -54,7 +56,7 @@
                                     <a href="{{ route('d.affiliation.show', $affiliation) }}" class="btn-hover-primary">Detail</a>
                                     <a href="{{ route('d.affiliation.edit', $affiliation) }}" class="btn-hover-primary">Edit</a>
 
-                                    <form action="{{ route('d.affiliation.destroy', $affiliation) }}" method="POST">
+                                    <form action="{{ route('d.affiliation.destroy', $affiliation) }}" method="POST" onsubmit="return confirm('Yakin untuk menghapus?')">
                                         @csrf
                                         @method('DELETE')
 

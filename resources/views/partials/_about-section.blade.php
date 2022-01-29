@@ -24,31 +24,20 @@
         </div>
 
         <div class="mx-auto mb-8">
-            <img src="{{ url('image/Logo-Vandertech.png') }}" alt="Vandertech" class="mx-auto h-24 md:h-32 w-auto">
+            <img src="{{ url('image/Logo-Vandertech.png') }}" alt="Vanderteck" class="mx-auto h-24 md:h-32 w-auto">
         </div>
             
         <section>
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-                <div class="col-span-1 px-7 md:px-0">
-                    <x-card-afiliasi link="{{ route('vander-inti-energi') }}" :image="url('image/logo-afiliasi/vander-inti.png')">
-                        Vander Inti Energi
-                    </x-card-afiliasi>
-                </div>
-                <div class="col-span-1 px-7 md:px-0">
-                    <x-card-afiliasi link="{{ route('vander-geolab') }}" :image="url('image/logo-afiliasi/vander-geo.png')">
-                        Vander Geo Laboratory
-                    </x-card-afiliasi>
-                </div>
-                <div class="col-span-1 px-7 md:px-0">
-                    <x-card-afiliasi link="{{ route('vander-training') }}" :image="url('image/logo-afiliasi/indo-training.png')">
-                        Vandertech Indo Training
-                    </x-card-afiliasi>
-                </div>
-                <div class="col-span-1 px-7 md:px-0">
-                    <x-card-afiliasi link="{{ route('9t-coffee') }}" :image="url('image/logo-afiliasi/9t-coffee.png')">
-                        9T Coffee
-                    </x-card-afiliasi>
-                </div>
+
+                @foreach ($affiliations->sortBy('order') as $affiliation)
+                    <div class="col-span-1 px-7 md:px-0">
+                        <x-card-afiliasi link="{{ route('afiliasi.detail', $affiliation) }}" image="{{ $affiliation->getLogoAffiliation() }}">
+                            {{ $affiliation->name }}
+                        </x-card-afiliasi>
+                    </div>
+                @endforeach
+
             </div>
         </section>
 

@@ -3,7 +3,7 @@
 use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\{
-    FrontNewsController,
+    FrontController,
     NewsController,
     AffiliationController,
     AffiliationPhotoController,
@@ -11,20 +11,21 @@ use App\Http\Controllers\{
     CategoryController,
 };
 
-Route::get('/', function () {
-    return view('welcome');
-})->name('/');
+// Beranda
+Route::get('/', [FrontController::class, 'home'])->name('/');
 
 // Route News & Event
-Route::get('/news-event', [FrontNewsController::class, 'index'])->name('news-event.list');
-Route::get('/news-event/{news}', [FrontNewsController::class, 'show'])->name('news-event.detail');
+Route::get('/news-event', [FrontController::class, 'listNewsAndEvent'])->name('news-event.list');
+Route::get('/news-event/{news}', [FrontController::class, 'detailNewsAndEvent'])->name('news-event.detail');
 
 // Profile Vandertech
 Route::get('/profile-vandertech', function () {
-    return view('detail');
+    return view('detail-vanderteck');
 })->name('profile-vandertech');
 
 // Route Afiliasi
+Route::get('/afiliasi/{affiliation}', [FrontController::class, 'detailAffiliation'])->name('afiliasi.detail');
+
 Route::get('/vander-inti-energi', function () {
     return view('afiliasi.vander-inti-energi');
 })->name('vander-inti-energi');

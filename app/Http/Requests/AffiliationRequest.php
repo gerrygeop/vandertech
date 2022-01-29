@@ -27,12 +27,17 @@ class AffiliationRequest extends FormRequest
             'name' => 'required|string',
             'logo_path' => 'image|mimes:jpg,jpeg,png',
             'description' => 'required',
+            'training_name' => 'nullable|string',
+            'training' => 'nullable',
+            'visi' => 'nullable|string',
+            'misi' => 'nullable',
             'address' => 'nullable',
             'telp' => 'nullable|numeric|digits_between:12,14',
             'email' => 'nullable|email',
             'maps' => 'nullable',
             'hidden' => 'bool',
             'slug' => 'nullable',
+            'order' => 'numeric',
         ];
     }
 }

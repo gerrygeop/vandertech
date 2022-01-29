@@ -55,7 +55,7 @@
                 </div>
         
                 <div class="px-4 lg:px-14 pb-12">
-                    <div class="border">
+                    <div>
                         <div class="float-none lg:float-left lg:pr-8">
                             <img 
                                 src="{{ $affiliation->getLogoAffiliation() }}" 
@@ -69,7 +69,7 @@
                         </p>
                     </div>
         
-                    <div class="clear-both mt-8">
+                    <div class="clear-both mt-12">
                         <p class="text-base text-slate-700">
                             Layanan Jasa Pembuatan Dokumen:
                         </p>

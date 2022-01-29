@@ -1,3 +1,7 @@
+@php
+    $affiliations = \App\Models\Affiliation::get();
+@endphp
+
 <nav x-data="{ open: false }" class="fixed top-0 inset-x-0 z-50 max-w-7xl mx-auto bg-white shadow-md shadow-slate-400/20">
     <!-- Primary Navigation Menu -->
     <div class="max-w-6xl mx-auto px-2 lg:px-0">
@@ -52,22 +56,14 @@
                         </x-slot>
         
                         <x-slot name="content">
-                            <x-dropdown-link href="{{ route('vander-inti-energi') }}">
-                                Vander Inti Energi
-                                <img src="{{ url('image/logo-afiliasi/vander-inti.png') }}" alt="Vender Inti Energi" class="w-auto h-10">
-                            </x-dropdown-link>
-                            <x-dropdown-link href="{{ route('vander-training') }}">
-                                Vandertech Indo Training
-                                <img src="{{ url('image/logo-afiliasi/indo-training.png') }}" alt="Vander Indo Training" class="w-auto h-10">
-                            </x-dropdown-link>
-                            <x-dropdown-link href="{{ route('vander-geolab') }}">
-                                Vander Geo Laboratory
-                                <img src="{{ url('image/logo-afiliasi/vander-geo.png') }}" alt="Vender Geo Laboratory" class="w-auto h-10">
-                            </x-dropdown-link>
-                            <x-dropdown-link href="{{ route('9t-coffee') }}">
-                                9T Coffee
-                                <img src="{{ url('image/logo-afiliasi/9t-coffee.png') }}" alt="9T Coffee" class="w-auto h-10">
-                            </x-dropdown-link>
+
+                            @foreach ($affiliations->sortBy('order') as $affiliation)
+                                <x-dropdown-link href="{{ route('afiliasi.detail', $affiliation) }}">
+                                    {{ $affiliation->name }}
+                                    <img src="{{ $affiliation->getLogoAffiliation() }}" alt="{{ $affiliation->name }}" class="w-auto h-10">
+                                </x-dropdown-link>
+                            @endforeach
+
                         </x-slot>
                     </x-dropdown>
                 </div>
@@ -113,10 +109,13 @@
                 </span>
                 
                 <div :class="{'block': afiliasi, 'hidden': ! afiliasi}" class="hidden lg:hidden">
-                    <x-responsive-nav-link :href="route('vander-inti-energi')" :active="request()->routeIs('vander-inti-energi')">Vander Inti Energi</x-responsive-nav-link>
-                    <x-responsive-nav-link :href="route('vander-training')" :active="request()->routeIs('vander-training')">Vandertech Indo Training</x-responsive-nav-link>
-                    <x-responsive-nav-link :href="route('vander-geolab')" :active="request()->routeIs('vander-geolab')">Vander Geo Laboratory</x-responsive-nav-link>
-                    <x-responsive-nav-link :href="route('9t-coffee')" :active="request()->routeIs('9t-coffee')">9T Coffee</x-responsive-nav-link>
+
+                    @foreach ($affiliations->sortBy('order') as $affiliation)
+                        <x-responsive-nav-link :href="route('afiliasi.detail', $affiliation)">
+                            {{ $affiliation->name }}
+                        </x-responsive-nav-link>
+                    @endforeach
+
                 </div>
             </div>
 
