@@ -10,6 +10,7 @@ use App\Http\Controllers\{
     PartnerController,
     CategoryController,
     VanderteckController,
+    UserController,
 };
 
 // Beranda
@@ -39,6 +40,11 @@ Route::middleware('auth')->prefix('d')->name('d.')->group(function() {
         Route::post('/upload-foto-slide', [VanderteckController::class, 'uploadFotoSlide'])->name('upload-foto-slide');
         Route::delete('/destroy-foto-slide/{slide}', [VanderteckController::class, 'destroyFotoSlide'])->name('destroy-foto-slide');
     });
+
+    // User profile
+    Route::get('/setting/profil', [UserController::class, 'profileUser'])->name('setting.profile');
+    Route::put('/setting/update/informasi', [UserController::class, 'updateInformasiUser'])->name('setting.update-informasi');
+    Route::put('/setting/update/password', [UserController::class, 'updatePasswordUser'])->name('setting.update-password');
 
     // News & Event
     Route::resource('news', NewsController::class);

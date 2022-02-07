@@ -40,7 +40,7 @@
     - Pilih foto dari afiliasi / buat tabel khusus untuk slideshow beranda vanderteck
     - Lanjut di vanderteck controller / buat migration?
 [] Update Order/nomor urut kategori mitra !!!!!
-[] Buat halaman profile admin
+[X] Buat halaman profile admin
 [] Coba ubah tampilan detail/content news & event
     - pindah judul di atas gambar
 [X] Update Dashboard
