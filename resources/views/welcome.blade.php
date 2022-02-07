@@ -5,7 +5,7 @@
 
         @include('partials._about-section')
 
-        @include('partials._visi-misi-section')
+        <x-visi-misi />
 
         <x-mitra />
 

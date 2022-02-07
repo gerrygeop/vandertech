@@ -4,18 +4,19 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+
 use Illuminate\Support\Facades\Storage;
 
-class Vanderteck extends Model
+class Slide extends Model
 {
     use HasFactory;
 
     protected $guarded = ['id'];
 
-    public function getImage()
+    public function getPhotoSlide()
     {
-        if ($this->image_path && Storage::exists('image-vanderteck/'.$this->image_path)) {
-            return asset('storage/image-vanderteck/' . $this->image_path);
+        if ($this->path && Storage::exists('photo-slideshow/'.$this->path)) {
+            return asset('storage/photo-slideshow/' . $this->path);
         }
 
         return $this->defaultImage();

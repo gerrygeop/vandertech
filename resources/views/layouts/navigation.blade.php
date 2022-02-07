@@ -5,7 +5,7 @@
             <div class="flex">
                 <!-- Logo -->
                 <div class="shrink-0 flex items-center">
-                    <a href="{{ route('d.dashboard') }}">
+                    <a href="{{ route('d.dashboard.main') }}">
                         <img src="{{ url('image/Logo-Vandertech.png') }}" alt="Vandertech" class="w-40 h-auto">
                     </a>
                 </div>
@@ -66,7 +66,7 @@
     <!-- Responsive Navigation Menu -->
     <div :class="{'block': open, 'hidden': ! open}" class="hidden lg:hidden border-t">
         <div class="pt-2 pb-3 space-y-1">
-            <x-responsive-nav-link :href="route('d.dashboard')" :active="request()->routeIs('d.dashboard')">
+            <x-responsive-nav-link :href="route('d.dashboard.main')" :active="request()->routeIs('d.dashboard.*')">
                 <x-icon d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
                 <span class="ml-2">Dashboard</span>
             </x-responsive-nav-link>
@@ -90,7 +90,7 @@
 
         <!-- Responsive Settings Options -->
         <div class="pt-4 pb-1 border-t border-slate-200">
-            <x-responsive-nav-link :href="route('d.dashboard')" :active="request()->routeIs('dashboard')">
+            <x-responsive-nav-link href="#" :active="request()->routeIs('dashboard')">
                 {{ __('Profil') }}
             </x-responsive-nav-link>
 

@@ -14,7 +14,7 @@
             </p>
 
             <div class="mt-2 text-center">
-                <a href="{{ route('profile-vandertech') }}" class="inline-flex items-center mx-auto group text-blue-500 capitalize dark:text-blue-400 hover:underline hover:text-blue-600 dark:hover:text-blue-500 transition duration-200">
+                <a href="{{ route('profile-vanderteck') }}" class="inline-flex items-center mx-auto group text-blue-500 capitalize dark:text-blue-400 hover:underline hover:text-blue-600 dark:hover:text-blue-500 transition duration-200">
                     Selengkapnya
                     <svg class="w-4 h-4 ml-1 group-hover:translate-x-2 transition duration-200" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                         <path fill-rule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd"></path>

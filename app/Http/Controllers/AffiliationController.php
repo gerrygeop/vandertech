@@ -84,8 +84,8 @@ class AffiliationController extends Controller
     public function destroy(Affiliation $affiliation)
     {
         $affiliation->photos()->each(function($photo) {
-            if (Storage::exists('photo-afiliasi/'.$photo->path)) {
-                Storage::delete('photo-afiliasi/', $photo->path);
+            if (Storage::exists('photo-slideshow/'.$photo->path)) {
+                Storage::delete('photo-slideshow/', $photo->path);
             }
             $photo->delete();
         });

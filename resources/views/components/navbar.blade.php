@@ -33,7 +33,7 @@
                         </x-slot>
         
                         <x-slot name="content">
-                            <x-dropdown-link href="/#about">
+                            <x-dropdown-link href="{{ route('profile-vanderteck') }}">
                                 Tentang Perusahaan
                             </x-dropdown-link>
                             <x-dropdown-link href="/#visi-misi">
@@ -98,7 +98,7 @@
                 </span>
                 
                 <div :class="{'block': profil, 'hidden': ! profil}" class="hidden lg:hidden">
-                    <x-responsive-nav-link href="/#about" :active="request()->is('/#about')">Tentang Perusahaan</x-responsive-nav-link>
+                    <x-responsive-nav-link href="{{ route('profile-vanderteck') }}" :active="request()->routeIs('profile-vandertech')">Tentang Perusahaan</x-responsive-nav-link>
                     <x-responsive-nav-link href="/#visi-misi" :active="request()->is('/#visi-misi')">Visi & Misi</x-responsive-nav-link>
                 </div>
             </div>

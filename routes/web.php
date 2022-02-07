@@ -9,6 +9,7 @@ use App\Http\Controllers\{
     AffiliationPhotoController,
     PartnerController,
     CategoryController,
+    VanderteckController,
 };
 
 // Beranda
@@ -18,35 +19,26 @@ Route::get('/', [FrontController::class, 'home'])->name('/');
 Route::get('/news-event', [FrontController::class, 'listNewsAndEvent'])->name('news-event.list');
 Route::get('/news-event/{news}', [FrontController::class, 'detailNewsAndEvent'])->name('news-event.detail');
 
-// Profile Vandertech
-Route::get('/profile-vandertech', function () {
-    return view('detail-vanderteck');
-})->name('profile-vandertech');
+// Profile Vanderteck
+Route::get('/profile-vanderteck', [FrontController::class, 'profileVanderteck'])->name('profile-vanderteck');
 
 // Route Afiliasi
 Route::get('/afiliasi/{affiliation}', [FrontController::class, 'detailAffiliation'])->name('afiliasi.detail');
 
-Route::get('/vander-inti-energi', function () {
-    return view('afiliasi.vander-inti-energi');
-})->name('vander-inti-energi');
-
-Route::get('/vander-training', function () {
-    return view('afiliasi.vander-training');
-})->name('vander-training');
-
-Route::get('/vander-geolab', function () {
-    return view('afiliasi.vander-geolab');
-})->name('vander-geolab');
-
-Route::get('/9t-coffee', function () {
-    return view('afiliasi.9t-coffee');
-})->name('9t-coffee');
-
-// Admin
+// Dapur Admin
 Route::middleware('auth')->prefix('d')->name('d.')->group(function() {
-    Route::get('/dashboard', function () {
-        return view('dashboard');
-    })->middleware(['auth'])->name('dashboard');
+
+    Route::prefix('dashboard')->name('dashboard.')->group(function () {
+        Route::get('/', [VanderteckController::class, 'dashboard'])->name('main');
+        Route::get('/edit-profil', [VanderteckController::class, 'editProfile'])->name('edit-profile');
+        Route::post('/update-profil', [VanderteckController::class, 'updateProfile'])->name('update-profile');
+        
+        Route::get('/edit-visi-misi', [VanderteckController::class, 'editVisiMisi'])->name('edit-visi-misi');
+        Route::post('/update-visi-misi', [VanderteckController::class, 'updateVisiMisi'])->name('update-visi-misi');
+        
+        Route::post('/upload-foto-slide', [VanderteckController::class, 'uploadFotoSlide'])->name('upload-foto-slide');
+        Route::delete('/destroy-foto-slide/{slide}', [VanderteckController::class, 'destroyFotoSlide'])->name('destroy-foto-slide');
+    });
 
     // News & Event
     Route::resource('news', NewsController::class);

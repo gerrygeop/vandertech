@@ -49,31 +49,13 @@
 
     <div class="swiper mySwiper">
         <div class="swiper-wrapper">
-            <div class="swiper-slide min-h-full aspect-video">
-                <img 
-                    src="{{ url('image/intienergi/12.jpeg') }}" 
-                    alt="">
-            </div>
-            <div class="swiper-slide min-h-full aspect-video">
-                <img 
-                src="{{ url('image/intienergi/5.jpeg') }}"
-                    alt="">
-            </div>
-            <div class="swiper-slide min-h-full aspect-video">
-                <img 
-                    src="{{ url('image/intienergi/2.jpeg') }}"
-                    alt="">
-            </div>
-            <div class="swiper-slide min-h-full aspect-video">
-                <img 
-                    src="{{ url('image/intienergi/6.jpeg') }}"
-                    alt="">
-            </div>
-            <div class="swiper-slide min-h-full aspect-video">
-                <img 
-                    src="{{ url('image/intienergi/4.jpeg') }}"
-                    alt="">
-            </div>
+            @foreach ($slides as $slide)
+                <div class="swiper-slide min-h-full aspect-video">
+                    <img 
+                        src="{{ $slide->getPhotoSlide() }}" 
+                        alt="Foto Slide Show">
+                </div>
+            @endforeach
         </div>
 
         <div class="swiper-button-next bg-slate-50/40 p-3 md:p-4 lg:p-6"></div>

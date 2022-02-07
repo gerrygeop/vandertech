@@ -36,11 +36,14 @@
 [X] update create/edit afiliasi (TAMBAHKAN VISI MISI, OPSI TRAINING, ORDER/URUTAN SETIAP AFILIASI)
 [X] Update slide show image afiliasi
 
+[X] Tampilkan foto slide di beranda !!!!
+    - Pilih foto dari afiliasi / buat tabel khusus untuk slideshow beranda vanderteck
+    - Lanjut di vanderteck controller / buat migration?
 [] Update Order/nomor urut kategori mitra !!!!!
 [] Buat halaman profile admin
 [] Coba ubah tampilan detail/content news & event
     - pindah judul di atas gambar
-[] Update Dashboard
+[X] Update Dashboard
     - visi misi
     - sejarah / detail vanderteck
     - slide foto beranda

@@ -7,7 +7,7 @@
                     @foreach ($affiliation->photos as $photo)
                         <div class="swiper-slide min-h-full aspect-video">
                             <img 
-                                src="{{ $photo->getAffiliationPhoto() }}" 
+                                src="{{ $photo->getPhotoSlideShow() }}" 
                                 alt="{{ $affiliation->slug }}">
                         </div>
                     @endforeach
@@ -51,7 +51,7 @@
                     <p class="text-base text-slate-700">
                         {{ $affiliation->training_name }}
                     </p>
-                    <div class="pl-5">
+                    <div class="pl-5" id="visi-misi-afiliasi">
                         {!! Str::markdown($affiliation->training) !!}
                     </div>
                 </div>
@@ -62,10 +62,8 @@
 
     @push('scripts')
         <script>
-            let olMisi = document.querySelectorAll('ol');
-            olMisi.forEach(e => {
-                e.setAttribute('class', 'list-decimal leading-loose tracking-wide');
-            });
+            let olMisi = document.querySelector('#visi-misi-afiliasi ol');
+            olMisi.setAttribute('class', 'list-decimal leading-loose tracking-wide');
         </script>
     @endpush
 </x-content>
