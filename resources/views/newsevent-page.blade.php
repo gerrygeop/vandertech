@@ -5,8 +5,8 @@
 
             <div class="flex flex-wrap w-full mb-6 lg:mb-8">
                 <div>
-                    <h1 class="text-2xl lg:text-3xl font-medium mb-2 text-slate-700 dark:text-slate-100">News & Event</h1>
-                    <div class="h-0.5 w-20 bg-indigo-500 dark:bg-indigo-300 rounded"></div>
+                    <h1 class="text-2xl lg:text-3xl font-medium mb-2 text-slate-700">News & Event</h1>
+                    <div class="h-0.5 w-20 bg-indigo-500 rounded"></div>
                 </div>
             </div>
 

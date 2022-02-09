@@ -5,7 +5,7 @@
 
     <div class="py-8">
         <div class="max-w-6xl mx-auto sm:px-6 lg:px-8">
-            <section class="p-8 mx-auto bg-white rounded-md shadow-md dark:bg-slate-800">
+            <section class="p-8 mx-auto bg-white rounded-md shadow-md">
                 
                 <form action="{{ route('d.category.store') }}" method="POST">
                     @csrf
