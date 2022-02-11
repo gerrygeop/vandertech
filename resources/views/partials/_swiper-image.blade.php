@@ -1,54 +1,8 @@
-@push('styles')
-    <style>
-        .swiper {
-            width: 100%;
-            height: 100%;
-        }
-
-        .swiper-slide {
-            text-align: center;
-            font-size: 18px;
-            background: black;
-
-            /* Center slide text vertically */
-            display: -webkit-box;
-            display: -ms-flexbox;
-            display: -webkit-flex;
-            display: flex;
-            -webkit-box-pack: center;
-            -ms-flex-pack: center;
-            -webkit-justify-content: center;
-            justify-content: center;
-            -webkit-box-align: center;
-            -ms-flex-align: center;
-            -webkit-align-items: center;
-            align-items: center;
-        }
-
-        .swiper-slide img {
-            display: block;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-        .swiper-button-next,
-        .swiper-button-prev{
-            color: #334155;
-            font-weight: bold
-        }
-        @media screen and (max-width: 650px) {
-            .swiper-button-next:after,
-            .swiper-button-prev:after {
-                font-size: 12px !important;
-            }
-        }
-    </style>
-@endpush
-
 <div class="min-h-full">
 
     <div class="swiper mySwiper">
         <div class="swiper-wrapper">
+
             @foreach ($slides as $slide)
                 <div class="swiper-slide min-h-full aspect-video">
                     <img 
@@ -56,6 +10,7 @@
                         alt="Foto Slide Show">
                 </div>
             @endforeach
+            
         </div>
 
         <div class="swiper-button-next bg-slate-50/40 p-3 md:p-4 lg:p-6"></div>

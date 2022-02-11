@@ -32,7 +32,7 @@ class AffiliationRequest extends FormRequest
             'visi' => 'nullable|string',
             'misi' => 'nullable',
             'address' => 'nullable',
-            'telp' => 'nullable|numeric|digits_between:12,14',
+            'telp' => 'nullable',
             'email' => 'nullable|email',
             'maps' => 'nullable',
             'hidden' => 'bool',

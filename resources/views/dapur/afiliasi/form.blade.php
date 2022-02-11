@@ -50,7 +50,11 @@
         <div class="flex flex-col mt-6">
             <div>
                 <x-label for="visi" class="mb-2">Visi</x-label>
-                <x-input id="visi" type="text" name="visi" class="w-full" value="{{ old('visi', $affiliation->visi) }}" />
+                <textarea 
+                name="visi" 
+                id="visi" 
+                rows="3"
+                class="w-full form-input">{{ old('visi', $affiliation->visi) }}</textarea>
     
                 @error('visi')
                     <p class="text-red-500 text-xs mt-1">{{ $message }}</p>
@@ -62,7 +66,7 @@
                 <textarea 
                     name="misi" 
                     id="misi" 
-                    rows="5"
+                    rows="6"
                     class="w-full form-input"
                     placeholder="1. ...">{{ old('misi', $affiliation->misi) }}</textarea>
     

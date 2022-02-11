@@ -36,6 +36,6 @@
     }
 
     .select-menu {
-        @apply bg-slate-50 rounded-md lg:rounded-l-none lg:rounded-r-md shadow-sm border-slate-300 lg:border-l-0 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 focus:outline-blue-500;
+        @apply bg-slate-50 rounded-md shadow-sm border-slate-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 focus:outline-blue-500;
     }
 }

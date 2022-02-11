@@ -40,7 +40,7 @@
                                 <div class="w-full max-w-xs text-center border rounded-md overflow-hidden">
                                     <img 
                                         class="object-cover object-center w-full h-48 mx-auto" 
-                                        src="{{ $photo->getPhotoSlideShow() }}" 
+                                        src="{{ $photo->getAffiliationPhoto() }}" 
                                         alt="{{ $affiliation->name }}"
                                     />
 
