@@ -1,4 +1,4 @@
-<div class="mx-auto overflow-hidden bg-white dark:bg-slate-800">
+<div class="mx-auto overflow-hidden bg-white">
     <img class="object-cover w-full h-64 md:h-96" src="{{ $news->getPhoto() }}" alt="cover">
 
     <div class="lg:mt-6 px-6 py-6 lg:pt-0">
@@ -11,7 +11,7 @@
             </span>
         </div>
         
-        <h2 class="block text-2xl font-semibold text-slate-800 dark:text-white">
+        <h2 class="block text-2xl font-semibold text-slate-800">
             {{ $news->title }}
         </h2>
         <article class="mt-2 text-base text-slate-700">{!! $news->body !!}</article>

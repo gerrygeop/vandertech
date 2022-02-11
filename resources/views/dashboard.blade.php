@@ -10,26 +10,48 @@
     </x-slot>
 
     <div class="py-8">
-        <div class="max-w-6xl mx-auto sm:px-6 lg:px-8">
+        <div x-data="{
+            openTab: 'first',
+            activeClass: 'text-blue-600 -mb-px border-b-2 border-blue-400',
+            inactiveClass: 'text-slate-400 border-b-2 border-slate-200'
+        }" class="max-w-6xl mx-auto sm:px-6 lg:px-8">
             
             <div class="w-full mx-auto">
                 {{-- Tabs --}}
-                <ul id="tabs" class="flex w-full mb-4 bg-slate-100">
-                    <li class="font-medium pb-2 text-blue-600 -mb-px border-b-2 border-blue-400 rounded-t opacity-50">
-                        <a id="default-tab" href="#first" class="btn-tab px-4 py-2 text-sm md:text-base">Profil Vanderteck</a>
+                <ul class="flex w-full mb-4 bg-slate-100">
+                    <li class="font-medium pb-2" @click="openTab = 'first'">
+                        <a 
+                            href="#" 
+                            class="btn-tab px-4 py-2 text-sm md:text-base"
+                            :class="openTab === 'first' ? activeClass : inactiveClass"
+                        >
+                            Profil Vanderteck
+                        </a>
                     </li>
-                    <li class="font-medium pb-2 border-b-2 rounded-t opacity-50">
-                        <a href="#second" class="btn-tab px-4 py-2 text-sm md:text-base">Visi & Misi</a>
+                    <li class="font-medium pb-2"  @click="openTab = 'second'">
+                        <a 
+                            href="#" 
+                            class="btn-tab px-4 py-2 text-sm md:text-base"
+                            :class="openTab === 'second' ? activeClass : inactiveClass"
+                        >
+                            Visi & Misi
+                        </a>
                     </li>
-                    <li class="font-medium pb-2 border-b-2 rounded-t opacity-50">
-                        <a href="#third" class="btn-tab px-4 py-2 text-sm md:text-base">Foto Slide</a>
+                    <li class="font-medium pb-2"  @click="openTab = 'third'">
+                        <a 
+                            href="#" 
+                            class="btn-tab px-4 py-2 text-sm md:text-base"
+                            :class="openTab === 'third' ? activeClass : inactiveClass"
+                        >
+                            Foto Slide
+                        </a>
                     </li>
                 </ul>
 
                 {{-- Tab Contents --}}
-                <div id="tab-contents" class="bg-white border-b border-slate-200 rounded-md shadow-sm overflow-hidden">
+                <div class="bg-white border-b border-slate-200 rounded-md shadow-sm overflow-hidden">
 
-                    <div id="first" class="px-6 pt-1 pb-8">
+                    <div x-show="openTab === 'first'" class="px-6 pt-1 pb-8">
                         <div class="flex justify-end border-b py-2 mb-4">
                             <a href="{{ route('d.dashboard.edit-profile') }}" class="px-4 py-1 bg-indigo-600 text-white hover:bg-indigo-700 rounded-md">Edit</a>
                         </div>
@@ -55,7 +77,7 @@
                         @endif
                     </div>
 
-                    <div id="second" class="hidden px-6 pt-1 pb-8">
+                    <div x-show="openTab === 'second'" class="px-6 pt-1 pb-8">
                         <div class="flex justify-end border-b py-2 mb-4">
                             <a href="{{ route('d.dashboard.edit-visi-misi') }}" class="px-4 py-1 bg-indigo-600 text-white hover:bg-indigo-700 rounded-md">Edit</a>
                         </div>
@@ -89,7 +111,7 @@
                         @endif
                     </div>
 
-                    <div id="third" class="hidden px-4 md:px-6 pt-1 pb-8">
+                    <div x-show="openTab === 'third'" class="px-4 md:px-6 pt-1 pb-8">
                         <div class="py-2 mb-4">
                             <form action="{{ route('d.dashboard.upload-foto-slide') }}" method="POST" enctype="multipart/form-data">
                                 @csrf
@@ -153,29 +175,6 @@
 
     @push('scripts')
         <script>
-            // set class tabs content
-            let tabsContainer = document.querySelector("#tabs");
-            let tabTogglers = tabsContainer.querySelectorAll(".btn-tab");
-
-            tabTogglers.forEach(function(toggler) {
-                toggler.addEventListener("click", function(e) {
-                    e.preventDefault();
-                    let tabName = this.getAttribute("href");
-                    let tabContents = document.querySelector("#tab-contents");
-
-                    for (let i = 0; i < tabContents.children.length; i++) {
-                        tabTogglers[i].parentElement.classList.remove("text-blue-600", "border-blue-400", "-mb-px", "opacity-100");
-                        tabContents.children[i].classList.remove("hidden");
-                        if ("#" + tabContents.children[i].id === tabName) {
-                            continue;
-                        }
-                        tabContents.children[i].classList.add("hidden");
-                    }
-                    e.target.parentElement.classList.add("text-blue-600", "border-blue-400", "-mb-px", "opacity-100");
-                });
-            });
-            document.getElementById("default-tab").click();
-
             // set class misi
             let olMisi = document.querySelector('#visi-misi-dapur ol');
             olMisi.setAttribute('class', 'list-disc leading-loose text-slate-700 tracking-wide');
