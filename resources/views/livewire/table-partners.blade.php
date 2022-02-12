@@ -82,7 +82,6 @@
 
                     <td class="p-4 whitespace-nowrap text-sm">
                         <div class="flex items-center justify-end">
-                            <a href="{{ route('d.partner.show', $partner) }}" class="btn-hover-primary">Detail</a>
                             <a href="{{ route('d.partner.edit', $partner) }}" class="btn-hover-primary">Edit</a>
 
                             <form action="{{ route('d.partner.destroy', $partner) }}" method="POST" onsubmit="return confirm('Yakin untuk menghapus?')">

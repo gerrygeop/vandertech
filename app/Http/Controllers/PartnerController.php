@@ -17,11 +17,6 @@ class PartnerController extends Controller
         return view('dapur.partners.index');
     }
 
-    public function show(Partner $partner)
-    {
-        return view('dapur.partners.show', compact('partner'));
-    }
-
     public function create()
     {
         $categories = Category::all();

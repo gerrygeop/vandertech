@@ -50,7 +50,7 @@ Route::middleware('auth')->prefix('d')->name('d.')->group(function() {
     Route::resource('news', NewsController::class);
 
     // Mitra / partners
-    Route::resource('partner', PartnerController::class);
+    Route::resource('partner', PartnerController::class)->except('show');
     
     // Kategori mitra
     Route::resource('category', CategoryController::class)->except('show');
