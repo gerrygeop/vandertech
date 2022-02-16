@@ -45,6 +45,30 @@
                 <div class="mt-12">
                     @include('afiliasi.training')
                 </div>
+
+                @if ($pelatihan)
+                    <div class="mt-12">
+                        <h2 class="text-base md:text-lg text-slate-900 font-medium tracking-wider underline underline-offset-1">
+                            Pelatihan yang telah dilaksanakan
+                        </h2>
+                        <table class="border mt-2">
+                            <thead class="bg-slate-100">
+                                <th class="px-4 py-2 text-left">Tahun</th>
+                                <th class="px-4 py-2 text-left">Mitra Perusahaan</th>
+                                <th class="px-4 py-2 text-left">Layanan Jasa</th>
+                            </thead>
+                            <tbody class="divide-y">
+                                @foreach ($pelatihan as $item)
+                                    <tr>
+                                        <td class="px-4 py-2">{{ $item->tahun }}</td>
+                                        <td class="px-4 py-2">{{ $item->partner->name }}</td>
+                                        <td class="px-4 py-2">{{ $item->layanan_jasa }}</td>
+                                    </tr>
+                                @endforeach
+                            </tbody>
+                        </table>
+                    </div>
+                @endif
             @endif
 
             @if ($affiliation->address || $affiliation->email || $affiliation->telp)

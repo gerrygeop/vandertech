@@ -27,6 +27,11 @@ class Affiliation extends Model
         return $this->hasMany(Photo::class);
     }
 
+    public function training()
+    {
+        return $this->hasMany(Pelatihan::class);
+    }
+
     public function getLogoAffiliation()
     {
         if ($this->logo_path && Storage::exists('logo-afiliasi/'.$this->logo_path)) {

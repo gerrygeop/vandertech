@@ -22,6 +22,11 @@ class Partner extends Model
     	return $this->categories()->sync($categoriesId);
     }
 
+    public function pelatihan()
+    {
+        return $this->hasMany(Pelatihan::class, 'id_partner');
+    }
+
     public function getLogoPartner()
     {
         if ($this->logo_path && Storage::exists('logo-mitra/'.$this->logo_path)) {

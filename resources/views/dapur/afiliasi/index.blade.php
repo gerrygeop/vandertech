@@ -50,18 +50,47 @@
                                 </div>
                             </td>
 
-                            <td class="px-6 py-4 whitespace-nowrap text-sm">
+                            <td class="px-6 py-4 whitespace-nowrap text-sm z-50">
                                 <div class="flex items-center justify-end">
-                                    <a href="{{ route('d.affiliation.photo.create', $affiliation) }}" class="btn-hover-primary">Foto</a>
-                                    <a href="{{ route('d.affiliation.show', $affiliation) }}" class="btn-hover-primary">Detail</a>
-                                    <a href="{{ route('d.affiliation.edit', $affiliation) }}" class="btn-hover-primary">Edit</a>
+                                    <x-dropdown align="right" width="48">
+                                        <x-slot name="trigger">
+                                            <span class="inline-flex rounded-md">
+                                                <button 
+                                                    type="button"
+                                                    class="inline-flex items-center p-2 text-sm text-gray-500 hover:text-gray-700 hover:bg-gray-200 rounded-md focus:outline-none transition"
+                                                >
+                                                    <x-icon d="M12 5v.01M12 12v.01M12 19v.01M12 6a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z" />
+                                                </button>
+                                            </span>
+                                        </x-slot>
+                    
+                                        <x-slot name="content">
+                                            <x-dropdown-link href="{{ route('d.affiliation.photo.create', $affiliation) }}">
+                                                <span class="btn-hover-primary p-0">Foto</span>
+                                            </x-dropdown-link>
 
-                                    <form action="{{ route('d.affiliation.destroy', $affiliation) }}" method="POST" onsubmit="return confirm('Yakin untuk menghapus?')">
-                                        @csrf
-                                        @method('DELETE')
+                                            @if ($affiliation->training)
+                                            <x-dropdown-link href="{{ route('d.affiliation.training.index', $affiliation) }}">
+                                                <span class="btn-hover-primary p-0">Pelatihan</span>
+                                            </x-dropdown-link>
+                                            @endif
 
-                                        <button class="btn-hover-danger">Hapus</button>
-                                    </form>
+                                            <x-dropdown-link href="{{ route('d.affiliation.show', $affiliation) }}">
+                                                <span class="btn-hover-primary p-0">Detail</span>
+                                            </x-dropdown-link>
+                                            <x-dropdown-link href="{{ route('d.affiliation.edit', $affiliation) }}">
+                                                <span class="btn-hover-primary p-0">Edit</span>
+                                            </x-dropdown-link>
+
+                                            <form action="{{ route('d.affiliation.destroy', $affiliation) }}" method="POST" onsubmit="return confirm('Yakin untuk menghapus?')">
+                                                @csrf
+                                                @method('DELETE')
+                                                <x-dropdown-link :href="route('d.affiliation.destroy', $affiliation)" onclick="event.preventDefault(); this.closest('form').submit();">
+                                                    <span class="btn-hover-danger">Hapus</span>
+                                                </x-dropdown-link>
+                                            </form>
+                                        </x-slot>
+                                    </x-dropdown>
                                 </div>
                             </td>
                         </tr>

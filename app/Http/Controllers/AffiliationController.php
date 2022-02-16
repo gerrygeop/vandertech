@@ -3,8 +3,11 @@
 namespace App\Http\Controllers;
 
 use App\Models\Affiliation;
-use Illuminate\Http\Request;
+use App\Models\Partner;
+use App\Models\Pelatihan;
+
 use App\Http\Requests\AffiliationRequest;
+use Illuminate\Http\Request;
 
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Str;
@@ -96,5 +99,65 @@ class AffiliationController extends Controller
 
         $affiliation->delete();
         return redirect()->route('d.affiliation.index')->with('success', 'Berhasil menghapus perusahaan afiliasi');
+    }
+
+    public function tableTraining(Affiliation $affiliation)
+    {
+        $pelatihan = Pelatihan::where('id_affiliation', $affiliation->id)->with('partner')->get();
+        return view('dapur.training.index', compact('pelatihan', 'affiliation'));
+    }
+
+    public function createtraining(Affiliation $affiliation)
+    {
+        $partners = Partner::all();
+        $pelatihan = new Pelatihan;
+        return view('dapur.training.create', compact('affiliation', 'partners', 'pelatihan'));
+    }
+
+    public function editTraining(Affiliation $affiliation, Pelatihan $pelatihan)
+    {
+        $partners = Partner::all();
+        return view('dapur.training.edit', compact('affiliation', 'partners', 'pelatihan'));
+    }
+
+    public function storeTraining(Request $request, Affiliation $affiliation)
+    {
+        $request->validate([
+            'id_partner' => 'required',
+            'tahun' => 'required',
+            'layanan_jasa' => 'required',
+        ]);
+
+        Pelatihan::create([
+            'id_partner' => $request->id_partner,
+            'tahun' => $request->tahun,
+            'layanan_jasa' => $request->layanan_jasa,
+            'id_affiliation' => $affiliation->id,
+        ]);
+
+        return redirect()->route('d.affiliation.training.index', $affiliation)->with('success', 'Berhasil Menambahkan Pelatihan yang telah dilaksanakan');
+    }
+
+    public function updateTraining(Request $request, Affiliation $affiliation, Pelatihan $pelatihan)
+    {
+        $request->validate([
+            'id_partner' => 'required',
+            'tahun' => 'required',
+            'layanan_jasa' => 'required',
+        ]);
+
+        $pelatihan->update([
+            'id_partner' => $request->id_partner,
+            'tahun' => $request->tahun,
+            'layanan_jasa' => $request->layanan_jasa,
+        ]);
+
+        return redirect()->route('d.affiliation.training.index', $affiliation)->with('success', 'Berhasil Mengupdate Pelatihan yang telah dilaksanakan');
+    }
+
+    public function destroyTraining(Pelatihan $pelatihan)
+    {
+        $pelatihan->delete();
+        return back()->with('success', 'Berhasil Menghapus Pelatihan yang telah dilaksanakan');
     }
 }

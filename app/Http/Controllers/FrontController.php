@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\News;
 use App\Models\Affiliation;
+use App\Models\Pelatihan;
 use App\Models\Vanderteck;
 use App\Models\Slide;
 
@@ -25,8 +26,13 @@ class FrontController extends Controller
 
     public function detailAffiliation(Affiliation $affiliation)
     {
+        $pelatihan = Pelatihan::where('id_affiliation', $affiliation->id)->with('partner')->get();
+        if ($pelatihan != null) {
+            $pelatihan = false;
+        }
+
         $affiliation->load('photos');
-        return view('afiliasi.detail-afiliasi', compact('affiliation'));
+        return view('afiliasi.detail-afiliasi', compact('affiliation', 'pelatihan'));
     }
 
     public function listNewsAndEvent()

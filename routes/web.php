@@ -57,6 +57,15 @@ Route::middleware('auth')->prefix('d')->name('d.')->group(function() {
 
     // Afiliasi
     Route::resource('affiliation', AffiliationController::class);
+
+    // Pelatihan dilaksanakan
+    Route::get('/affiliation/{affiliation}/training', [AffiliationController::class, 'tableTraining'])->name('affiliation.training.index');
+    Route::get('/affiliation/{affiliation}/training/create', [AffiliationController::class, 'createTraining'])->name('affiliation.training.create');
+    Route::get('/affiliation/{affiliation}/training/{$pelatihan}', [AffiliationController::class, 'editTraining'])->name('affiliation.training.edit');
+    Route::post('/affiliation/{affiliation}/training/store', [AffiliationController::class, 'storeTraining'])->name('affiliation.training.store');
+    Route::put('/affiliation/{affiliation}/training/update/{$pelatihan}', [AffiliationController::class, 'updateTraining'])->name('affiliation.training.update');
+    Route::delete('/affiliation/training/destroy/{$pelatihan}', [AffiliationController::class, 'destroyTraining'])->name('affiliation.training.destroy');
+
     // Afiliasi Photo
     Route::get('/affiliation/{affiliation}/photos/create', [AffiliationPhotoController::class, 'create'])->name('affiliation.photo.create');
     Route::post('/affiliation/{affiliation}/photos', [AffiliationPhotoController::class, 'store'])->name('affiliation.photo.store');
