@@ -27,7 +27,8 @@ class FrontController extends Controller
     public function detailAffiliation(Affiliation $affiliation)
     {
         $pelatihan = Pelatihan::where('id_affiliation', $affiliation->id)->with('partner')->get();
-        if ($pelatihan != null) {
+
+        if ($pelatihan->count() < 1) {
             $pelatihan = false;
         }
 
