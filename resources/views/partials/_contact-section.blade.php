@@ -21,10 +21,10 @@
                         </div>
     
                         <div class="mt-4">
-                            <h2 class="font-semibold tracking-widest text-xs">EMAIL</h2>
+                            <h2 class="font-semibold tracking-widest text-xs mb-4">EMAIL</h2>
                             <a class="text-indigo-300 md:text-indigo-500 leading-relaxed text-sm">example@email.com</a>
                             
-                            <h2 class="font-semibold tracking-widest text-xs mt-4">TELP</h2>
+                            <h2 class="font-semibold tracking-widest text-xs">TELP</h2>
                             <div class="flex items-center">
                                 <svg class="h-5 w-5 text-emerald-500 mr-1" xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24px" viewBox="0 0 24 24" width="24px" fill="currentColor">
                                     <g><rect fill="none" height="24" width="24" y="0"/></g>
