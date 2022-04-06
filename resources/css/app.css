@@ -20,6 +20,10 @@
         @apply inline-flex items-center px-4 py-2 text-white text-base bg-blue-700 hover:bg-blue-600 active:bg-blue-800 border border-transparent focus:border-blue-200 focus:ring ring-blue-200 rounded-md tracking-wide shadow shadow-blue-700/50 transition ease-in-out duration-150;
     }
 
+    .btn-secondary {
+        @apply inline-flex items-center justify-center px-4 py-2 bg-slate-50 border border-slate-400 rounded-md font-semibold text-xs text-slate-600 hover:text-slate-800 uppercase tracking-widest active:bg-slate-100 focus:outline-none focus:border-slate-800 focus:ring ring-slate-200 disabled:opacity-25 transition ease-in-out duration-150;
+    }
+
     .btn-hover-primary {
         @apply p-2 text-indigo-600 hover:text-indigo-800 hover:underline;
     }

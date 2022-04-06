@@ -118,7 +118,7 @@
 
                                 <div class="flex items-center justify-between gap-8">
                                     <div class="w-full md:w-1/2">
-                                        <x-input id="photo" type="file" class="w-full p-2 input-file" name="photo[]" multiple />
+                                        <x-input id="photo" type="file" class="w-full p-2 input-file" name="photo[]" required multiple />
                                         @error('photo')
                                             <p class="text-red-500 text-xs mt-1">{{ $message }}</p>
                                         @enderror

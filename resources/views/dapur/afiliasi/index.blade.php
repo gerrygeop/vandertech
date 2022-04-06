@@ -52,6 +52,9 @@
 
                             <td class="px-6 py-4 whitespace-nowrap text-sm z-50">
                                 <div class="flex items-center justify-end">
+                                    <a href="{{ route('d.affiliation.show', $affiliation) }}" class="btn-hover-primary">Detail</a>
+                                    <a href="{{ route('d.affiliation.edit', $affiliation) }}" class="btn-hover-primary">Edit</a>
+
                                     <x-dropdown align="right" width="48">
                                         <x-slot name="trigger">
                                             <span class="inline-flex rounded-md">
@@ -75,18 +78,18 @@
                                             </x-dropdown-link>
                                             @endif
 
-                                            <x-dropdown-link href="{{ route('d.affiliation.show', $affiliation) }}">
+                                            {{-- <x-dropdown-link href="{{ route('d.affiliation.show', $affiliation) }}">
                                                 <span class="btn-hover-primary p-0">Detail</span>
                                             </x-dropdown-link>
                                             <x-dropdown-link href="{{ route('d.affiliation.edit', $affiliation) }}">
                                                 <span class="btn-hover-primary p-0">Edit</span>
-                                            </x-dropdown-link>
+                                            </x-dropdown-link> --}}
 
                                             <form action="{{ route('d.affiliation.destroy', $affiliation) }}" method="POST" onsubmit="return confirm('Yakin untuk menghapus?')">
                                                 @csrf
                                                 @method('DELETE')
                                                 <x-dropdown-link :href="route('d.affiliation.destroy', $affiliation)" onclick="event.preventDefault(); this.closest('form').submit();">
-                                                    <span class="btn-hover-danger">Hapus</span>
+                                                    <span class="btn-hover-danger p-0">Hapus</span>
                                                 </x-dropdown-link>
                                             </form>
                                         </x-slot>

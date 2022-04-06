@@ -32,7 +32,8 @@
 
                     </div>
 
-                    <div class="flex mt-12">
+                    <div class="flex items-center mt-12">
+                        <a href="{{ route('d.dashboard.main') }}" class="mr-2 btn-secondary">Batal</a>
                         <x-button>Simpan</x-button>
                     </div>
                 </form>

@@ -23,6 +23,7 @@
                     </div>
 
                     <div class="flex mt-12">
+                        <a href="{{ route('d.category.index') }}" class="mr-2 btn-secondary">Batal</a>
                         <x-button>Simpan</x-button>
                     </div>
                 </form>
