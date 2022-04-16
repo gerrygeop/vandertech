@@ -46,3 +46,4 @@
     - slide foto beranda
     
 [] Update Order/nomor urut kategori mitra !!!!!
+[] Buat table list

@@ -13,6 +13,9 @@
                     @include('dapur.training.form')
 
                     <div class="flex mt-12">
+                        <a href="{{ route('d.affiliation.training.index', $affiliation) }}" class="mr-2 btn-secondary">
+                            Batal
+                        </a>
                         <x-button>Simpan</x-button>
                     </div>
                 </form>

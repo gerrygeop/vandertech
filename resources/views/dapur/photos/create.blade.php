@@ -25,7 +25,7 @@
                     </div>
 
                     <div class="flex justify-end md:justify-start mt-6">
-                        <a href="{{ route('d.affiliation.index') }}" class="mr-2 btn-secondary">Batal</a>
+                        <a href="{{ route('d.affiliation.show', $affiliation) }}" class="mr-2 btn-secondary">Batal</a>
                         <x-button>Upload</x-button>
                     </div>
                 </form>

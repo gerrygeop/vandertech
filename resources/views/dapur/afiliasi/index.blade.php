@@ -55,7 +55,7 @@
                                     <a href="{{ route('d.affiliation.show', $affiliation) }}" class="btn-hover-primary">Detail</a>
                                     <a href="{{ route('d.affiliation.edit', $affiliation) }}" class="btn-hover-primary">Edit</a>
 
-                                    <x-dropdown align="right" width="48">
+                                    {{-- <x-dropdown align="right" width="48">
                                         <x-slot name="trigger">
                                             <span class="inline-flex rounded-md">
                                                 <button 
@@ -78,12 +78,12 @@
                                             </x-dropdown-link>
                                             @endif
 
-                                            {{-- <x-dropdown-link href="{{ route('d.affiliation.show', $affiliation) }}">
+                                            <x-dropdown-link href="{{ route('d.affiliation.show', $affiliation) }}">
                                                 <span class="btn-hover-primary p-0">Detail</span>
                                             </x-dropdown-link>
                                             <x-dropdown-link href="{{ route('d.affiliation.edit', $affiliation) }}">
                                                 <span class="btn-hover-primary p-0">Edit</span>
-                                            </x-dropdown-link> --}}
+                                            </x-dropdown-link>
 
                                             <form action="{{ route('d.affiliation.destroy', $affiliation) }}" method="POST" onsubmit="return confirm('Yakin untuk menghapus?')">
                                                 @csrf
@@ -93,7 +93,7 @@
                                                 </x-dropdown-link>
                                             </form>
                                         </x-slot>
-                                    </x-dropdown>
+                                    </x-dropdown> --}}
                                 </div>
                             </td>
                         </tr>

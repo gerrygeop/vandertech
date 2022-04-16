@@ -23,8 +23,8 @@
     <script src="{{ asset('js/app.js') }}" defer></script>
 
     {{-- Trix Editor --}}
-    <link rel="stylesheet" type="text/css" href="/css/trix.css">
-    <script type="text/javascript" src="/js/trix.js"></script>
+    <link rel="stylesheet" type="text/css" href="{{ asset('css/trix.css') }}">
+    <script type="text/javascript" src="{{ asset('js/trix.js') }}"></script>
 
     <style>
         .background-img {

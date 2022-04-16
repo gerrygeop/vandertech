@@ -100,7 +100,7 @@
                 <textarea 
                     name="training" 
                     id="training" 
-                    rows="5"
+                    rows="6"
                     class="w-full form-input"
                     placeholder="1. ...">{{ old('training', $affiliation->training) }}</textarea>
     

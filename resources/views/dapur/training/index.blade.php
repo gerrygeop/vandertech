@@ -12,7 +12,11 @@
     <div class="py-8">
         <div class="max-w-6xl mx-auto sm:px-6 lg:px-8">
 
-            <div class="mb-3 px-4 lg:px-0 text-right lg:text-left">
+            <div class="flex items-center justify-between mb-3 px-4 lg:px-0">
+                <a href="{{ route('d.affiliation.show', $affiliation) }}" class="flex items-center text-slate-700 px-3 py-2 bg-slate-200 hover:bg-slate-300 rounded">
+                    <x-icon classes="mr-1" d="M10 19l-7-7m0 0l7-7m-7 7h18" size="w-5 h-5" />
+                    Kembali
+                </a>
                 <a href="{{ route('d.affiliation.training.create', $affiliation) }}" class="btn-add-primary">
                     <x-icon classes="mr-1" d="M12 9v3m0 0v3m0-3h3m-3 0H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z" />
                     Pelatihan
@@ -40,7 +44,7 @@
                             <td class="px-6 py-4 text-sm md:text-base text-slate-700 whitespace-nowrap capitalize">
                                 {{ $item->partner->name }}
                             </td>
-                            <td class="px-6 py-4 text-sm md:text-base text-slate-700 whitespace-nowrap capitalize">
+                            <td class="px-6 py-4 text-sm md:text-base text-slate-700 capitalize">
                                 {{ $item->layanan_jasa }}
                             </td>
 
