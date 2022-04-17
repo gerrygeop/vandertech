@@ -22,7 +22,7 @@
     </div>
 
     <div>
-        <x-label for="layanan_jasa" class="mb-2">Layanan Jasa</x-label>
+        <x-label for="layanan_jasa" class="mb-2">Layanan Jasa / Pelatihan</x-label>
         <x-input id="layanan_jasa" type="text" name="layanan_jasa" class="w-full" value="{{ old('layanan_jasa', $pelatihan->layanan_jasa) }}" />
 
         @error('layanan_jasa')

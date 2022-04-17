@@ -31,10 +31,10 @@
                             <span class="btn-hover-primary p-0">Foto</span>
                         </x-dropdown-link>
 
-                        @if ($affiliation->training)
-                        <x-dropdown-link href="{{ route('d.affiliation.training.index', $affiliation) }}">
-                            <span class="btn-hover-primary p-0">Pelatihan</span>
-                        </x-dropdown-link>
+                        @if ($affiliation->layanan_jasa)
+                            <x-dropdown-link href="{{ route('d.affiliation.training.index', $affiliation) }}">
+                                <span class="btn-hover-primary p-0">Perusahaan Mitra</span>
+                            </x-dropdown-link>
                         @endif
 
                         <form action="{{ route('d.affiliation.destroy', $affiliation) }}" method="POST" onsubmit="return confirm('Yakin untuk menghapus afiliasi?')">
@@ -105,16 +105,9 @@
                         </div>
                     @endif
         
-                    @if ($affiliation->training_name && $affiliation->training)
+                    @if ($affiliation->layanan_jasa)
                         <div class="mt-8">
-                            <div class="mb-1">
-                                <h2 class="text-base text-slate-900 font-semibold">
-                                    {{ $affiliation->training_name }}
-                                </h2>
-                            </div>
-                            <div class="pl-5" id="training-afiliasi-dapur">
-                                {!! Str::markdown($affiliation->training) !!}
-                            </div>
+                            {!! $affiliation->layanan_jasa !!}
                         </div>
                     @endif
 

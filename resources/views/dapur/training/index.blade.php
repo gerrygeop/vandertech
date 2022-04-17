@@ -6,7 +6,7 @@
     @endif
 
     <x-slot name="header">
-        Pelatihan yang telah dilaksanakan
+        Layanan Jasa / Pelatihan
     </x-slot>
 
     <div class="py-8">
@@ -19,7 +19,7 @@
                 </a>
                 <a href="{{ route('d.affiliation.training.create', $affiliation) }}" class="btn-add-primary">
                     <x-icon classes="mr-1" d="M12 9v3m0 0v3m0-3h3m-3 0H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z" />
-                    Pelatihan
+                    Tambah Data
                 </a>
             </div>
 

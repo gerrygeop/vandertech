@@ -79,35 +79,19 @@
 
     <hr class="my-3 border-slate-200" />
     
-    <div class="border rounded-md p-4">
+    <div>
         <div class="inline-flex items-center space-x-1 border-b-2 border-indigo-300 italic">
-            <p class="font-medium text-lg text-slate-600">Pelatihan</p>
+            <p class="font-medium text-lg text-slate-600">Layanan Jasa / Pelatihan</p>
             <span class="font-light text-sm text-slate-500">(kosongkan jika tidak diperlukan)</span>
         </div>
 
-        <div class="flex flex-col mt-6">
-            <div>
-                <x-label for="training_name" class="mb-2">Nama Pelatihan</x-label>
-                <x-input id="training_name" type="text" name="training_name" class="w-full" value="{{ old('training_name', $affiliation->training_name) }}" />
+        <div class="mt-4">
+            <input id="layanan_jasa" type="hidden" name="layanan_jasa" value="{{ old('layanan_jasa', $affiliation->layanan_jasa) }}">
+            <trix-editor input="layanan_jasa"></trix-editor>
     
-                @error('training_name')
-                    <p class="text-red-500 text-xs mt-1">{{ $message }}</p>
-                @enderror
-            </div>
-    
-            <div class="mt-6">
-                <x-label for="training" class="mb-2">List Pelatihan</x-label>
-                <textarea 
-                    name="training" 
-                    id="training" 
-                    rows="6"
-                    class="w-full form-input"
-                    placeholder="1. ...">{{ old('training', $affiliation->training) }}</textarea>
-    
-                @error('training')
-                    <p class="text-red-500 text-xs mt-1">{{ $message }}</p>
-                @enderror
-            </div>
+            @error('layanan_jasa')
+                <p class="text-red-500 text-xs mt-1">{{ $message }}</p>
+            @enderror
         </div>
     </div>
 
