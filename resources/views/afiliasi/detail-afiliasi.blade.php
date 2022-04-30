@@ -51,7 +51,7 @@
                         <h2 class="text-base md:text-lg text-slate-900 font-medium tracking-wider">
                             Pelatihan yang telah dilaksanakan
                         </h2>
-                        <table class="border mt-1">
+                        <x-table>
                             <thead class="bg-slate-100">
                                 <th class="px-4 py-2 text-left">Tahun</th>
                                 <th class="px-4 py-2 text-left" colspan="2">Mitra Perusahaan</th>
@@ -61,17 +61,19 @@
                                 @foreach ($pelatihan as $item)
                                     <tr>
                                         <td class="px-4 py-2">{{ $item->tahun }}</td>
-                                        <td class="pl-4 pr-2 py-2">
-                                            <img class="h-10 w-auto mx-auto" src="{{ $item->partner->getLogoPartner() }}" alt="{{ $item->partner->name }}">
+                                        <td class="pl-4 pr-2 py-2 whitespace-nowrap">
+                                            <div class="shrink h-8 w-24 lg:h-10 lg:w-28">
+                                                <img class="h-10 w-auto mx-auto" src="{{ $item->partner->getLogoPartner() }}" alt="{{ $item->partner->name }}">
+                                            </div>
                                         </td>
-                                        <td class="pl-2 pr-4 py-2">
+                                        <td class="pl-2 pr-4 py-2 whitespace-nowrap">
                                             <span>{{ $item->partner->name }}</span>
                                         </td>
-                                        <td class="px-4 py-2">{{ $item->layanan_jasa }}</td>
+                                        <td class="px-4 py-2 whitespace-nowrap">{{ $item->layanan_jasa }}</td>
                                     </tr>
                                 @endforeach
                             </tbody>
-                        </table>
+                        </x-table>
                     </div>
                 @endif
             @endif
