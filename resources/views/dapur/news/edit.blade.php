@@ -32,7 +32,28 @@
                         <div>
                             <x-label for="body" class="mb-2">Teks</x-label>
                             <input id="body" type="hidden" name="body" value="{{ old('body', $news->body) }}">
-                            <trix-editor input="body"></trix-editor>
+                            <trix-editor 
+                                input="body"
+                                x-data="{
+                                    upload(event) {
+                                        const data = new FormData();
+                                        data.append('attachment', event.attachment.file);
+                    
+                                        window.axios.post('/d/attachments', data, {
+                                            onUploadProgress(progressEvent) {
+                                                event.attachment.setUploadProgress(
+                                                    progressEvent.loaded / progressEvent.total * 100
+                                                );
+                                            },
+                                        }).then(({ data }) => {
+                                            event.attachment.setAttributes({
+                                                url: data.image_url,
+                                            });
+                                        });
+                                    }
+                                }"
+                                x-on:trix-attachment-add="upload"
+                            ></trix-editor>
 
                             @error('body')
                                 <p class="text-red-500 text-xs mt-1">{{ $message }}</p>

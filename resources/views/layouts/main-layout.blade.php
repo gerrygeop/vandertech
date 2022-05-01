@@ -84,11 +84,6 @@
         .font-heading {
             font-family: 'Merriweather', serif;
         }
-
-        /* Text editor */
-        trix-toolbar [data-trix-button-group="file-tools"] {
-            display: none;
-        }
     </style>
 
     @stack('styles')

@@ -119,4 +119,18 @@ class NewsController extends Controller
         $news->delete();
         return redirect()->back();
     }
+
+    public function attachments()
+    {
+        request()->validate([
+            'attachment' => 'required|image|mimes:jpg,jpeg,png',
+        ]);
+
+        $path = request()->file('attachment')->store('trix-attachments', 'public');
+
+        return [
+            'image_url' => Storage::disk('public')->url($path),
+        ];
+    }
+
 }

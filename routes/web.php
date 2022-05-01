@@ -48,6 +48,7 @@ Route::middleware('auth')->prefix('d')->name('d.')->group(function() {
 
     // News & Event
     Route::resource('news', NewsController::class);
+    Route::post('/attachments', [NewsController::class, 'attachments']);
 
     // Mitra / partners
     Route::resource('partner', PartnerController::class)->except('show');
