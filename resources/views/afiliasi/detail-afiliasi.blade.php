@@ -53,15 +53,15 @@
                         </h2>
                         <x-table>
                             <thead class="bg-slate-100">
-                                <th class="px-4 py-2 text-center">Tahun</th>
-                                <th class="px-4 py-2 text-center">Mitra Perusahaan</th>
-                                <th class="px-4 py-2 text-center">Layanan Jasa</th>
+                                <th class="px-4 py-2">Tahun</th>
+                                <th class="px-7 py-2">Mitra Perusahaan</th>
+                                <th class="pl-8 pr-4 py-2 text-left">Layanan Jasa</th>
                             </thead>
                             <tbody class="divide-y">
                                 @foreach ($pelatihan as $item)
                                     <tr>
                                         <td class="px-4 py-2 text-center">{{ $item->tahun }}</td>
-                                        <td class="px-4 py-2 flex flex-col items-center whitespace-nowrap">
+                                        <td class="px-7 py-2 flex flex-col items-center whitespace-nowrap">
                                             <div class="shrink h-8 lg:h-10">
                                                 <img 
                                                     class="h-10 w-auto" 
@@ -71,7 +71,7 @@
                                             </div>
                                             <span class="text-sm mt-2">{{ $item->partner->name }}</span>
                                         </td>
-                                        <td class="px-4 py-2 whitespace-nowrap text-center">{{ $item->layanan_jasa }}</td>
+                                        <td class="pl-8 pr-4 py-2 whitespace-nowrap">{{ $item->layanan_jasa }}</td>
                                     </tr>
                                 @endforeach
                             </tbody>

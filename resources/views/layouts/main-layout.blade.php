@@ -6,6 +6,9 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <title>{{ config('app.name', 'Vandertech') }}</title>
+    <link rel="shortcut icon" href="{{ asset('image/icon.png') }}" type="image/png">
+    <meta name="description" content="PT. Vander Teck Resourses berkomitmen untuk terus berinovasi dan melakukan pengembangan dengan menggunakan konsep value chain dan berupaya menetapkan standarisasi dalam tata kelola perusahaan, menjaga kepercayaan klien dalam pekerjaan.">
+    <meta name="keywords" content="PT. vander teck resourses, vander teck,vandertech, vandertech resourses, cv. vandertech resourses, jasa pertambangan, 9t coffee, vander geo laboratori, vander inti energi, vandertech indo training, organisasi, pertambangan samarinda, samarinda">
 
     {{-- Fonts --}}
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap">
